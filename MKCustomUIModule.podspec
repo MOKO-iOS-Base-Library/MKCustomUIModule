@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
   s.version          = '1.0.0'
-  s.summary          = 'A short description of MKCustomUIModule.'
+  s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/aadyx2007@163.com/MKCustomUIModule'
+  s.homepage         = 'https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'aadyx2007@163.com' => 'aadyx2007@163.com' }
-  s.source           = { :git => 'https://github.com/aadyx2007@163.com/MKCustomUIModule.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.0'
