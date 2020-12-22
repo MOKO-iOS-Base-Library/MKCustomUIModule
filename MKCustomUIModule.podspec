@@ -45,12 +45,14 @@ TODO: Add long description of the pod here.
     end
     ss.subspec 'MKTextButtonCell' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/Cell/MKTextButtonCell/**'
+      sss.dependency 'MKCustomUIModule/View/MKPickerView'
     end
     ss.subspec 'MKTextFieldCell' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/Cell/MKTextFieldCell/**'
     end
     ss.subspec 'MKMeasureTxPowerCell' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/Cell/MKMeasureTxPowerCell/**'
+      sss.dependency 'MKCustomUIModule/View/MKSlider'
     end
     ss.subspec 'MKTextSwitchCell' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/Cell/MKTextSwitchCell/**'

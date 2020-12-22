@@ -8,9 +8,9 @@
 
 #import "MKTextSwitchCell.h"
 
-#import <Masonry/Masonry.h>
+#import "Masonry.h"
 
-#import <MKBaseModuleLibrary/MKMacroDefines.h>
+#import "MKMacroDefines.h"
 
 @implementation MKTextSwitchCellModel
 @end

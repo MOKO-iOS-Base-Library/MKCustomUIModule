@@ -9,7 +9,7 @@
 #import <MKBaseModuleLibrary/MKMacroDefines.h>
 #import <MKBaseModuleLibrary/MKAttributedString.h>
 
-#import <MKCustomUIModule/MKSlider.h>
+#import "MKSlider.h"
 
 @implementation MKMeasureTxPowerCellModel
 @end
