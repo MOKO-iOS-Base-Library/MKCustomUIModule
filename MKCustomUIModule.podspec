@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -29,8 +29,6 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.0'
-
-  s.source_files = 'MKCustomUIModule/Classes/**/*'
   
   s.resource_bundles = {
     'MKCustomUIModule' => ['MKCustomUIModule/Assets/*.png']
