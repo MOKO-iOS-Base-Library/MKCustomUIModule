@@ -27,4 +27,7 @@
  */
 + (NSString *)currentSystemLanguage;
 
+/// 获取当前手机型号
++ (NSString *)currentIphoneType;
+
 @end

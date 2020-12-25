@@ -1,9 +1,9 @@
 {
   "name": "MKCustomUIModule",
-  "version": "0.1.0",
-  "summary": "A short description of MKCustomUIModule.",
+  "version": "1.0.2",
+  "summary": "通用UI组件库",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/aadyx2007@163.com/MKCustomUIModule",
+  "homepage": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,13 +12,12 @@
     "aadyx2007@163.com": "aadyx2007@163.com"
   },
   "source": {
-    "git": "https://github.com/aadyx2007@163.com/MKCustomUIModule.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule.git",
+    "tag": "1.0.2"
   },
   "platforms": {
     "ios": "12.0"
   },
-  "source_files": "MKCustomUIModule/Classes/**/*",
   "resource_bundles": {
     "MKCustomUIModule": [
       "MKCustomUIModule/Assets/*.png"
@@ -55,7 +54,12 @@
         },
         {
           "name": "MKTextButtonCell",
-          "source_files": "MKCustomUIModule/Classes/Cell/MKTextButtonCell/**"
+          "source_files": "MKCustomUIModule/Classes/Cell/MKTextButtonCell/**",
+          "dependencies": {
+            "MKCustomUIModule/View/MKPickerView": [
+
+            ]
+          }
         },
         {
           "name": "MKTextFieldCell",
@@ -63,7 +67,15 @@
         },
         {
           "name": "MKMeasureTxPowerCell",
-          "source_files": "MKCustomUIModule/Classes/Cell/MKMeasureTxPowerCell/**"
+          "source_files": "MKCustomUIModule/Classes/Cell/MKMeasureTxPowerCell/**",
+          "dependencies": {
+            "MKCustomUIModule/View/MKSlider": [
+
+            ],
+            "MKCustomUIModule/UIAdopter": [
+
+            ]
+          }
         },
         {
           "name": "MKTextSwitchCell",
@@ -96,11 +108,32 @@
         },
         {
           "name": "MKPickerView",
-          "source_files": "MKCustomUIModule/Classes/View/MKPickerView/**"
+          "source_files": "MKCustomUIModule/Classes/View/MKPickerView/**",
+          "dependencies": {
+            "MKCustomUIModule/UIAdopter": [
+
+            ]
+          }
         },
         {
           "name": "MKSlider",
           "source_files": "MKCustomUIModule/Classes/View/MKSlider/**"
+        },
+        {
+          "name": "MKSearchConditionsView",
+          "source_files": "MKCustomUIModule/Classes/View/MKSearchConditionsView/**",
+          "dependencies": {
+            "MKCustomUIModule/UIAdopter": [
+
+            ],
+            "MKCustomUIModule/View/MKSlider": [
+
+            ]
+          }
+        },
+        {
+          "name": "MKSearchButton",
+          "source_files": "MKCustomUIModule/Classes/View/MKSearchButton/**"
         }
       ]
     },

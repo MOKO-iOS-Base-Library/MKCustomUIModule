@@ -4,10 +4,11 @@
 
 #import "MKMeasureTxPowerCell.h"
 
-#import <Masonry/Masonry.h>
+#import "Masonry.h"
 
-#import <MKBaseModuleLibrary/MKMacroDefines.h>
-#import <MKBaseModuleLibrary/MKAttributedString.h>
+#import "MKMacroDefines.h"
+
+#import "MKCustomUIAdopter.h"
 
 #import "MKSlider.h"
 
@@ -176,7 +177,7 @@
     if (!_rssiMsgLabel) {
         _rssiMsgLabel = [[UILabel alloc] init];
         _rssiMsgLabel.textAlignment = NSTextAlignmentLeft;
-        _rssiMsgLabel.attributedText = [MKAttributedString getAttributedString:@[@"RSSI@1m",@"   (-127dBm ~ 0dBm)"] fonts:@[MKFont(15.f),MKFont(13.f)] colors:@[DEFAULT_TEXT_COLOR,RGBCOLOR(223, 223, 223)]];
+        _rssiMsgLabel.attributedText = [MKCustomUIAdopter attributedString:@[@"RSSI@1m",@"   (-127dBm ~ 0dBm)"] fonts:@[MKFont(15.f),MKFont(13.f)] colors:@[DEFAULT_TEXT_COLOR,RGBCOLOR(223, 223, 223)]];
     }
     return _rssiMsgLabel;
 }
@@ -209,7 +210,7 @@
     if (!_txPowerMsgLabel) {
         _txPowerMsgLabel = [[UILabel alloc] init];
         _txPowerMsgLabel.textAlignment = NSTextAlignmentLeft;
-        _txPowerMsgLabel.attributedText = [MKAttributedString getAttributedString:@[@"Tx Power",@"   (-40,-20,-16,-12,-8,-4,0,+3,+4)"] fonts:@[MKFont(15.f),MKFont(13.f)] colors:@[DEFAULT_TEXT_COLOR,RGBCOLOR(223, 223, 223)]];
+        _txPowerMsgLabel.attributedText = [MKCustomUIAdopter attributedString:@[@"Tx Power",@"   (-40,-20,-16,-12,-8,-4,0,+3,+4)"] fonts:@[MKFont(15.f),MKFont(13.f)] colors:@[DEFAULT_TEXT_COLOR,RGBCOLOR(223, 223, 223)]];
     }
     return _txPowerMsgLabel;
 }

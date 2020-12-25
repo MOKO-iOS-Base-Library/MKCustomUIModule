@@ -16,5 +16,4 @@
 #define ValidData(f)        (f!=nil && [f isKindOfClass:[NSData class]])
 
 
-//获取系统时间戳
-#define  kSystemTimeStamp [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
+

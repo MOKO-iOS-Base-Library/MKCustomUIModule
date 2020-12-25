@@ -19,10 +19,15 @@
 #import <MKCustomUIModule/MKMeasureTxPowerCell.h>
 #import <MKCustomUIModule/MKTextSwitchCell.h>
 
+#import <MKCustomUIModule/MKSlider.h>
+
 #import <MKCustomUIModule/MKTrackerAboutController.h>
 #import <MKCustomUIModule/MKTrackerLogController.h>
 
 #import <MKCustomUIModule/MKCustomUIAdopter.h>
+
+#import <MKCustomUIModule/MKSearchButton.h>
+#import <MKCustomUIModule/MKSearchConditionsView.h>
 
 @interface MKTrackerAboutModel : NSObject<MKTrackerAboutParamsProtocol>
 
@@ -93,7 +98,8 @@ UITableViewDataSource,
 MKTextFieldCellDelegate,
 MKTextButtonCellDelegate,
 MKMeasureTxPowerCellDelegate,
-mk_textSwitchCellDelegate>
+mk_textSwitchCellDelegate,
+MKSearchButtonDelegate>
 
 @property (nonatomic, strong)MKBaseTableView *tableView;
 
@@ -216,6 +222,18 @@ mk_textSwitchCellDelegate>
 #pragma mark - mk_textSwitchCellDelegate
 - (void)mk_textSwitchCellStatusChanged:(BOOL)isOn index:(NSInteger)index {
     NSLog(@"当前开关状态发生改变了:%@-%@",@(isOn),@(index));
+}
+
+#pragma mark - MKSearchButtonDelegate
+- (void)mk_scanSearchButtonMethod {
+    [MKSearchConditionsView showSearchKey:@"bb" rssi:-66 minRssi:-100 searchBlock:^(NSString * _Nonnull searchKey, NSInteger searchRssi) {
+        NSLog(@"选择了:%@-%@",searchKey,@(searchRssi));
+    }];
+    
+}
+
+- (void)mk_scanSearchButtonClearMethod {
+    
 }
 
 #pragma mark - event method
@@ -397,6 +415,7 @@ mk_textSwitchCellDelegate>
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
+        _tableView.tableHeaderView = [self tableHeaderView];
         _tableView.tableFooterView = [self tableFooterView];
     }
     return _tableView;
@@ -437,8 +456,23 @@ mk_textSwitchCellDelegate>
     return _section4List;
 }
 
+- (UIView *)tableHeaderView {
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kViewWidth, 60.f)];
+    headerView.backgroundColor = RGBCOLOR(237, 243, 250);
+    
+    MKSearchButton *searchButton = [[MKSearchButton alloc] init];
+    searchButton.frame = CGRectMake(15.f, 10.f, kViewWidth - 30, 40.f);
+    searchButton.delegate = self;
+    MKSearchButtonDataModel *buttonModel = [[MKSearchButtonDataModel alloc] init];
+    buttonModel.minSearchRssi = -100;
+    searchButton.dataModel = buttonModel;
+    [headerView addSubview:searchButton];
+    
+    return headerView;
+}
+
 - (UIView *)tableFooterView {
-    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100.f)];
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 130.f)];
     footerView.backgroundColor = COLOR_WHITE_MACROS;
     
     UIButton *pushButton = [MKCustomUIAdopter customButtonWithTitle:@"Push"
@@ -448,6 +482,9 @@ mk_textSwitchCellDelegate>
                                                              action:@selector(pushAboutPage)];
     [footerView addSubview:pushButton];
     [pushButton setFrame:CGRectMake(15.f, 30.f, self.view.frame.size.width - 30, 45.f)];
+    
+    MKSlider *slider = [[MKSlider alloc] initWithFrame:CGRectMake(15, 90, kViewWidth - 30, 30.f)];
+    [footerView addSubview:slider];
     
     return footerView;
 }

@@ -35,7 +35,6 @@
 #import "MKDeviceDefine.h"
 #import "MKMacroDefines.h"
 #import "MKRegularsDefine.h"
-#import "MKAttributedString.h"
 #import "MKDateFormatter.h"
 #import "MKModuleManager.h"
 

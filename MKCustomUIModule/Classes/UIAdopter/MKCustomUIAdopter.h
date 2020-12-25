@@ -26,6 +26,18 @@ NS_ASSUME_NONNULL_BEGIN
                              target:(nonnull id)target
                              action:(nonnull SEL)action;
 
+/// 获取富文本
+/// @param strings 富文本内容
+/// @param fonts 富文本内容字体大小
+/// @param colors 富文本字体颜色
++ (NSMutableAttributedString *)attributedString:(NSArray <NSString *>*)strings
+                                          fonts:(NSArray <NSFont *>*)fonts
+                                         colors:(NSArray <UIColor *>*)colors;
+
+/// 旋转动画
+/// @param duration 旋转一周时长
++ (CABasicAnimation *)refreshAnimation:(NSTimeInterval)duration;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -12,8 +12,8 @@
 
 @implementation MKSlider
 
-- (instancetype)init{
-    if (self = [super init]) {
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
         [self setThumbImage:[LOADICON(@"MKCustomUIModule", @"MKSlider", @"sliderThumbIcon.png") resizableImageWithCapInsets:UIEdgeInsetsZero]
                    forState:UIControlStateNormal];
         [self setThumbImage:[LOADICON(@"MKCustomUIModule", @"MKSlider", @"sliderThumbIcon.png") resizableImageWithCapInsets:UIEdgeInsetsZero]

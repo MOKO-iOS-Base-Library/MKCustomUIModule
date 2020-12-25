@@ -9,11 +9,13 @@
 #pragma mark - *************************  硬件相关  *************************
 /** 获取屏幕尺寸、宽度、高度 */
 #define kScreenRect                 ([[UIScreen mainScreen] bounds])            //屏幕frame
+#define kViewWidth                ([UIScreen mainScreen].bounds.size.width)   //屏幕宽度
+#define kViewHeight               ([UIScreen mainScreen].bounds.size.height)  //屏幕高度
 #define kScreenCurrModeSize         [[UIScreen mainScreen] currentMode].size    //currentModel的size
 
-#define kScreenMaxLength            (MAX(kScreenWidth, kScreenHeight))          //获取屏幕宽高最大者
-#define kScreenMinLength            (MIN(kScreenWidth, kScreenHeight))          //获取屏幕宽高最小者
-#define launchBounds(i) (CGRectMake(i * kScreenWidth,0,kScreenWidth,kScreenHeight))
+#define kScreenMaxLength            (MAX(kViewWidth, kViewHeight))          //获取屏幕宽高最大者
+#define kScreenMinLength            (MIN(kViewWidth, kViewHeight))          //获取屏幕宽高最小者
+#define launchBounds(i) (CGRectMake(i * kViewWidth,0,kViewWidth,kViewHeight))
 
 #define isIPad                      (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)    //是否是ipad设备
 #define isIPhone                    (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)  //是否是iPhone设备
@@ -88,6 +90,9 @@
 
 #define iOS(x)                  (([[[UIDevice currentDevice] systemVersion] floatValue] >= x) ? YES : NO)
 
+//获取系统时间戳
+#define  kSystemTimeStamp [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
+
 
 #pragma mark - *************************  本地文档相关  *************************
 /** 获取Documents目录 */
@@ -125,6 +130,11 @@ if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queu
 //图片的宏定义,注意该方法只对取mainBundle下面的图片有效，如果是自建的bundle，则该方法取不到。
 #define LOADIMAGE(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@%@",file,(iPhone6Plus || iPhoneX || iPhoneMax) ? @"@3x" : @"@2x"] ofType:ext]]
 
+/*
+ podLibName:调用该方法的对象所在的bundle名称
+ bundleClassName:调用该方法的对象在bundle里面的名称
+ imageName:icon名称，xxx.png
+ */
 #define LOADICON(podLibName,bundleClassName,imageName) \
 ({\
 NSBundle *bundle = [NSBundle bundleForClass:NSClassFromString(bundleClassName)];\
