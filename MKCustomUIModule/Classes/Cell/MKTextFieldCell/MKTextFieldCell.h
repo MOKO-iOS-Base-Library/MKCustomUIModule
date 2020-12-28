@@ -8,7 +8,7 @@
 
 #import <MKBaseModuleLibrary/MKBaseCell.h>
 
-#import <MKBaseModuleLibrary/UITextField+MKAdd.h>
+#import <MKCustomUIModule/MKTextField.h>
 
 /*
  如果想要键盘取消第一响应者，则需要发出MKTextFieldNeedHiddenKeyboard通知即可
@@ -71,9 +71,9 @@ typedef NS_ENUM(NSInteger, mk_textFieldCellType) {
 @property (nonatomic, strong)UIFont *textFieldTextFont;
 
 /// 当前textField的输入类型
-@property (nonatomic, assign)mk_CustomTextFieldType textFieldType;
+@property (nonatomic, assign)mk_textFieldType textFieldType;
 
-/// textField的最大输入长度
+/// textField的最大输入长度,对于textFieldType == mk_uuidMode无效
 @property (nonatomic, assign)NSInteger maxLength;
 
 @property (nonatomic, assign)UITextFieldViewMode  clearButtonMode;

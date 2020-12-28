@@ -13,6 +13,8 @@
 #import "MKMacroDefines.h"
 #import "NSString+MKAdd.h"
 
+#import "MKCustomUIAdopter.h"
+
 @implementation MKTextFieldCellModel
 @end
 
@@ -22,7 +24,7 @@
 
 @property (nonatomic, strong)UIView *textBorderView;
 
-@property (nonatomic, strong)UITextField *textField;
+@property (nonatomic, strong)MKTextField *textField;
 
 @property (nonatomic, strong)UILabel *unitLabel;
 
@@ -98,12 +100,9 @@
 }
 
 #pragma mark - event method
-- (void)textFieldValueChanged {
-    if (self.dataModel.maxLength > 0 && self.textField.text.length > self.dataModel.maxLength) {
-        return;
-    }
+- (void)textFieldValueChanged:(NSString *)textValue {
     if ([self.delegate respondsToSelector:@selector(mk_deviceTextCellValueChanged:textValue:)]) {
-        [self.delegate mk_deviceTextCellValueChanged:self.dataModel.index textValue:SafeStr(self.textField.text)];
+        [self.delegate mk_deviceTextCellValueChanged:self.dataModel.index textValue:SafeStr(textValue)];
     }
 }
 
@@ -139,13 +138,18 @@
         [self.textBorderView removeFromSuperview];
         self.textBorderView = nil;
     }
+    WS(weakSelf);
     self.textField = [self textFieldWithPlaceholder:self.dataModel.textPlaceholder
                                               value:self.dataModel.textFieldValue
                                           maxLength:self.dataModel.maxLength
                                                type:self.dataModel.textFieldType
                                       textAlignment:self.dataModel.textAlignment
                                                font:self.dataModel.textFieldTextFont
-                                          textColor:self.dataModel.textFieldTextColor];
+                                          textColor:self.dataModel.textFieldTextColor
+                                           callBack:^(NSString *text) {
+        __strong typeof(self) sself = weakSelf;
+        [sself textFieldValueChanged:text];
+    }];
     self.textField.clearButtonMode = self.dataModel.clearButtonMode;
     self.textBorderView = [self loadBorderView];
     if (self.dataModel.cellType == mk_textFieldCell_normalType) {
@@ -191,27 +195,6 @@
     return _unitLabel;
 }
 
-- (UITextField *)textFieldWithPlaceholder:(NSString *)placeholder
-                                    value:(NSString *)value
-                                maxLength:(NSInteger)maxLength
-                                     type:(mk_CustomTextFieldType)type
-                            textAlignment:(NSTextAlignment)textAlignment
-                                     font:(UIFont *)font
-                                textColor:(UIColor *)textColor{
-    UITextField *textField = [[UITextField alloc] initWithTextFieldType:type];
-    textField.borderStyle = UITextBorderStyleNone;
-    textField.maxLength = maxLength;
-    textField.placeholder = placeholder;
-    textField.text = value;
-    textField.font = (font ? font : MKFont(13.f));
-    textField.textColor = (textColor ? textColor : DEFAULT_TEXT_COLOR);
-    textField.textAlignment = textAlignment;
-    [textField addTarget:self
-                  action:@selector(textFieldValueChanged)
-        forControlEvents:UIControlEventEditingChanged];
-    return textField;
-}
-
 - (UIView *)loadBorderView {
     UIView *borderView = [[UIView alloc] init];
     borderView.backgroundColor = COLOR_WHITE_MACROS;
@@ -219,6 +202,25 @@
     borderView.layer.borderWidth = CUTTING_LINE_HEIGHT;
     borderView.layer.borderColor = CUTTING_LINE_COLOR.CGColor;
     return borderView;
+}
+
+- (MKTextField *)textFieldWithPlaceholder:(NSString *)placeholder
+                                    value:(NSString *)value
+                                maxLength:(NSInteger)maxLength
+                                     type:(mk_textFieldType)type
+                            textAlignment:(NSTextAlignment)textAlignment
+                                     font:(UIFont *)font
+                                textColor:(UIColor *)textColor
+                                 callBack:(void (^)(NSString *text))callBack{
+    MKTextField *textField = [[MKTextField alloc] initWithTextFieldType:type textChangedBlock:callBack];
+    textField.borderStyle = UITextBorderStyleNone;
+    textField.maxLength = maxLength;
+    textField.placeholder = placeholder;
+    textField.text = value;
+    textField.font = (font ? font : MKFont(13.f));
+    textField.textColor = (textColor ? textColor : DEFAULT_TEXT_COLOR);
+    textField.textAlignment = textAlignment;
+    return textField;
 }
 
 @end

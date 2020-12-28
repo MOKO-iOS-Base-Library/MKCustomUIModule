@@ -12,12 +12,14 @@
 #import <MKBaseModuleLibrary/MKBaseTableView.h>
 
 #import <Masonry/Masonry.h>
+#import <MLInputDodger/MLInputDodger.h>
 
 #import <MKCustomUIModule/MKTextFieldCell.h>
 #import <MKCustomUIModule/MKTextButtonCell.h>
 #import <MKCustomUIModule/MKNormalTextCell.h>
 #import <MKCustomUIModule/MKMeasureTxPowerCell.h>
 #import <MKCustomUIModule/MKTextSwitchCell.h>
+#import <MKCustomUIModule/MKFilterDataCell.h>
 
 #import <MKCustomUIModule/MKSlider.h>
 
@@ -99,7 +101,8 @@ MKTextFieldCellDelegate,
 MKTextButtonCellDelegate,
 MKMeasureTxPowerCellDelegate,
 mk_textSwitchCellDelegate,
-MKSearchButtonDelegate>
+MKSearchButtonDelegate,
+MKFilterDataCellDelegate>
 
 @property (nonatomic, strong)MKBaseTableView *tableView;
 
@@ -113,9 +116,17 @@ MKSearchButtonDelegate>
 
 @property (nonatomic, strong)NSMutableArray *section4List;
 
+@property (nonatomic, strong)NSMutableArray *section5List;
+
 @end
 
 @implementation MKTestViewController
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.view.shiftHeightAsDodgeViewForMLInputDodger = 50.0f;
+    [self.view registerAsDodgeViewForMLInputDodgerWithOriginalY:self.view.frame.origin.y];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -141,12 +152,16 @@ MKSearchButtonDelegate>
     if (indexPath.section == 3) {
         return 120.f;
     }
+    if (indexPath.section == 5) {
+        MKFilterDataCellModel *cellModel = self.section5List[indexPath.row];
+        return (cellModel.isOn ? 145.f : 60.f);
+    }
     return 44.f;
 }
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    return 6;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -164,6 +179,9 @@ MKSearchButtonDelegate>
     }
     if (section == 4) {
         return self.section4List.count;
+    }
+    if (section == 5) {
+        return self.section5List.count;
     }
     return 0;
 }
@@ -192,8 +210,14 @@ MKSearchButtonDelegate>
         cell.delegate = self;
         return cell;
     }
-    MKTextSwitchCell *cell = [MKTextSwitchCell initCellWithTableView:tableView];
-    cell.dataModel = self.section4List[indexPath.row];
+    if (indexPath.section == 4) {
+        MKTextSwitchCell *cell = [MKTextSwitchCell initCellWithTableView:tableView];
+        cell.dataModel = self.section4List[indexPath.row];
+        cell.delegate = self;
+        return cell;
+    }
+    MKFilterDataCell *cell = [MKFilterDataCell initCellWithTableView:tableView];
+    cell.dataModel = self.section5List[indexPath.row];
     cell.delegate = self;
     return cell;
 }
@@ -236,6 +260,30 @@ MKSearchButtonDelegate>
     
 }
 
+#pragma mark - MKFilterDataCellDelegate
+- (void)mk_fliterSwitchStatusChanged:(BOOL)isOn index:(NSInteger)index {
+    NSLog(@"当前开关状态变了:%@-------%@",@(index),@(isOn));
+    MKFilterDataCellModel *cellModel = self.section5List[index];
+    cellModel.isOn = isOn;
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:5] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+- (void)mk_listButtonStateChanged:(BOOL)selected index:(NSInteger)index {
+    NSLog(@"当前按钮状态变了:%@-------%@",@(index),@(selected));
+}
+
+- (void)mk_filterTextFieldValueChanged:(NSString *)value index:(NSInteger)index {
+    NSLog(@"当前输入框值发生了改变:%@----------%@",value,@(index));
+}
+
+- (void)mk_leftFilterTextFieldValueChanged:(NSString *)value index:(NSInteger)index {
+    NSLog(@"当前左侧输入框发生改变:%@+++++++++%@",value,@(index));
+}
+
+- (void)mk_rightFilterTextFieldValueChanged:(NSString *)value index:(NSInteger)index {
+    NSLog(@"当前右侧输入框发生改变:%@+++++++++%@",value,@(index));
+}
+
 #pragma mark - event method
 
 - (void)pushAboutPage {
@@ -253,6 +301,7 @@ MKSearchButtonDelegate>
     [self loadSection2Datas];
     [self loadSection3Datas];
     [self loadSection4Datas];
+    [self loadSection5Datas];
     [self.tableView reloadData];
 }
 
@@ -263,7 +312,7 @@ MKSearchButtonDelegate>
     cellModel1.msgFont = MKFont(11.f);
     cellModel1.textPlaceholder = @"随便搞一下";
     cellModel1.maxLength = 3;
-    cellModel1.textFieldType = realNumberOnly;
+    cellModel1.textFieldType = mk_realNumberOnly;
     cellModel1.textFieldValue = @"2";
     cellModel1.index = 0;
     cellModel1.unit = @"Min";
@@ -286,7 +335,7 @@ MKSearchButtonDelegate>
     cellModel3.msg = @"ADV Interval";
     cellModel3.textPlaceholder = @"随便搞3下";
 //    cellModel3.maxLength = 3;
-    cellModel3.textFieldType = realNumberOnly;
+    cellModel3.textFieldType = mk_realNumberOnly;
 //    cellModel3.textFieldValue = @"2";
     cellModel3.index = 2;
     cellModel3.textAlignment = NSTextAlignmentCenter;
@@ -299,7 +348,7 @@ MKSearchButtonDelegate>
     cellModel4.msg = @"第4个测试项";
     cellModel4.textPlaceholder = @"随便搞4下";
     cellModel4.maxLength = 10;
-    cellModel4.textFieldType = normalInput;
+    cellModel4.textFieldType = mk_normal;
     cellModel4.textFieldValue = @"2";
     cellModel4.index = 3;
 //    cellModel4.clearButtonMode = NO;
@@ -396,6 +445,28 @@ MKSearchButtonDelegate>
     [self.section4List addObject:cellModel3];
 }
 
+- (void)loadSection5Datas {
+    MKFilterDataCellModel *cellModel1 = [[MKFilterDataCellModel alloc] init];
+    cellModel1.index = 0;
+    cellModel1.msg = @"MAC Address Filtering";
+    cellModel1.isOn = YES;
+    cellModel1.selected = YES;
+    cellModel1.cellType = mk_filterDataCellType_normal;
+    cellModel1.maxLength = 10;
+    cellModel1.textFieldType = mk_hexCharOnly;
+    cellModel1.textFieldValue = @"aa";
+    cellModel1.textFieldPlaceholder = @"MAC Address";
+    [self.section5List addObject:cellModel1];
+    
+    MKFilterDataCellModel *cellModel2 = [[MKFilterDataCellModel alloc] init];
+    cellModel2.index = 1;
+    cellModel2.msg = @"iBeacon Major Filtering";
+    cellModel2.cellType = mk_filterDataCellType_double;
+    cellModel2.leftTextFieldValue = @"0";
+    cellModel2.rightTextFieldValue = @"10";
+    [self.section5List addObject:cellModel2];
+}
+
 - (void)loadSubViews {
     self.defaultTitle = @"列表cell测试页面";
     [self.view addSubview:self.tableView];
@@ -454,6 +525,13 @@ MKSearchButtonDelegate>
         _section4List = [NSMutableArray array];
     }
     return _section4List;
+}
+
+- (NSMutableArray *)section5List {
+    if (!_section5List) {
+        _section5List = [NSMutableArray array];
+    }
+    return _section5List;
 }
 
 - (UIView *)tableHeaderView {

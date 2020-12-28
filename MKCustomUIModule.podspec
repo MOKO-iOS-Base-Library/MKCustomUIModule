@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -47,6 +47,8 @@ TODO: Add long description of the pod here.
     end
     ss.subspec 'MKTextFieldCell' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/Cell/MKTextFieldCell/**'
+      sss.dependency 'MKCustomUIModule/UIAdopter'
+      sss.dependency 'MKCustomUIModule/View/MKTextField'
     end
     ss.subspec 'MKMeasureTxPowerCell' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/Cell/MKMeasureTxPowerCell/**'
@@ -55,6 +57,10 @@ TODO: Add long description of the pod here.
     end
     ss.subspec 'MKTextSwitchCell' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/Cell/MKTextSwitchCell/**'
+    end
+    ss.subspec 'MKFilterDataCell' do |sss|
+      sss.source_files = 'MKCustomUIModule/Classes/Cell/MKFilterDataCell/**'
+      sss.dependency 'MKCustomUIModule/View/MKTextField'
     end
   end
   
@@ -88,6 +94,9 @@ TODO: Add long description of the pod here.
     end
     ss.subspec 'MKSearchButton' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/View/MKSearchButton/**'
+    end
+    ss.subspec 'MKTextField' do |sss|
+      sss.source_files = 'MKCustomUIModule/Classes/View/MKTextField/**'
     end
   end
   

@@ -19,9 +19,5 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'MKCustomUIModule_Example' do
   pod 'MKCustomUIModule', :path => '../'
 
-  target 'MKCustomUIModule_Tests' do
-    inherit! :search_paths
-
-    pod 'FBSnapshotTestCase'
-  end
+  pod 'MLInputDodger'
 end
