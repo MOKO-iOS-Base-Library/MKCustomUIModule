@@ -51,7 +51,14 @@
 
 - (void)textFieldChanged:(NSNotification *) noti
 {
-    NSString *tempString = [self.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *tempString = self.text;
+    if (!ValidStr(tempString)) {
+        self.text = @"";
+        if (self.changedBlock) {
+            self.changedBlock(self.text);
+        }
+        return;
+    }
     if (self.maxLength > 0 && tempString.length > self.maxLength && self.textType != mk_uuidMode) {
         self.text = [tempString substringToIndex:self.maxLength];
         if (self.changedBlock) {

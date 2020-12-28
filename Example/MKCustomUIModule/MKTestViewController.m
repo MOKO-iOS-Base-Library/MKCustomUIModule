@@ -224,7 +224,7 @@ MKFilterDataCellDelegate>
 
 #pragma mark - MKTextFieldCellDelegate
 - (void)mk_deviceTextCellValueChanged:(NSInteger)index textValue:(NSString *)value {
-    
+    NSLog(@"我靠，吓死我了，值发生改变了:%@-%@",@(index),value);
 }
 
 #pragma mark - MKTextButtonCellDelegate

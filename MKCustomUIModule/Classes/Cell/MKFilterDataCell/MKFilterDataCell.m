@@ -1,6 +1,6 @@
 
 /*
- 开关打开状态下，cell高度145.f，关闭则44.f
+ 开关打开状态下，cell高度145.f，关闭则60.f
  */
 
 #import "MKFilterDataCell.h"
