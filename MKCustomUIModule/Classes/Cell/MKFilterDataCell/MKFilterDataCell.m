@@ -9,8 +9,6 @@
 
 #import "MKMacroDefines.h"
 
-#import "MKCustomUIAdopter.h"
-
 @implementation MKFilterDataCellModel
 @end
 
