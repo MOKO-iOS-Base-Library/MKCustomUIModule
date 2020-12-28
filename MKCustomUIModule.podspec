@@ -47,7 +47,6 @@ TODO: Add long description of the pod here.
     end
     ss.subspec 'MKTextFieldCell' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/Cell/MKTextFieldCell/**'
-      sss.dependency 'MKCustomUIModule/UIAdopter'
       sss.dependency 'MKCustomUIModule/View/MKTextField'
     end
     ss.subspec 'MKMeasureTxPowerCell' do |sss|
