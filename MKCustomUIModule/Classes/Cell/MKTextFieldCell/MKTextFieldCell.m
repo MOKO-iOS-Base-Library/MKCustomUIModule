@@ -13,8 +13,6 @@
 #import "MKMacroDefines.h"
 #import "NSString+MKAdd.h"
 
-#import "MKCustomUIAdopter.h"
-
 @implementation MKTextFieldCellModel
 @end
 
