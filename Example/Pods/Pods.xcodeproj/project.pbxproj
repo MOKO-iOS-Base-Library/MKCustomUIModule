@@ -390,7 +390,7 @@
 		01A9F199A0E12F276897441B47689A38 /* MKHaveRefreshTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKHaveRefreshTableView.m; path = MKCustomUIModule/Classes/View/HaveRefreshView/MKHaveRefreshTableView.m; sourceTree = "<group>"; };
 		022ACE3A2D45B5B222B458057F4C155E /* MLInputDodger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MLInputDodger-dummy.m"; sourceTree = "<group>"; };
 		04F0F33E264111044071D55F8E904188 /* sliderThumbIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "sliderThumbIcon@3x.png"; path = "MKCustomUIModule/Assets/sliderThumbIcon@3x.png"; sourceTree = "<group>"; };
-		05CCF915CDB5CA9948F0AA95329FEBDB /* MKBaseModuleLibrary.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MKBaseModuleLibrary.bundle; path = "MKBaseModuleLibrary-MKBaseModuleLibrary.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CCF915CDB5CA9948F0AA95329FEBDB /* MKBaseModuleLibrary.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKBaseModuleLibrary.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0687E9457E29B6C1F80AAD7E0CF98227 /* UIImage+MKAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MKAdd.m"; path = "MKBaseModuleLibrary/Classes/Category/UIImage+MKAdd.m"; sourceTree = "<group>"; };
 		06888493A066228162332D7A3935C770 /* Toast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-dummy.m"; sourceTree = "<group>"; };
 		076901C67F7D455D10C5052B67DD3C31 /* sliderMinimumTrackIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "sliderMinimumTrackIcon@3x.png"; path = "MKCustomUIModule/Assets/sliderMinimumTrackIcon@3x.png"; sourceTree = "<group>"; };
@@ -418,11 +418,11 @@
 		182EB270121BFE29814873E44A7873A7 /* clearButtonIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "clearButtonIcon@2x.png"; path = "MKCustomUIModule/Assets/clearButtonIcon@2x.png"; sourceTree = "<group>"; };
 		186E1DA6B910A2AA861E3D2CCFD3C1F9 /* emailIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "emailIcon@3x.png"; path = "MKCustomUIModule/Assets/emailIcon@3x.png"; sourceTree = "<group>"; };
 		194FA5D55371133F0ACD35B616255316 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackFooter.h; path = MJRefresh/Base/MJRefreshBackFooter.h; sourceTree = "<group>"; };
-		1B3C492923381A121C81BD758E6624BC /* MKCustomUIModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MKCustomUIModule.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1B3C492923381A121C81BD758E6624BC /* MKCustomUIModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MKCustomUIModule.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		1C3E0952495292C80407C9A38E1D4C96 /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
 		1D2BF0F68F6FA471675089426FD36929 /* listButtonSelectedIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "listButtonSelectedIcon@2x.png"; path = "MKCustomUIModule/Assets/listButtonSelectedIcon@2x.png"; sourceTree = "<group>"; };
 		1F8640B26406376182F41FE8ECD00140 /* UIView+MLInputDodger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MLInputDodger.h"; path = "Classes/UIView+MLInputDodger.h"; sourceTree = "<group>"; };
-		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		205A16F411149F5D4DBA865513104342 /* MKModuleManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKModuleManager.m; path = MKBaseModuleLibrary/Classes/Tools/MKModuleManager/MKModuleManager.m; sourceTree = "<group>"; };
 		20B41F051A8EE264070B9F0A0E4C5308 /* MKTextFieldCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKTextFieldCell.m; path = MKCustomUIModule/Classes/Cell/MKTextFieldCell/MKTextFieldCell.m; sourceTree = "<group>"; };
 		219BF7F34F34925A487705086F2FF275 /* searchGrayIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "searchGrayIcon@2x.png"; path = "MKCustomUIModule/Assets/searchGrayIcon@2x.png"; sourceTree = "<group>"; };
@@ -431,7 +431,7 @@
 		2263D88033F4E085F2E23676284B2740 /* MJRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.release.xcconfig; sourceTree = "<group>"; };
 		2412B91214020E1695685A596DACFF97 /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackFooter.m; path = MJRefresh/Base/MJRefreshBackFooter.m; sourceTree = "<group>"; };
 		258E3728455A68AE5AC3F2282BABFE95 /* CircleProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleProgressBar-prefix.pch"; sourceTree = "<group>"; };
-		2607EE853833050B3E9A5C78A8B0F771 /* MKBaseModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MKBaseModuleLibrary.framework; path = MKBaseModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2607EE853833050B3E9A5C78A8B0F771 /* MKBaseModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKBaseModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		276E2DA6BBF8E96793E4B3D5A1EFC139 /* MKCustomUIModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKCustomUIModule-dummy.m"; sourceTree = "<group>"; };
 		283766F1753DFBE93DEC86D9850B4802 /* MBProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBProgressHUD-Info.plist"; sourceTree = "<group>"; };
 		29A02DED89CEECC9C6E5ABBD97C11F7C /* MJRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-prefix.pch"; sourceTree = "<group>"; };
@@ -442,7 +442,7 @@
 		2D47E89A794813383689B797110C9844 /* Toast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Toast-Info.plist"; sourceTree = "<group>"; };
 		2DFC53CE0BA1E60951B8D2CA8DF9D997 /* MJRefresh-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MJRefresh-Info.plist"; sourceTree = "<group>"; };
 		2E2663990A9E4D9E1F9C351774E76E05 /* Pods-MKCustomUIModule_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MKCustomUIModule_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2E9F741430D8BD56AD797200DDF3DA71 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2E9F741430D8BD56AD797200DDF3DA71 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		30BF88FC6BD938A836650A6533BBB507 /* MKSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKSlider.m; path = MKCustomUIModule/Classes/View/MKSlider/MKSlider.m; sourceTree = "<group>"; };
 		32FDBE3BAA0D110006BFD2EB99579266 /* MKBaseNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKBaseNavigationController.h; path = MKBaseModuleLibrary/Classes/Base/NavigationController/MKBaseNavigationController.h; sourceTree = "<group>"; };
 		33519C8ACF7507D4C8D4D3AA5A030CAE /* MKBaseCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKBaseCell.m; path = MKBaseModuleLibrary/Classes/Base/Cell/MKBaseCell/MKBaseCell.m; sourceTree = "<group>"; };
@@ -487,7 +487,7 @@
 		54CCFC7C6E165818869020A03A0EED24 /* MKBaseTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKBaseTableView.m; path = MKBaseModuleLibrary/Classes/Base/View/tableView/MKBaseTableView.m; sourceTree = "<group>"; };
 		557D4D1D5BD9271D68EE76EDF763AC4F /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
 		55AA6B223B960F0AC1C65D595CB49C56 /* CircleProgressBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleProgressBar-umbrella.h"; sourceTree = "<group>"; };
-		55E0AFD333353D71ACC2207149E879D6 /* Toast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toast.framework; path = Toast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E0AFD333353D71ACC2207149E879D6 /* Toast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5861AC30842B127AC8A7CDC0FB076052 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		587FBFCFA2127BCE9E41D1B91B0F36E1 /* Toast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Toast.modulemap; sourceTree = "<group>"; };
 		58D1779E2B803AB72FAE00455468655F /* CircleProgressBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircleProgressBar.debug.xcconfig; sourceTree = "<group>"; };
@@ -529,8 +529,8 @@
 		7664651EFDA4C7C4D8D4CD4AD7E996F1 /* MKBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKBaseViewController.m; path = MKBaseModuleLibrary/Classes/Base/Controller/MKBaseViewController.m; sourceTree = "<group>"; };
 		76BD64E323131D1AA918075533D5D71B /* sliderThumbIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "sliderThumbIcon@2x.png"; path = "MKCustomUIModule/Assets/sliderThumbIcon@2x.png"; sourceTree = "<group>"; };
 		77F78D9FB28E35C079DB661971BEF0DD /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
-		7948FA343D314AE2DEBBA7CA6076F151 /* CircleProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CircleProgressBar.framework; path = CircleProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		795D65D255D403824054D0CBE90E32B9 /* MKCustomUIModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MKCustomUIModule.framework; path = MKCustomUIModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7948FA343D314AE2DEBBA7CA6076F151 /* CircleProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CircleProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		795D65D255D403824054D0CBE90E32B9 /* MKCustomUIModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKCustomUIModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E5D7DB6AAE236A1A0D708E913653CC /* CircleProgressBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircleProgressBar-dummy.m"; sourceTree = "<group>"; };
 		7A2F394D46EB422082112E0E5F7C0274 /* MKCustomUIModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MKCustomUIModule-Info.plist"; sourceTree = "<group>"; };
 		7BBA11EB5F8B5DF8AF155B2D57275006 /* MJRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.debug.xcconfig; sourceTree = "<group>"; };
@@ -550,7 +550,7 @@
 		890FFA9FD0BA4A7EABFF79174252EC4E /* MJRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-umbrella.h"; sourceTree = "<group>"; };
 		8A5087079D83164DF6C438B3C3CB7AB0 /* MBProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.release.xcconfig; sourceTree = "<group>"; };
 		8AC247F0C21D915460EE93E968F9576A /* WRNavigationBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WRNavigationBar.h; path = MKBaseModuleLibrary/Classes/Base/View/WRNavigationBar/WRNavigationBar.h; sourceTree = "<group>"; };
-		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BCC3B2FFD37E53643A5C7F904877168 /* keyboardDelIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "keyboardDelIcon@3x.png"; path = "MKCustomUIModule/Assets/keyboardDelIcon@3x.png"; sourceTree = "<group>"; };
 		8BFCDDA70193971619CF51A25F1B5A97 /* MKHexKeyboard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKHexKeyboard.h; path = MKCustomUIModule/Classes/View/MKHexKeyBoard/MKHexKeyboard.h; sourceTree = "<group>"; };
 		8CD8838ED38CFED9DD111CC9E27AAD26 /* MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJRefresh-dummy.m"; sourceTree = "<group>"; };
@@ -566,7 +566,7 @@
 		9AA26F3BF1EC43B787F8ADA113CB3702 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		9C25F5829AB9214FA3AA54B8ACC563F2 /* MJRefreshConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConfig.m; path = MJRefresh/MJRefreshConfig.m; sourceTree = "<group>"; };
 		9C319C4C2D15B1873631A3D2F0C389A8 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E32D5C936F43C12CBFDA42FC2B8ABAC /* ResourceBundle-MKBaseModuleLibrary-MKBaseModuleLibrary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MKBaseModuleLibrary-MKBaseModuleLibrary-Info.plist"; sourceTree = "<group>"; };
 		9E43471E1DB25993E3B22DC97609B704 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		9F0F6A400B18BEFB6A60D8A7C860EA56 /* MJRefreshTrailer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshTrailer.h; path = MJRefresh/Base/MJRefreshTrailer.h; sourceTree = "<group>"; };
@@ -599,7 +599,7 @@
 		B49974849B23E1A9E4F28ADD3248E0E5 /* MKBaseTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKBaseTableView.h; path = MKBaseModuleLibrary/Classes/Base/View/tableView/MKBaseTableView.h; sourceTree = "<group>"; };
 		B4BBB94EBA99369C88F50EBC19585F66 /* MJRefreshFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshFooter.h; path = MJRefresh/Base/MJRefreshFooter.h; sourceTree = "<group>"; };
 		B5E7975FE68C847AFB3D2ED1A0A86662 /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackGifFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
-		B82F40879FDB508865D7F93F0B74525E /* Pods_MKCustomUIModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MKCustomUIModule_Example.framework; path = "Pods-MKCustomUIModule_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82F40879FDB508865D7F93F0B74525E /* Pods_MKCustomUIModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MKCustomUIModule_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DE0080DF8DEE17E0D0B1E9D29134F9 /* MKBaseModuleLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKBaseModuleLibrary.release.xcconfig; sourceTree = "<group>"; };
 		BC0B60CB0E2D6689394F3396E82F5A14 /* go_next_button@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "go_next_button@3x.png"; path = "MKCustomUIModule/Assets/go_next_button@3x.png"; sourceTree = "<group>"; };
 		BCFEB0B56B7D1CE4F623690E25260B37 /* deviceType_unselectedIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "deviceType_unselectedIcon@2x.png"; path = "MKCustomUIModule/Assets/deviceType_unselectedIcon@2x.png"; sourceTree = "<group>"; };
@@ -607,7 +607,7 @@
 		C1015C4E7B1B8D8999D848F435C55D96 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CE8D2E0586060CD5DEAC457B999A0A /* MKBaseModuleLibrary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MKBaseModuleLibrary-Info.plist"; sourceTree = "<group>"; };
 		C1EAD04494E345481121C46CC3226F48 /* MKHaveRefreshViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKHaveRefreshViewProtocol.h; path = MKCustomUIModule/Classes/View/HaveRefreshView/MKHaveRefreshViewProtocol.h; sourceTree = "<group>"; };
-		C291AC0DBEA2986CD250F2466A26691D /* MLInputDodger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MLInputDodger.framework; path = MLInputDodger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C291AC0DBEA2986CD250F2466A26691D /* MLInputDodger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLInputDodger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D1D6F49F547F209DBE92DA38C5F851 /* MKDateFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKDateFormatter.m; path = MKBaseModuleLibrary/Classes/Tools/MKDateFormatter/MKDateFormatter.m; sourceTree = "<group>"; };
 		C4DB77C8F5A6F07D14CAE587FB82C92C /* MKHudManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKHudManager.m; path = MKCustomUIModule/Classes/View/MKHudManager/MKHudManager.m; sourceTree = "<group>"; };
 		C5972D5EC9C75719976E5B1A9E9B7657 /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MJRefresh.m"; path = "MJRefresh/NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
@@ -629,7 +629,7 @@
 		D05AC8A45B38CA844F95E0C3AE7B39B3 /* MJRefreshHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshHeader.m; path = MJRefresh/Base/MJRefreshHeader.m; sourceTree = "<group>"; };
 		D25CE49BBBF5F80AC67D50547D1E1379 /* NSInvocation+MKAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+MKAdd.h"; path = "MKBaseModuleLibrary/Classes/Category/NSInvocation+MKAdd.h"; sourceTree = "<group>"; };
 		D270732ACE8FBB3DF01641DCCF326CF6 /* MKBaseModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKBaseModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D299E571E016B9E6B94A53EE5C782D2B /* MKCustomUIModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MKCustomUIModule.bundle; path = "MKCustomUIModule-MKCustomUIModule.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D299E571E016B9E6B94A53EE5C782D2B /* MKCustomUIModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKCustomUIModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3340470EB15704C337FF6B497C4C1C3 /* MKCustomUIModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKCustomUIModule-prefix.pch"; sourceTree = "<group>"; };
 		D34C121DDEBC7390BAEB7472F640F693 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
 		D360935831053BD758A256C2D3866D43 /* MKTextButtonCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKTextButtonCell.h; path = MKCustomUIModule/Classes/Cell/MKTextButtonCell/MKTextButtonCell.h; sourceTree = "<group>"; };
@@ -659,8 +659,8 @@
 		E2FA9E2FE93D7C2FFE5E5CCBAA613F4D /* NSDateFormatter+MKAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDateFormatter+MKAdd.m"; path = "MKBaseModuleLibrary/Classes/Category/NSDateFormatter+MKAdd.m"; sourceTree = "<group>"; };
 		E3E6183A6E8902465168EFC764A8FD76 /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MJRefresh.h"; path = "MJRefresh/NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
 		E40C40DE14FC891AEDFFA9A55D05847B /* MKCustomUIModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKCustomUIModule.debug.xcconfig; sourceTree = "<group>"; };
-		E459AB1BE595703C8CB4998B70A76EC0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		E49D6D248DD1CEE584E6776B9164A1B2 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJRefresh.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E459AB1BE595703C8CB4998B70A76EC0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E49D6D248DD1CEE584E6776B9164A1B2 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CB8FD35B02697D579DE96694819781 /* MJRefreshComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshComponent.m; path = MJRefresh/Base/MJRefreshComponent.m; sourceTree = "<group>"; };
 		E7A3E06E73A007CE6E8E341C429861B2 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		E7B1D2DC2B977A826C5C28D43E39263C /* MKBaseModuleLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKBaseModuleLibrary.debug.xcconfig; sourceTree = "<group>"; };
@@ -956,7 +956,6 @@
 				EB37547FF9A3BD261B689038502554BD /* CircleProgressBar.m */,
 				77AE71EA6B2DFA9FCFF5BB6940D5052F /* Support Files */,
 			);
-			name = CircleProgressBar;
 			path = CircleProgressBar;
 			sourceTree = "<group>";
 		};
@@ -990,7 +989,6 @@
 				CE091454238AA604621CB0FBE988C782 /* ViewController+MASAdditions.m */,
 				B473EAB2D604E509F1944AE3FBC8B150 /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -1014,7 +1012,6 @@
 				AC8138414074F5CB4FBDD2084B664716 /* Support Files */,
 				CC6C83D7A9E2A8318BAEA0DBE72DF1BB /* Tools */,
 			);
-			name = MKBaseModuleLibrary;
 			path = MKBaseModuleLibrary;
 			sourceTree = "<group>";
 		};
@@ -1061,7 +1058,6 @@
 				ED5143563A35C6FC67FD4D9D9854EE0C /* UIView+Toast.m */,
 				314C0042D0DC92E9CB8154ADA7EEAF0A /* Support Files */,
 			);
-			name = Toast;
 			path = Toast;
 			sourceTree = "<group>";
 		};
@@ -1198,7 +1194,6 @@
 				6AC466C91AD00057AF6373DBDC7800EA /* Resources */,
 				005059C7569DD76289996D326B8EC975 /* Support Files */,
 			);
-			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -1283,7 +1278,6 @@
 				4FDDAA87BCF9D1DBA08AC7CD939E9A03 /* MBProgressHUD.m */,
 				839C22CEBC594F6B849EB63901ADBB20 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1349,7 +1343,6 @@
 				62085A279A5452A331E506EAC4BF2FAF /* Resources */,
 				7C5A1C647E59197810F1560C9E4EF95D /* Support Files */,
 			);
-			name = MLInputDodger;
 			path = MLInputDodger;
 			sourceTree = "<group>";
 		};
@@ -2534,8 +2527,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

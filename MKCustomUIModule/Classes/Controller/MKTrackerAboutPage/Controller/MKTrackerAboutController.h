@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol MKTrackerAboutParamsProtocol <NSObject>
 
-@optional
-
 /// 导航栏标题,默认@"ABOUT"
 @property (nonatomic, copy)NSString *title;
 
