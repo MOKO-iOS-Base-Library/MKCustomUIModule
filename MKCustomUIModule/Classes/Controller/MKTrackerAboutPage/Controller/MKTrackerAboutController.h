@@ -29,8 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 底部背景图片
 @property (nonatomic, strong)UIImage *bottomBackIcon;
 
-/// 要显示的app名字
+/// 要显示的app名字，如果不填，则默认显示当前工程的app名称
 @property (nonatomic, copy)NSString *appName;
+
+/// app当前版本，如果不填，则默认取当前工程的版本号
+@property (nonatomic, copy)NSString *appVersion;
 
 @end
 

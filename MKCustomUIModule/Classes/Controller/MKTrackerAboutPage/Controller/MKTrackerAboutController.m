@@ -88,8 +88,9 @@
     }
     if (ValidStr(self.protocol.appName)) {
         self.appNameLabel.text = self.protocol.appName;
-    }else {
-        self.appNameLabel.text = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey];
+    }
+    if (ValidStr(self.protocol.appVersion)) {
+        self.versionLabel.text = [@"Version: V" stringByAppendingString:self.protocol.appVersion];
     }
     [self.aboutIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.view.mas_centerX);
@@ -137,6 +138,7 @@
         _appNameLabel.textColor = DEFAULT_TEXT_COLOR;
         _appNameLabel.textAlignment = NSTextAlignmentCenter;
         _appNameLabel.font = MKFont(20.f);
+        _appNameLabel.text = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
     }
     return _appNameLabel;
 }
