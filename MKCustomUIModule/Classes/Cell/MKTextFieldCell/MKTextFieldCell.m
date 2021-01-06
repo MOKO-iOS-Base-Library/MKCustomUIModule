@@ -13,7 +13,30 @@
 #import "MKMacroDefines.h"
 #import "NSString+MKAdd.h"
 
+static CGFloat const offset_X = 15.f;
+static CGFloat const textBorderViewHeight = 35.f;
+static CGFloat const unitLabelWidth = 70.f;
+
 @implementation MKTextFieldCellModel
+
+- (CGFloat)cellHeightWithContentWidth:(CGFloat)width {
+    UIFont *msgFont = (self.msgFont ? self.msgFont : MKFont(15.f));
+    CGFloat msgWith = (width - 3 * offset_X) / 2;
+    CGSize msgSize = [NSString sizeWithText:self.msg
+                                    andFont:msgFont
+                                 andMaxSize:CGSizeMake(msgWith, MAXFLOAT)];
+    if (!ValidStr(self.noteMsg)) {
+        //没有底部note内容
+        return MAX(msgSize.height + 2 * offset_X + 6.f, 44.f);
+    }
+    //存在底部的note
+    UIFont *noteFont = (self.noteMsgFont ? self.noteMsgFont : MKFont(12.f));
+    CGSize noteSize = [NSString sizeWithText:self.noteMsg
+                                     andFont:noteFont
+                                  andMaxSize:CGSizeMake(width - 2 * offset_X, MAXFLOAT)];
+    return MAX(msgSize.height + 2 * offset_X + 6.f, 44.f) + noteSize.height + 10.f;
+}
+
 @end
 
 @interface MKTextFieldCell ()
@@ -25,6 +48,8 @@
 @property (nonatomic, strong)MKTextField *textField;
 
 @property (nonatomic, strong)UILabel *unitLabel;
+
+@property (nonatomic, strong)UILabel *noteLabel;
 
 @end
 
@@ -46,6 +71,7 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self.contentView addSubview:self.msgLabel];
         [self.contentView addSubview:self.unitLabel];
+        [self.contentView addSubview:self.noteLabel];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(needHiddenKeyboard)
                                                      name:@"MKTextFieldNeedHiddenKeyboard"
@@ -56,18 +82,12 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGSize msgSize = [NSString sizeWithText:self.msgLabel.text
-                                    andFont:self.msgLabel.font
-                                 andMaxSize:CGSizeMake(MAXFLOAT, MKFont(15.f).lineHeight)];
-    CGFloat msgLabelWidth = msgSize.width;
-    if (msgLabelWidth > (self.contentView.frame.size.width - 3 * 15) / 2) {
-        msgLabelWidth = (self.contentView.frame.size.width - 3 * 15) / 2;
-    }
+    CGSize msgSize = [self msgSize];
     [self.msgLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(15.f);
-        make.width.mas_equalTo(msgLabelWidth);
-        make.centerY.mas_equalTo(self.contentView.mas_centerY);
-        make.height.mas_equalTo(self.contentView.mas_height);
+        make.left.mas_equalTo(offset_X);
+        make.width.mas_equalTo(msgSize.width);
+        make.top.mas_equalTo(offset_X + 3.f);
+        make.height.mas_equalTo(msgSize.height);
     }];
     if (self.textField && self.textField.superview) {
         [self.textField mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -78,21 +98,28 @@
         }];
     }
     [self.unitLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(-15.f);
-        make.width.mas_equalTo(70.f);
-        make.centerY.mas_equalTo(self.contentView.mas_centerY);
+        make.right.mas_equalTo(-offset_X);
+        make.width.mas_equalTo(unitLabelWidth);
+        make.centerY.mas_equalTo(self.msgLabel.mas_centerY);
         make.height.mas_equalTo(self.contentView.mas_height);
+    }];
+    CGSize noteSize = [self noteSize];
+    [self.noteLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(offset_X);
+        make.right.mas_equalTo(-offset_X);
+        make.bottom.mas_equalTo(-offset_X);
+        make.height.mas_equalTo(noteSize.height);
     }];
     if (self.textBorderView && self.textBorderView.superview) {
         [self.textBorderView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.msgLabel.mas_right).mas_offset(15.f);
+            make.left.mas_equalTo(self.msgLabel.mas_right).mas_offset(offset_X);
             if (ValidStr(self.dataModel.unit)) {
                 make.right.mas_equalTo(self.unitLabel.mas_left).mas_offset(-5.f);
             }else {
-                make.right.mas_equalTo(-15.f);
+                make.right.mas_equalTo(-offset_X);
             }
-            make.centerY.mas_equalTo(self.contentView.mas_centerY);
-            make.height.mas_equalTo(35.f);
+            make.centerY.mas_equalTo(self.msgLabel.mas_centerY);
+            make.height.mas_equalTo(textBorderViewHeight);
         }];
     }
 }
@@ -123,6 +150,9 @@
     self.msgLabel.text = SafeStr(_dataModel.msg);
     self.msgLabel.font = (_dataModel.msgFont ? _dataModel.msgFont : MKFont(15.f));
     self.msgLabel.textColor = (_dataModel.msgColor ? _dataModel.msgColor : DEFAULT_TEXT_COLOR);
+    self.noteLabel.text = SafeStr(_dataModel.noteMsg);
+    self.noteLabel.font = (_dataModel.noteMsgFont ? _dataModel.noteMsgFont : MKFont(12.f));
+    self.noteLabel.textColor = (_dataModel.noteMsgColor ? _dataModel.noteMsgColor : DEFAULT_TEXT_COLOR);
     [self setupSubViews];
 }
 
@@ -171,6 +201,28 @@
     [self setNeedsLayout];
 }
 
+- (CGSize)msgSize {
+    if (!ValidStr(self.msgLabel.text)) {
+        return CGSizeMake(0, 0);
+    }
+    CGFloat maxMsgWidth = (self.contentView.frame.size.width - 3 * offset_X) / 2;
+    CGSize msgSize = [NSString sizeWithText:self.msgLabel.text
+                                    andFont:self.msgLabel.font
+                                 andMaxSize:CGSizeMake(maxMsgWidth, MAXFLOAT)];
+    return CGSizeMake(maxMsgWidth, msgSize.height);
+}
+
+- (CGSize)noteSize {
+    if (!ValidStr(self.noteLabel.text)) {
+        return CGSizeMake(0, 0);
+    }
+    CGFloat width = self.contentView.frame.size.width - 30.f;
+    CGSize noteSize = [NSString sizeWithText:self.noteLabel.text
+                                     andFont:self.noteLabel.font
+                                  andMaxSize:CGSizeMake(width, MAXFLOAT)];
+    return CGSizeMake(width, noteSize.height);
+}
+
 #pragma mark - getter
 - (UILabel *)msgLabel {
     if (!_msgLabel) {
@@ -191,6 +243,17 @@
         _unitLabel.font = MKFont(13.f);
     }
     return _unitLabel;
+}
+
+- (UILabel *)noteLabel {
+    if (!_noteLabel) {
+        _noteLabel = [[UILabel alloc] init];
+        _noteLabel.textColor = DEFAULT_TEXT_COLOR;
+        _noteLabel.font = MKFont(12.f);
+        _noteLabel.textAlignment = NSTextAlignmentLeft;
+        _noteLabel.numberOfLines = 0;
+    }
+    return _noteLabel;
 }
 
 - (UIView *)loadBorderView {

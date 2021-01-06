@@ -50,6 +50,8 @@
 
 @property (nonatomic, copy, nullable)NSString *appName;
 
+@property (nonatomic, copy, nullable)NSString *appVersion;
+
 @end
 
 @implementation MKTrackerAboutModel
@@ -149,6 +151,18 @@ MKFilterDataCellDelegate>
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        MKTextFieldCellModel *cellModel = self.section0List[indexPath.row];
+        return [cellModel cellHeightWithContentWidth:kViewWidth];
+    }
+    if (indexPath.section == 1) {
+        MKTextButtonCellModel *cellModel = self.section1List[indexPath.row];
+        return [cellModel cellHeightWithContentWidth:kViewWidth];
+    }
+    if (indexPath.section == 2) {
+        MKNormalTextCellModel *cellModel = self.section2List[indexPath.row];
+        return [cellModel cellHeightWithContentWidth:kViewWidth];
+    }
     if (indexPath.section == 3) {
         return 120.f;
     }
@@ -307,9 +321,9 @@ MKFilterDataCellDelegate>
 
 - (void)loadSection0Datas {
     MKTextFieldCellModel *cellModel1 = [[MKTextFieldCellModel alloc] init];
-    cellModel1.msg = @"第一个测试项";
+    cellModel1.msg = @"第一个测试项第一个测试项第一个测试项第一个测试项第一个测试项第一个测试项第一个测试项第一个测试项第一个测试项第一个测试项";
     cellModel1.msgColor = [UIColor redColor];
-    cellModel1.msgFont = MKFont(11.f);
+    cellModel1.msgFont = MKFont(20.f);
     cellModel1.textPlaceholder = @"随便搞一下";
     cellModel1.maxLength = 3;
     cellModel1.textFieldType = mk_realNumberOnly;
@@ -321,6 +335,11 @@ MKFilterDataCellDelegate>
     cellModel1.cellType = mk_textFieldCell_normalType;
     cellModel1.textFieldTextColor = [UIColor redColor];
     cellModel1.textFieldTextFont = MKFont(13.f);
+    
+    cellModel1.noteMsg = @"过来我看一下你到底想显示啥玩意儿啊，不要这么玩行不行啊，和谐和气一点点哦，大家新年过得好吗？开心吗";
+    cellModel1.noteMsgColor = [UIColor redColor];
+    cellModel1.noteMsgFont = MKFont(14.f);
+    
     [self.section0List addObject:cellModel1];
     
     MKTextFieldCellModel *cellModel2 = [[MKTextFieldCellModel alloc] init];
@@ -329,6 +348,9 @@ MKFilterDataCellDelegate>
     cellModel2.textFieldValue = @"3";
     cellModel2.index = 1;
     cellModel2.cellType = mk_textFieldCell_topLineType;
+    
+    cellModel2.noteMsg = @"过来我看一下你到底想显示啥玩意儿啊，不要这么玩行不行啊，和谐和气一点点哦，大家新年过得好吗？开心吗,过来我看一下你到底想显示啥玩意儿啊，不要这么玩行不行啊，和谐和气一点点哦，大家新年过得好吗？开心吗";
+    
     [self.section0List addObject:cellModel2];
     
     MKTextFieldCellModel *cellModel3 = [[MKTextFieldCellModel alloc] init];
@@ -355,17 +377,18 @@ MKFilterDataCellDelegate>
 //    cellModel4.unit = @"Min";
 //    cellModel4.borderColor = DEFAULT_TEXT_COLOR;
     cellModel4.cellType = mk_textFieldCell_normalType;
-    [self.section0List addObject:cellModel1];
+    [self.section0List addObject:cellModel4];
 }
 
 - (void)loadSection1Datas {
     MKTextButtonCellModel *cellModel1 = [[MKTextButtonCellModel alloc] init];
-    cellModel1.msg = @"Tracking Notification";
+    cellModel1.msg = @"Tracking NotificationTracking NotificationTracking NotificationTracking NotificationTracking NotificationTracking NotificationTracking NotificationTracking NotificationTracking Notification";
     cellModel1.dataList = @[@"Off",@"Light",@"Vibration",@"Light+Vibration"];
     cellModel1.index = 0;
     cellModel1.dataListIndex = 1;
     cellModel1.buttonBackColor = COLOR_WHITE_MACROS;
     cellModel1.buttonTitleColor = UIColorFromRGB(0x2F84D0);
+    cellModel1.noteMsg = @"过来我看一下你到底想显示啥玩意儿啊，不要这么玩行不行啊，和谐和气一点点哦，大家新年过得好吗？开心吗";
     [self.section1List addObject:cellModel1];
     
     MKTextButtonCellModel *cellModel2 = [[MKTextButtonCellModel alloc] init];
@@ -396,13 +419,16 @@ MKFilterDataCellDelegate>
     cellModel2.leftMsgTextColor = [UIColor redColor];
     cellModel2.rightMsgTextFont = MKFont(15.f);
     cellModel2.rightMsgTextColor = [UIColor redColor];
+    cellModel2.noteMsgFont = MKFont(15.f);
+    cellModel2.noteMsgColor = [UIColor redColor];
     [self.section2List addObject:cellModel2];
     
     MKNormalTextCellModel *cellModel3 = [[MKNormalTextCellModel alloc] init];
-    cellModel3.leftMsg = @"新的一种cell2";
+    cellModel3.leftMsg = @"过来我看一下你到底想显示啥玩意儿啊，不要这么玩行不行啊，和谐和气一点点哦，大家新年过得好吗？开心吗新的一种cell2";
     cellModel3.rightMsg = @"当前值";
     cellModel3.showRightIcon = YES;
     cellModel3.leftIcon = LOADIMAGE(@"slot_frameType", @"png");
+    cellModel3.noteMsg = @"过来我看一下你到底想显示啥玩意儿啊，不要这么玩行不行啊，和谐和气一点点哦，大家新年过得好吗？开心吗";
     [self.section2List addObject:cellModel3];
     
     MKNormalTextCellModel *cellModel4 = [[MKNormalTextCellModel alloc] init];

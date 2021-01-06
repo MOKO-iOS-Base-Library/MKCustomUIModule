@@ -81,6 +81,19 @@ typedef NS_ENUM(NSInteger, mk_textFieldCellType) {
 /// textField边框颜色,cellType=mk_textFieldCell_topLineType类型的时候，borderColor不起作用
 @property (nonatomic, strong)UIColor *borderColor;
 
+/// 底部note标签内容
+@property (nonatomic, copy)NSString *noteMsg;
+
+/// note标签字体颜色,默认#353535
+@property (nonatomic, strong)UIColor *noteMsgColor;
+
+/// note标签字体大小,默认12
+@property (nonatomic, strong)UIFont *noteMsgFont;
+
+/// 获取当前cell的高度
+/// @param width 当前cell宽度
+- (CGFloat)cellHeightWithContentWidth:(CGFloat)width;
+
 @end
 
 @protocol MKTextFieldCellDelegate <NSObject>
