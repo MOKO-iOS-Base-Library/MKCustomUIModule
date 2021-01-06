@@ -28,14 +28,14 @@ static CGFloat const offset_X = 15.f;
                                  andMaxSize:CGSizeMake(maxMsgWidth, MAXFLOAT)];
     if (!ValidStr(self.noteMsg)) {
         //没有底部note内容
-        return MAX(msgSize.height + 2 * offset_X + 6.f, 44.f);
+        return MAX(msgSize.height + 2 * offset_X, 50.f);
     }
     //存在底部的note
     UIFont *noteFont = (self.noteMsgFont ? self.noteMsgFont : MKFont(12.f));
     CGSize noteSize = [NSString sizeWithText:self.noteMsg
                                      andFont:noteFont
                                   andMaxSize:CGSizeMake(width - 2 * offset_X, MAXFLOAT)];
-    return MAX(msgSize.height + 2 * offset_X + 6.f, 44.f) + noteSize.height + 10.f;
+    return MAX(msgSize.height + 2 * offset_X, 50.f) + noteSize.height + 10.f;
 }
 
 @end
@@ -79,6 +79,8 @@ static CGFloat const offset_X = 15.f;
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    BOOL hasNote = ValidStr(self.noteLabel.text);
+    
     CGSize msgSize = [self msgSize];
     [self.leftMsgLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         if (self.leftIcon) {
@@ -87,7 +89,13 @@ static CGFloat const offset_X = 15.f;
             make.left.mas_equalTo(offset_X);
         }
         make.right.mas_equalTo(self.contentView.mas_centerX).mas_offset(-3.f);
-        make.top.mas_equalTo(offset_X + 3.f);
+        if (hasNote) {
+            //有底部的note标签内容
+            make.top.mas_equalTo(offset_X);
+        }else {
+            //如果没有，则上下居中
+            make.centerY.mas_equalTo(self.contentView.mas_centerY);
+        }
         make.height.mas_equalTo(msgSize.height);
     }];
     if (self.leftIcon) {

@@ -166,6 +166,10 @@ MKFilterDataCellDelegate>
     if (indexPath.section == 3) {
         return 120.f;
     }
+    if (indexPath.section == 4) {
+        MKTextSwitchCellModel *cellModel = self.section4List[indexPath.row];
+        return [cellModel cellHeightWithContentWidth:kViewWidth];
+    }
     if (indexPath.section == 5) {
         MKFilterDataCellModel *cellModel = self.section5List[indexPath.row];
         return (cellModel.isOn ? 145.f : 60.f);
@@ -460,6 +464,7 @@ MKFilterDataCellDelegate>
     cellModel2.msg = @"第二个开关cell";
     cellModel2.isOn = YES;
     cellModel2.index = 1;
+    cellModel2.noteMsg = @"阿赫赫尔";
     [self.section4List addObject:cellModel2];
     
     MKTextSwitchCellModel *cellModel3 = [[MKTextSwitchCellModel alloc] init];

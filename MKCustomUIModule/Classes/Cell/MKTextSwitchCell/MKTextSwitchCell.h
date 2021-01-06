@@ -30,6 +30,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// 当前cell所在的index
 @property (nonatomic, assign)NSInteger index;
 
+/// 底部note标签内容
+@property (nonatomic, copy)NSString *noteMsg;
+
+/// note标签字体颜色,默认#353535
+@property (nonatomic, strong)UIColor *noteMsgColor;
+
+/// note标签字体大小,默认12
+@property (nonatomic, strong)UIFont *noteMsgFont;
+
+/// 获取当前cell的高度
+/// @param width 当前cell宽度
+- (CGFloat)cellHeightWithContentWidth:(CGFloat)width;
+
 @end
 
 @protocol mk_textSwitchCellDelegate <NSObject>
