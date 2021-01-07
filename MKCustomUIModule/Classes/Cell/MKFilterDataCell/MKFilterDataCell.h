@@ -27,6 +27,9 @@ typedef NS_ENUM(NSInteger, mk_filterDataCellType) {
 /// 开关状态
 @property (nonatomic, assign)BOOL isOn;
 
+/// 开关是否能用，默认YES
+@property (nonatomic, assign)BOOL switchEnable;
+
 /// 选中按钮状态
 @property (nonatomic, assign)BOOL selected;
 

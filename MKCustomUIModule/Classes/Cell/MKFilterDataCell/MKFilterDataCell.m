@@ -10,6 +10,14 @@
 #import "MKMacroDefines.h"
 
 @implementation MKFilterDataCellModel
+
+- (instancetype)init {
+    if (self = [super init]) {
+        self.switchEnable = YES;
+    }
+    return self;
+}
+
 @end
 
 @interface MKFilterNormalTextView : UIView
@@ -333,6 +341,7 @@
         return;
     }
     self.msgLabel.text = SafeStr(_dataModel.msg);
+    self.switchButton.enabled = _dataModel.switchEnable;
     self.switchButton.selected = _dataModel.isOn;
     UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_MKCustomUIModule_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_MKCustomUIModule_switchUnselectedIcon.png"));
     [self.switchButton setImage:buttonImage forState:UIControlStateNormal];

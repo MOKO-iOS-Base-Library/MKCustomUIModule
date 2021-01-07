@@ -27,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 开关状态
 @property (nonatomic, assign)BOOL isOn;
 
+/// 开关是否能用，默认YES
+@property (nonatomic, assign)BOOL switchEnable;
+
 /// 当前cell所在的index
 @property (nonatomic, assign)NSInteger index;
 

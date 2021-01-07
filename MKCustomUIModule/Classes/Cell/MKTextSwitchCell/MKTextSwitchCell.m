@@ -19,6 +19,13 @@ static CGFloat const switchButtonHeight = 30.f;
 
 @implementation MKTextSwitchCellModel
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.switchEnable = YES;
+    }
+    return self;
+}
+
 - (CGFloat)cellHeightWithContentWidth:(CGFloat)width {
     UIFont *msgFont = (self.msgFont ? self.msgFont : MKFont(15.f));
     CGFloat maxMsgWidth = width - 3 * offset_X - switchButtonWidth;
@@ -141,6 +148,7 @@ static CGFloat const switchButtonHeight = 30.f;
     self.msgLabel.text = SafeStr(_dataModel.msg);
     self.msgLabel.font = (_dataModel.msgFont ? _dataModel.msgFont : MKFont(15.f));
     self.msgLabel.textColor = (_dataModel.msgColor ? _dataModel.msgColor : DEFAULT_TEXT_COLOR);
+    self.switchButton.enabled = _dataModel.switchEnable;
     self.switchButton.selected = _dataModel.isOn;
     UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchUnselectedIcon.png"));
     [self.switchButton setImage:buttonImage forState:UIControlStateNormal];

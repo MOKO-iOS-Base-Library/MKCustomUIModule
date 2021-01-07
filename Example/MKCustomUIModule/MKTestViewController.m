@@ -457,6 +457,7 @@ MKFilterDataCellDelegate>
     cellModel1.msgColor = [UIColor redColor];
     cellModel1.msgFont = MKFont(12.f);
     cellModel1.isOn = YES;
+    cellModel1.switchEnable = NO;
     cellModel1.index = 0;
     [self.section4List addObject:cellModel1];
 
