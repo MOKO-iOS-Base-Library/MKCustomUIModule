@@ -399,7 +399,7 @@ MKFilterDataCellDelegate>
     cellModel2.msg = @"Tracking";
     cellModel2.msgFont = MKFont(15.f);
     cellModel2.msgColor = [UIColor redColor];
-    cellModel2.dataList = @[@"Off",@"Light",@"Vibration",@"Light+Vibration"];
+//    cellModel2.dataList = @[@"Off",@"Light",@"Vibration",@"Light+Vibration"];
     cellModel2.index = 0;
     cellModel2.dataListIndex = 1;
     cellModel2.buttonBackColor = COLOR_WHITE_MACROS;

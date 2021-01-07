@@ -108,6 +108,9 @@ static CGFloat const selectButtonHeight = 30.f;
 - (void)selectedButtonPressed {
     //隐藏其他cell里面的输入框键盘
     [[NSNotificationCenter defaultCenter] postNotificationName:@"MKTextFieldNeedHiddenKeyboard" object:nil];
+    if (!ValidArray(self.dataModel.dataList)) {
+        return;
+    }
     NSInteger row = 0;
     for (NSInteger i = 0; i < self.dataModel.dataList.count; i ++) {
         if ([self.selectedButton.titleLabel.text isEqualToString:self.dataModel.dataList[i]]) {
