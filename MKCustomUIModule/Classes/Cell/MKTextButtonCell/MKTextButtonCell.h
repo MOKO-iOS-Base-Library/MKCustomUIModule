@@ -53,6 +53,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// note标签字体大小,默认12
 @property (nonatomic, strong)UIFont *noteMsgFont;
 
+/// 按钮是否相应点击事件,默认是YES,如果想禁用按钮，则设置成NO
+@property (nonatomic, assign)BOOL buttonEnable;
+
 /// 获取当前cell的高度
 /// @param width 当前cell宽度
 - (CGFloat)cellHeightWithContentWidth:(CGFloat)width;

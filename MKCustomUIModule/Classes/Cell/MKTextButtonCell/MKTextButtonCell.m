@@ -21,6 +21,13 @@ static CGFloat const selectButtonHeight = 30.f;
 
 @implementation MKTextButtonCellModel
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.buttonEnable = YES;
+    }
+    return self;
+}
+
 - (CGFloat)cellHeightWithContentWidth:(CGFloat)width {
     UIFont *msgFont = (self.msgFont ? self.msgFont : MKFont(15.f));
     CGFloat msgWith = width - 3 * offset_X - selectButtonWidth;
@@ -138,6 +145,7 @@ static CGFloat const selectButtonHeight = 30.f;
     self.msgLabel.text = SafeStr(_dataModel.msg);
     self.msgLabel.font = (_dataModel.msgFont ? _dataModel.msgFont : MKFont(15.f));
     self.msgLabel.textColor = (_dataModel.msgColor ? _dataModel.msgColor : DEFAULT_TEXT_COLOR);
+    self.selectedButton.enabled = _dataModel.buttonEnable;
     [self.selectedButton setTitle:_dataModel.dataList[_dataModel.dataListIndex] forState:UIControlStateNormal];
     if (_dataModel.buttonLabelFont) {
         [self.selectedButton.titleLabel setFont:_dataModel.buttonLabelFont];

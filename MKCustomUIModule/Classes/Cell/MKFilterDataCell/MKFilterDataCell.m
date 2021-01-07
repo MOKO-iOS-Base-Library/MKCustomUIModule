@@ -199,7 +199,7 @@
 
 @property (nonatomic, strong)UILabel *msgLabel;
 
-@property (nonatomic, strong)UISwitch *switchView;
+@property (nonatomic, strong)UIButton *switchButton;
 
 @property (nonatomic, strong)UIImageView *selectedIcon;
 
@@ -226,7 +226,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self.contentView addSubview:self.msgLabel];
-        [self.contentView addSubview:self.switchView];
+        [self.contentView addSubview:self.switchButton];
         [self.contentView addSubview:self.listButton];
         [self.listButton addSubview:self.selectedIcon];
         [self.listButton addSubview:self.buttonMsgLabel];
@@ -238,11 +238,11 @@
     [super layoutSubviews];
     [self.msgLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15.f);
-        make.right.mas_equalTo(self.switchView.mas_left).mas_offset(-10.f);
+        make.right.mas_equalTo(self.switchButton.mas_left).mas_offset(-10.f);
         make.top.mas_equalTo(15.f);
-        make.height.mas_equalTo(self.switchView.mas_height);
+        make.height.mas_equalTo(self.switchButton.mas_height);
     }];
-    [self.switchView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.switchButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-15.f);
         make.centerY.mas_equalTo(self.msgLabel.mas_centerY);
         make.width.mas_equalTo(45.f);
@@ -269,16 +269,20 @@
 }
 
 #pragma mark - event method
-- (void)switchViewValueChanged {
+- (void)switchButtonPressed {
+    self.switchButton.selected = !self.switchButton.selected;
+    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_MKCustomUIModule_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_MKCustomUIModule_switchUnselectedIcon.png"));
+    [self.switchButton setImage:buttonImage forState:UIControlStateNormal];
     if (self.normalView) {
-        self.normalView.hidden = !self.switchView.isOn;
+        self.normalView.hidden = !self.switchButton.isSelected;
     }
     if (self.doubleTextView) {
-        self.doubleTextView.hidden = !self.switchView.isOn;
+        self.doubleTextView.hidden = !self.switchButton.isSelected;
     }
-    self.listButton.hidden = !self.switchView.isOn;
+    self.listButton.hidden = !self.switchButton.isSelected;
+    
     if ([self.delegate respondsToSelector:@selector(mk_fliterSwitchStatusChanged:index:)]) {
-        [self.delegate mk_fliterSwitchStatusChanged:self.switchView.isOn index:self.dataModel.index];
+        [self.delegate mk_fliterSwitchStatusChanged:self.switchButton.isSelected index:self.dataModel.index];
     }
 }
 
@@ -329,7 +333,9 @@
         return;
     }
     self.msgLabel.text = SafeStr(_dataModel.msg);
-    [self.switchView setOn:_dataModel.isOn];
+    self.switchButton.selected = _dataModel.isOn;
+    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_MKCustomUIModule_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_MKCustomUIModule_switchUnselectedIcon.png"));
+    [self.switchButton setImage:buttonImage forState:UIControlStateNormal];
     self.listButton.selected = _dataModel.selected;
     UIImage *image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"listButtonUnselectedIcon.png");
     if (self.listButton.isSelected) {
@@ -385,12 +391,12 @@
     }
     
     if (self.normalView) {
-        self.normalView.hidden = !self.switchView.isOn;
+        self.normalView.hidden = !self.switchButton.isSelected;
     }
     if (self.doubleTextView) {
-        self.doubleTextView.hidden = !self.switchView.isOn;
+        self.doubleTextView.hidden = !self.switchButton.isSelected;
     }
-    self.listButton.hidden = !self.switchView.isOn;
+    self.listButton.hidden = !self.switchButton.isSelected;
 }
 
 #pragma mark - getter
@@ -402,16 +408,6 @@
         _msgLabel.textColor = DEFAULT_TEXT_COLOR;
     }
     return _msgLabel;
-}
-
-- (UISwitch *)switchView {
-    if (!_switchView) {
-        _switchView = [[UISwitch alloc] init];
-        [_switchView addTarget:self
-                        action:@selector(switchViewValueChanged)
-              forControlEvents:UIControlEventValueChanged];
-    }
-    return _switchView;
 }
 
 - (UIImageView *)selectedIcon {
@@ -431,6 +427,17 @@
         _buttonMsgLabel.text = @"Whitelist";
     }
     return _buttonMsgLabel;
+}
+
+- (UIButton *)switchButton {
+    if (!_switchButton) {
+        _switchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_switchButton setImage:LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_MKCustomUIModule_switchUnselectedIcon") forState:UIControlStateNormal];
+        [_switchButton addTarget:self
+                          action:@selector(switchButtonPressed)
+                forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _switchButton;
 }
 
 - (UIControl *)listButton {

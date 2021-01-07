@@ -399,7 +399,7 @@ MKFilterDataCellDelegate>
     cellModel2.msg = @"Tracking";
     cellModel2.msgFont = MKFont(15.f);
     cellModel2.msgColor = [UIColor redColor];
-//    cellModel2.dataList = @[@"Off",@"Light",@"Vibration",@"Light+Vibration"];
+    cellModel2.dataList = @[@"Off",@"Light",@"Vibration",@"Light+Vibration"];
     cellModel2.index = 0;
     cellModel2.dataListIndex = 1;
     cellModel2.buttonBackColor = COLOR_WHITE_MACROS;
@@ -462,6 +462,7 @@ MKFilterDataCellDelegate>
 
     MKTextSwitchCellModel *cellModel2 = [[MKTextSwitchCellModel alloc] init];
     cellModel2.msg = @"第二个开关cell";
+    cellModel2.leftIcon = LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchSelectedIcon.png");
     cellModel2.isOn = YES;
     cellModel2.index = 1;
     cellModel2.noteMsg = @"阿赫赫尔";
@@ -471,7 +472,7 @@ MKFilterDataCellDelegate>
     cellModel3.msg = @"开关cell1";
     cellModel3.msgColor = [UIColor yellowColor];
     cellModel3.msgFont = MKFont(18.f);
-    cellModel3.isOn = YES;
+    cellModel3.isOn = NO;
     cellModel3.index = 2;
     [self.section4List addObject:cellModel3];
 }

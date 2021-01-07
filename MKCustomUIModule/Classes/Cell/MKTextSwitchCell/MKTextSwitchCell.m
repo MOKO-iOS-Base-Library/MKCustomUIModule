@@ -14,14 +14,14 @@
 #import "NSString+MKAdd.h"
 
 static CGFloat const offset_X = 15.f;
-static CGFloat const switchViewWidth = 40.f;
-static CGFloat const switchViewHeight = 30.f;
+static CGFloat const switchButtonWidth = 40.f;
+static CGFloat const switchButtonHeight = 30.f;
 
 @implementation MKTextSwitchCellModel
 
 - (CGFloat)cellHeightWithContentWidth:(CGFloat)width {
     UIFont *msgFont = (self.msgFont ? self.msgFont : MKFont(15.f));
-    CGFloat maxMsgWidth = width - 3 * offset_X - switchViewWidth;
+    CGFloat maxMsgWidth = width - 3 * offset_X - switchButtonWidth;
     if (self.leftIcon) {
         maxMsgWidth = maxMsgWidth - self.leftIcon.size.width - 3.f;
     }
@@ -48,7 +48,7 @@ static CGFloat const switchViewHeight = 30.f;
 
 @property (nonatomic, strong)UILabel *msgLabel;
 
-@property (nonatomic, strong)UISwitch *switchView;
+@property (nonatomic, strong)UIButton *switchButton;
 
 @property (nonatomic, strong)UILabel *noteLabel;
 
@@ -67,7 +67,7 @@ static CGFloat const switchViewHeight = 30.f;
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self.contentView addSubview:self.msgLabel];
-        [self.contentView addSubview:self.switchView];
+        [self.contentView addSubview:self.switchButton];
         [self.contentView addSubview:self.noteLabel];
     }
     return self;
@@ -86,7 +86,7 @@ static CGFloat const switchViewHeight = 30.f;
         }else{
             make.left.mas_equalTo(offset_X);
         }
-        make.right.mas_equalTo(self.switchView.mas_left).mas_offset(-offset_X);
+        make.right.mas_equalTo(self.switchButton.mas_left).mas_offset(-offset_X);
         if (hasNote) {
             //有底部的note标签内容
             make.top.mas_equalTo(offset_X);
@@ -106,11 +106,11 @@ static CGFloat const switchViewHeight = 30.f;
             make.height.mas_equalTo(image.size.height);
         }];
     }
-    [self.switchView mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.switchButton mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-offset_X);
-        make.width.mas_equalTo(switchViewWidth);
+        make.width.mas_equalTo(switchButtonWidth);
         make.centerY.mas_equalTo(self.msgLabel.mas_centerY);
-        make.height.mas_equalTo(switchViewHeight);
+        make.height.mas_equalTo(switchButtonHeight);
     }];
     CGSize noteSize = [self noteSize];
     [self.noteLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -122,9 +122,12 @@ static CGFloat const switchViewHeight = 30.f;
 }
 
 #pragma mark - event method
-- (void)switchViewValueChanged{
+- (void)switchButtonPressed{
+    self.switchButton.selected = !self.switchButton.selected;
+    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchUnselectedIcon.png"));
+    [self.switchButton setImage:buttonImage forState:UIControlStateNormal];
     if ([self.delegate respondsToSelector:@selector(mk_textSwitchCellStatusChanged:index:)]) {
-        [self.delegate mk_textSwitchCellStatusChanged:self.switchView.isOn index:self.dataModel.index];
+        [self.delegate mk_textSwitchCellStatusChanged:self.switchButton.isSelected index:self.dataModel.index];
     }
 }
 
@@ -138,7 +141,9 @@ static CGFloat const switchViewHeight = 30.f;
     self.msgLabel.text = SafeStr(_dataModel.msg);
     self.msgLabel.font = (_dataModel.msgFont ? _dataModel.msgFont : MKFont(15.f));
     self.msgLabel.textColor = (_dataModel.msgColor ? _dataModel.msgColor : DEFAULT_TEXT_COLOR);
-    [self.switchView setOn:_dataModel.isOn];
+    self.switchButton.selected = _dataModel.isOn;
+    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchUnselectedIcon.png"));
+    [self.switchButton setImage:buttonImage forState:UIControlStateNormal];
     if (self.leftIcon && self.leftIcon.superview) {
         [self.leftIcon removeFromSuperview];
         self.leftIcon = nil;
@@ -159,7 +164,7 @@ static CGFloat const switchViewHeight = 30.f;
     if (!ValidStr(self.msgLabel.text)) {
         return CGSizeMake(0, 0);
     }
-    CGFloat maxMsgWidth = self.contentView.frame.size.width - 3 * offset_X - switchViewWidth;
+    CGFloat maxMsgWidth = self.contentView.frame.size.width - 3 * offset_X - switchButtonWidth;
     if (self.leftIcon) {
         UIImage *image = self.leftIcon.image;
         maxMsgWidth = maxMsgWidth - image.size.width - 3.f;
@@ -193,15 +198,15 @@ static CGFloat const switchViewHeight = 30.f;
     return _msgLabel;
 }
 
-- (UISwitch *)switchView{
-    if (!_switchView) {
-        _switchView = [[UISwitch alloc] init];
-        _switchView.backgroundColor = COLOR_WHITE_MACROS;
-        [_switchView addTarget:self
-                        action:@selector(switchViewValueChanged)
-              forControlEvents:UIControlEventValueChanged];
+- (UIButton *)switchButton {
+    if (!_switchButton) {
+        _switchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_switchButton setImage:LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchUnselectedIcon") forState:UIControlStateNormal];
+        [_switchButton addTarget:self
+                          action:@selector(switchButtonPressed)
+                forControlEvents:UIControlEventTouchUpInside];
     }
-    return _switchView;
+    return _switchButton;
 }
 
 - (UILabel *)noteLabel {
