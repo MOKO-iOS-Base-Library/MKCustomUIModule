@@ -209,7 +209,7 @@ static CGFloat const switchButtonHeight = 30.f;
 - (UIButton *)switchButton {
     if (!_switchButton) {
         _switchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_switchButton setImage:LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchUnselectedIcon") forState:UIControlStateNormal];
+        [_switchButton setImage:LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchUnselectedIcon.png") forState:UIControlStateNormal];
         [_switchButton addTarget:self
                           action:@selector(switchButtonPressed)
                 forControlEvents:UIControlEventTouchUpInside];

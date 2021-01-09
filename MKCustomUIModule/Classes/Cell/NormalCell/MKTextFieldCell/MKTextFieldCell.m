@@ -19,6 +19,13 @@ static CGFloat const unitLabelWidth = 70.f;
 
 @implementation MKTextFieldCellModel
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.textEnable = YES;
+    }
+    return self;
+}
+
 - (CGFloat)cellHeightWithContentWidth:(CGFloat)width {
     UIFont *msgFont = (self.msgFont ? self.msgFont : MKFont(15.f));
     CGFloat msgWith = (width - 3 * offset_X) / 2;
@@ -186,6 +193,7 @@ static CGFloat const unitLabelWidth = 70.f;
         [sself textFieldValueChanged:text];
     }];
     self.textField.clearButtonMode = self.dataModel.clearButtonMode;
+    self.textField.enabled = self.dataModel.textEnable;
     self.textBorderView = [self loadBorderView];
     if (self.dataModel.cellType == mk_textFieldCell_normalType) {
         self.textBorderView.layer.cornerRadius = 6.f;

@@ -14,6 +14,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         self.switchEnable = YES;
+        self.enabled = YES;
     }
     return self;
 }
@@ -346,6 +347,7 @@
     UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_MKCustomUIModule_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_MKCustomUIModule_switchUnselectedIcon.png"));
     [self.switchButton setImage:buttonImage forState:UIControlStateNormal];
     self.listButton.selected = _dataModel.selected;
+    self.listButton.enabled = _dataModel.enabled;
     UIImage *image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"listButtonUnselectedIcon.png");
     if (self.listButton.isSelected) {
         image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"listButtonSelectedIcon.png");

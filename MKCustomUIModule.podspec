@@ -35,32 +35,69 @@ TODO: Add long description of the pod here.
   }
   
   s.subspec 'Cell' do |ss|
-    ss.subspec 'MKLoraDeviceTypeCell' do |sss|
-      sss.source_files = 'MKCustomUIModule/Classes/Cell/MKLoraDeviceTypeCell/**'
+    
+    ss.subspec 'NormalCell' do |sss|
+      sss.subspec 'MKNormalTextCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/NormalCell/MKNormalTextCell/**'
+      end
+      sss.subspec 'MKTextButtonCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/NormalCell/MKTextButtonCell/**'
+        ssss.dependency 'MKCustomUIModule/View/MKPickerView'
+      end
+      sss.subspec 'MKTextFieldCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/NormalCell/MKTextFieldCell/**'
+        ssss.dependency 'MKCustomUIModule/View/MKTextField'
+      end
+      sss.subspec 'MKTextSwitchCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/NormalCell/MKTextSwitchCell/**'
+      end
+      sss.subspec 'MKNormalSliderCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/NormalCell/MKNormalSliderCell/**'
+        ssss.dependency 'MKCustomUIModule/View/MKSlider'
+        ssss.dependency 'MKCustomUIModule/UIAdopter'
+      end
     end
-    ss.subspec 'MKNormalTextCell' do |sss|
-      sss.source_files = 'MKCustomUIModule/Classes/Cell/MKNormalTextCell/**'
+    
+    ss.subspec 'LoRaCell' do |sss|
+      sss.subspec 'MKLoraDeviceTypeCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKLoraDeviceTypeCell/**'
+      end
+      
+      sss.subspec 'MKMeasureTxPowerCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKMeasureTxPowerCell/**'
+        ssss.dependency 'MKCustomUIModule/View/MKSlider'
+        ssss.dependency 'MKCustomUIModule/UIAdopter'
+      end
+      
+      sss.subspec 'MKFilterDataCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKFilterDataCell/**'
+        ssss.dependency 'MKCustomUIModule/View/MKTextField'
+      end
+      
+      sss.subspec 'MKAdvancedSettingCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKAdvancedSettingCell/**'
+      end
+      
+      sss.subspec 'MKMixedChoiceCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKMixedChoiceCell/**'
+      end
+      
+      sss.subspec 'MKLoRaSettingCHCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKLoRaSettingCHCell/**'
+        ssss.dependency 'MKCustomUIModule/View/MKPickerView'
+      end
+      
+      sss.subspec 'MKFilterRawAdvDataCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKFilterRawAdvDataCell/**'
+        ssss.dependency 'MKCustomUIModule/View/MKTextField'
+      end
+      
+      sss.subspec 'MKRawAdvDataOperationCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKRawAdvDataOperationCell/**'
+      end
+      
     end
-    ss.subspec 'MKTextButtonCell' do |sss|
-      sss.source_files = 'MKCustomUIModule/Classes/Cell/MKTextButtonCell/**'
-      sss.dependency 'MKCustomUIModule/View/MKPickerView'
-    end
-    ss.subspec 'MKTextFieldCell' do |sss|
-      sss.source_files = 'MKCustomUIModule/Classes/Cell/MKTextFieldCell/**'
-      sss.dependency 'MKCustomUIModule/View/MKTextField'
-    end
-    ss.subspec 'MKMeasureTxPowerCell' do |sss|
-      sss.source_files = 'MKCustomUIModule/Classes/Cell/MKMeasureTxPowerCell/**'
-      sss.dependency 'MKCustomUIModule/View/MKSlider'
-      sss.dependency 'MKCustomUIModule/UIAdopter'
-    end
-    ss.subspec 'MKTextSwitchCell' do |sss|
-      sss.source_files = 'MKCustomUIModule/Classes/Cell/MKTextSwitchCell/**'
-    end
-    ss.subspec 'MKFilterDataCell' do |sss|
-      sss.source_files = 'MKCustomUIModule/Classes/Cell/MKFilterDataCell/**'
-      sss.dependency 'MKCustomUIModule/View/MKTextField'
-    end
+    
   end
   
   s.subspec 'View' do |ss|

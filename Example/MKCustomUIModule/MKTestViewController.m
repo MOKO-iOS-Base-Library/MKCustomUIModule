@@ -31,6 +31,8 @@
 #import <MKCustomUIModule/MKSearchButton.h>
 #import <MKCustomUIModule/MKSearchConditionsView.h>
 
+#import "MKCellTestController.h"
+
 @interface MKTrackerAboutModel : NSObject<MKTrackerAboutParamsProtocol>
 
 /// 导航栏标题
@@ -143,9 +145,11 @@ MKFilterDataCellDelegate>
 }
 
 - (void)leftButtonMethod {
-    MKTrackerLogModel *viewModel = [[MKTrackerLogModel alloc] init];
-    viewModel.emailIcon = LOADIMAGE(@"aboutIcon", @"png");
-    MKTrackerLogController *vc = [[MKTrackerLogController alloc] initWithProtocol:viewModel localFileName:@"mk_log"];
+//    MKTrackerLogModel *viewModel = [[MKTrackerLogModel alloc] init];
+//    viewModel.emailIcon = LOADIMAGE(@"aboutIcon", @"png");
+//    MKTrackerLogController *vc = [[MKTrackerLogController alloc] initWithProtocol:viewModel localFileName:@"mk_log"];
+//    [self.navigationController pushViewController:vc animated:YES];
+    MKCellTestController *vc = [[MKCellTestController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

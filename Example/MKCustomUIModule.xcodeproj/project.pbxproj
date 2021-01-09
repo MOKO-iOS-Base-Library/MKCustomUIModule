@@ -12,6 +12,7 @@
 		0056E7BA2590900F00A68785 /* MKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0056E7B92590900F00A68785 /* MKTestViewController.m */; };
 		0056E7C22590926200A68785 /* aboutIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0056E7C02590926200A68785 /* aboutIcon@2x.png */; };
 		0056E7C32590926200A68785 /* aboutIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0056E7C12590926200A68785 /* aboutIcon@3x.png */; };
+		00FC29B525A8596300C0B9B7 /* MKCellTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC29B425A8596300C0B9B7 /* MKCellTestController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -45,6 +46,8 @@
 		0056E7B92590900F00A68785 /* MKTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKTestViewController.m; sourceTree = "<group>"; };
 		0056E7C02590926200A68785 /* aboutIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aboutIcon@2x.png"; sourceTree = "<group>"; };
 		0056E7C12590926200A68785 /* aboutIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aboutIcon@3x.png"; sourceTree = "<group>"; };
+		00FC29B325A8596300C0B9B7 /* MKCellTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKCellTestController.h; sourceTree = "<group>"; };
+		00FC29B425A8596300C0B9B7 /* MKCellTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKCellTestController.m; sourceTree = "<group>"; };
 		3D18A040630E2275603BAEB6 /* MKCustomUIModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MKCustomUIModule.podspec; path = ../MKCustomUIModule.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MKCustomUIModule_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKCustomUIModule_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -159,6 +162,8 @@
 				6003F594195388D20070C39A /* Supporting Files */,
 				0056E7B82590900F00A68785 /* MKTestViewController.h */,
 				0056E7B92590900F00A68785 /* MKTestViewController.m */,
+				00FC29B325A8596300C0B9B7 /* MKCellTestController.h */,
+				00FC29B425A8596300C0B9B7 /* MKCellTestController.m */,
 			);
 			name = "Example for MKCustomUIModule";
 			path = MKCustomUIModule;
@@ -378,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0056E7BA2590900F00A68785 /* MKTestViewController.m in Sources */,
+				00FC29B525A8596300C0B9B7 /* MKCellTestController.m in Sources */,
 				6003F59E195388D20070C39A /* MKAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
