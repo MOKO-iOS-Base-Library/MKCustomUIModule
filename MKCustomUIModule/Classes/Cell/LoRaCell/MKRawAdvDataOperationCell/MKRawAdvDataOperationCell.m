@@ -118,6 +118,7 @@ static CGFloat const switchButtonHeight = 30.f;
     self.switchButton.selected = !self.switchButton.selected;
     UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_MKCustomUIModule_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_MKCustomUIModule_switchUnselectedIcon.png"));
     [self.switchButton setImage:buttonImage forState:UIControlStateNormal];
+    [self updateSubViews];
     if ([self.delegate respondsToSelector:@selector(mk_rawAdvDataOperation_switchStatusChanged:)]) {
         [self.delegate mk_rawAdvDataOperation_switchStatusChanged:self.switchButton.isSelected];
     }
@@ -165,6 +166,15 @@ static CGFloat const switchButtonHeight = 30.f;
         image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"listButtonSelectedIcon.png");
     }
     self.selectedIcon.image = image;
+    [self updateSubViews];
+}
+
+#pragma mark - private method
+- (void)updateSubViews {
+    //当开关关闭的时候，隐藏三个按钮
+    self.subButton.hidden = !self.switchButton.selected;
+    self.addButton.hidden = !self.switchButton.selected;
+    self.listButton.hidden = !self.switchButton.selected;
 }
 
 #pragma mark - getter
