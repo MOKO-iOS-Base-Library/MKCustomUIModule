@@ -60,6 +60,13 @@ MKFilterRawAdvDataCellDelegate>
     [super viewDidAppear:animated];
     self.view.shiftHeightAsDodgeViewForMLInputDodger = 50.0f;
     [self.view registerAsDodgeViewForMLInputDodgerWithOriginalY:self.view.frame.origin.y];
+    //本页面禁止右划退出手势
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 - (void)viewDidLoad {
@@ -254,12 +261,26 @@ MKFilterRawAdvDataCellDelegate>
     
     MKNormalSliderCellModel *cellModel2 = [[MKNormalSliderCellModel alloc] init];
     cellModel2.index = 1;
-    cellModel2.msg = [MKCustomUIAdopter attributedString:@[@"勉为其难",@"(仔细看看)"] fonts:@[MKFont(20.f),MKFont(15.f)] colors:@[[UIColor redColor],RGBCOLOR(102, 102, 102)]];
-    cellModel2.sliderMaxValue = 0;
-    cellModel2.sliderMinValue = -100;
-    cellModel2.noteMsg = @"测试一下带滑竿的cell";
-    cellModel2.sliderEnable = NO;
+    cellModel2.msg = [MKCustomUIAdopter attributedString:@[@"Valid BLE Data Filter Interval",@"   (1-600s)"] fonts:@[MKFont(20.f),MKFont(15.f)] colors:@[DEFAULT_TEXT_COLOR,RGBCOLOR(102, 102, 102)]];
+    cellModel2.sliderMaxValue = 600;
+    cellModel2.sliderMinValue = 1;
+    cellModel2.sliderValue = 100;
+    cellModel2.unit = @"s";
+    cellModel2.changed = YES;
+    cellModel2.leftNoteMsg = @"*The device will store the Contact Tracking  data every";
+    cellModel2.rightNoteMsg = @"and the same MAC address only be saved one time.";
     [self.section0List addObject:cellModel2];
+    
+    MKNormalSliderCellModel *cellModel3 = [[MKNormalSliderCellModel alloc] init];
+    cellModel3.index = 2;
+    cellModel3.msg = [MKCustomUIAdopter attributedString:@[@"Alarm Trigger RSSI",@"      -127-0dBm"] fonts:@[MKFont(20.f),MKFont(15.f)] colors:@[DEFAULT_TEXT_COLOR,RGBCOLOR(102, 102, 102)]];
+    cellModel3.sliderMaxValue = 0;
+    cellModel3.sliderMinValue = -127;
+    cellModel3.sliderValue = -20;
+    cellModel3.changed = YES;
+    cellModel3.leftNoteMsg = @"*The device alarm  is triggered when the BLE RSSI scanned is greater than";
+    cellModel3.rightNoteMsg = @".";
+    [self.section0List addObject:cellModel3];
 }
 
 - (void)loadSection1Datas {
