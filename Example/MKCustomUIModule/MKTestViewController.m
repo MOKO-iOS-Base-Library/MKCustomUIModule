@@ -467,7 +467,7 @@ MKFilterDataCellDelegate>
 
     MKTextSwitchCellModel *cellModel2 = [[MKTextSwitchCellModel alloc] init];
     cellModel2.msg = @"第二个开关cell";
-    cellModel2.leftIcon = LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_MKCustomUIModule_switchSelectedIcon.png");
+    cellModel2.leftIcon = LOADICON(@"MKCustomUIModule", @"MKTextSwitchCell", @"mk_customUI_switchSelectedIcon.png");
     cellModel2.isOn = YES;
     cellModel2.index = 1;
     cellModel2.noteMsg = @"阿赫赫尔";

@@ -253,7 +253,7 @@ MKFilterRawAdvDataCellDelegate>
 - (void)loadSection0Datas {
     MKNormalSliderCellModel *cellModel1 = [[MKNormalSliderCellModel alloc] init];
     cellModel1.index = 0;
-    cellModel1.msg = @"偶来亿啊接收到 ";
+    cellModel1.msg = [MKCustomUIAdopter attributedString:@[@"偶来亿啊接收到 "] fonts:@[MKFont(15.f)] colors:@[DEFAULT_TEXT_COLOR]];
     cellModel1.sliderMaxValue = 0;
     cellModel1.sliderMinValue = -100;
     cellModel1.noteMsg = @"测试一下带滑竿的cell,测试一下带滑竿的cell测试一下带滑竿的cell测试一下带滑竿的cell测试一下带滑竿的cell测试一下带滑竿的cell测试一下带滑竿的cell测试一下带滑竿的cell测试一下带滑竿的cell测试一下带滑竿的cell测试一下带滑竿的cell测试一下带滑竿的cell";
@@ -324,7 +324,7 @@ MKFilterRawAdvDataCellDelegate>
     cellModel1.noteMsg = @"那我这下子就知道你到底想干啥了，你个憨扑街，再这样玩会被打死的";
     cellModel1.noteMsgFont = MKFont(14.f);
     cellModel1.noteMsgColor = [UIColor yellowColor];
-    cellModel1.leftIcon = LOADICON(@"MKCustomUIModule", @"MKMixedChoiceCell", @"wifisignalIcon.png");
+    cellModel1.leftIcon = LOADICON(@"MKCustomUIModule", @"MKMixedChoiceCell", @"mk_customUI_wifisignalIcon.png");
     MKMixedChoiceCellButtonModel *buttonModel1 = [[MKMixedChoiceCellButtonModel alloc] init];
     buttonModel1.buttonIndex = 0;
     buttonModel1.selected = YES;
@@ -340,7 +340,7 @@ MKFilterRawAdvDataCellDelegate>
     MKMixedChoiceCellButtonModel *buttonModel3 = [[MKMixedChoiceCellButtonModel alloc] init];
     buttonModel3.buttonIndex = 2;
     buttonModel3.buttonMsg = @"选择2下第2个的按钮开关吧选择2下第2个的按钮开关吧选择2下第2个的按钮开关吧选择2下第2个的按钮开关吧选择2下第2个的按钮开关吧选择2下第2个的按钮开关吧";
-    buttonModel3.selectedIcon = LOADICON(@"MKCustomUIModule", @"MKMixedChoiceCell", @"wifisignalIcon.png");
+    buttonModel3.selectedIcon = LOADICON(@"MKCustomUIModule", @"MKMixedChoiceCell", @"mk_customUI_wifisignalIcon.png");
     
     MKMixedChoiceCellButtonModel *buttonModel4 = [[MKMixedChoiceCellButtonModel alloc] init];
     buttonModel4.buttonIndex = 3;
