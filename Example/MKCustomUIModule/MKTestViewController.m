@@ -32,6 +32,7 @@
 #import <MKCustomUIModule/MKSearchConditionsView.h>
 
 #import "MKCellTestController.h"
+#import "MKViewCurveController.h"
 
 @interface MKTrackerAboutModel : NSObject<MKTrackerAboutParamsProtocol>
 
@@ -141,7 +142,8 @@ MKFilterDataCellDelegate>
 #pragma mark - super method
 
 - (void)rightButtonMethod {
-    
+    MKViewCurveController *vc = [[MKViewCurveController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)leftButtonMethod {
