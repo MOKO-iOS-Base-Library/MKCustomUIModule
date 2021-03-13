@@ -430,7 +430,7 @@
 		0407A9CA1694285D37D63F653BFB7118 /* MKBaseTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKBaseTableView.h; path = MKBaseModuleLibrary/Classes/Base/View/tableView/MKBaseTableView.h; sourceTree = "<group>"; };
 		04FACF9DFE00B04F627D21DF630DF6BF /* mk_customUI_sliderMaximumTrackImage@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "mk_customUI_sliderMaximumTrackImage@3x.png"; path = "MKCustomUIModule/Assets/mk_customUI_sliderMaximumTrackImage@3x.png"; sourceTree = "<group>"; };
 		05606475C72AB133442DF589E4D1CC21 /* mk_customUI_sliderThumbIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "mk_customUI_sliderThumbIcon@3x.png"; path = "MKCustomUIModule/Assets/mk_customUI_sliderThumbIcon@3x.png"; sourceTree = "<group>"; };
-		05CCF915CDB5CA9948F0AA95329FEBDB /* MKBaseModuleLibrary.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKBaseModuleLibrary.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CCF915CDB5CA9948F0AA95329FEBDB /* MKBaseModuleLibrary.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MKBaseModuleLibrary.bundle; path = "MKBaseModuleLibrary-MKBaseModuleLibrary.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06888493A066228162332D7A3935C770 /* Toast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-dummy.m"; sourceTree = "<group>"; };
 		07A8AB7A997BD18C8A0A86FA37978D11 /* mk_customUI_deviceTypeSelectedIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "mk_customUI_deviceTypeSelectedIcon@2x.png"; path = "MKCustomUIModule/Assets/mk_customUI_deviceTypeSelectedIcon@2x.png"; sourceTree = "<group>"; };
 		085500FB448AB156D1AE4F5CFAF09F7D /* MLInputDodger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MLInputDodger.debug.xcconfig; sourceTree = "<group>"; };
@@ -461,15 +461,15 @@
 		1B17E53CF8768F927471566934356F54 /* NSDate+MKAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MKAdd.m"; path = "MKBaseModuleLibrary/Classes/Category/NSDate+MKAdd.m"; sourceTree = "<group>"; };
 		1C3E0952495292C80407C9A38E1D4C96 /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
 		1F8640B26406376182F41FE8ECD00140 /* UIView+MLInputDodger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MLInputDodger.h"; path = "Classes/UIView+MLInputDodger.h"; sourceTree = "<group>"; };
-		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2263D88033F4E085F2E23676284B2740 /* MJRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.release.xcconfig; sourceTree = "<group>"; };
 		2318B23FDB5564621D205FE99B1939AE /* NSInvocation+MKAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+MKAdd.h"; path = "MKBaseModuleLibrary/Classes/Category/NSInvocation+MKAdd.h"; sourceTree = "<group>"; };
 		2412B91214020E1695685A596DACFF97 /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackFooter.m; path = MJRefresh/Base/MJRefreshBackFooter.m; sourceTree = "<group>"; };
-		24B8F6A1308A5C8193A180E5A7045BCE /* MKCustomUIModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MKCustomUIModule.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		24B8F6A1308A5C8193A180E5A7045BCE /* MKCustomUIModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MKCustomUIModule.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		250E454646B5D0CD20A229C9125C60BC /* UIColor+MKAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MKAdd.m"; path = "MKBaseModuleLibrary/Classes/Category/UIColor+MKAdd.m"; sourceTree = "<group>"; };
 		258E3728455A68AE5AC3F2282BABFE95 /* CircleProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleProgressBar-prefix.pch"; sourceTree = "<group>"; };
 		25D5AB62884B25D3F2819C4E5CFC3264 /* MKTextSwitchCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKTextSwitchCell.h; path = MKCustomUIModule/Classes/Cell/NormalCell/MKTextSwitchCell/MKTextSwitchCell.h; sourceTree = "<group>"; };
-		2607EE853833050B3E9A5C78A8B0F771 /* MKBaseModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKBaseModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2607EE853833050B3E9A5C78A8B0F771 /* MKBaseModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MKBaseModuleLibrary.framework; path = MKBaseModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2685F8000CBAA802F63051ECE2B2A2C9 /* MKMixedChoiceCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKMixedChoiceCell.m; path = MKCustomUIModule/Classes/Cell/LoRaCell/MKMixedChoiceCell/MKMixedChoiceCell.m; sourceTree = "<group>"; };
 		27549B5D19CA3AAB57174482CA83C82A /* MKLoRaAdvancedSettingCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKLoRaAdvancedSettingCell.m; path = MKCustomUIModule/Classes/Cell/LoRaCell/MKAdvancedSettingCell/MKLoRaAdvancedSettingCell.m; sourceTree = "<group>"; };
 		27CC2FA1F27BEAE9DFE889D64056BDB7 /* NSDate+MKAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MKAdd.h"; path = "MKBaseModuleLibrary/Classes/Category/NSDate+MKAdd.h"; sourceTree = "<group>"; };
@@ -535,7 +535,7 @@
 		54B3AC558BA2C47F642DF05534B69047 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		557D4D1D5BD9271D68EE76EDF763AC4F /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
 		55AA6B223B960F0AC1C65D595CB49C56 /* CircleProgressBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleProgressBar-umbrella.h"; sourceTree = "<group>"; };
-		55E0AFD333353D71ACC2207149E879D6 /* Toast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E0AFD333353D71ACC2207149E879D6 /* Toast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toast.framework; path = Toast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57342AACE597C8B726C9450A7FB67BAC /* MKLoRaSettingCHCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKLoRaSettingCHCell.h; path = MKCustomUIModule/Classes/Cell/LoRaCell/MKLoRaSettingCHCell/MKLoRaSettingCHCell.h; sourceTree = "<group>"; };
 		5861AC30842B127AC8A7CDC0FB076052 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		587FBFCFA2127BCE9E41D1B91B0F36E1 /* Toast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Toast.modulemap; sourceTree = "<group>"; };
@@ -576,8 +576,8 @@
 		757D0550D4FD3F8E34314A36B3A58CF0 /* MLInputDodger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MLInputDodger-Info.plist"; sourceTree = "<group>"; };
 		75F3F1DB053F2985476FA3EC223591F7 /* UIImage+MKAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MKAdd.h"; path = "MKBaseModuleLibrary/Classes/Category/UIImage+MKAdd.h"; sourceTree = "<group>"; };
 		77F78D9FB28E35C079DB661971BEF0DD /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
-		7948FA343D314AE2DEBBA7CA6076F151 /* CircleProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CircleProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		795D65D255D403824054D0CBE90E32B9 /* MKCustomUIModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKCustomUIModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7948FA343D314AE2DEBBA7CA6076F151 /* CircleProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CircleProgressBar.framework; path = CircleProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		795D65D255D403824054D0CBE90E32B9 /* MKCustomUIModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MKCustomUIModule.framework; path = MKCustomUIModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E5D7DB6AAE236A1A0D708E913653CC /* CircleProgressBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircleProgressBar-dummy.m"; sourceTree = "<group>"; };
 		7BBA11EB5F8B5DF8AF155B2D57275006 /* MJRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.debug.xcconfig; sourceTree = "<group>"; };
 		7C46A9CB7B497CF63B971753937A65C9 /* MKFilterDataCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKFilterDataCell.m; path = MKCustomUIModule/Classes/Cell/LoRaCell/MKFilterDataCell/MKFilterDataCell.m; sourceTree = "<group>"; };
@@ -602,7 +602,7 @@
 		89E4E83DF5E768A20FAAC4C2A78FED95 /* MKRegularsDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKRegularsDefine.h; path = MKBaseModuleLibrary/Classes/Defines/MKRegularsDefine.h; sourceTree = "<group>"; };
 		8A2B0997FB7CC414E79FB49140F6EE29 /* mk_customUI_searchGrayIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "mk_customUI_searchGrayIcon@3x.png"; path = "MKCustomUIModule/Assets/mk_customUI_searchGrayIcon@3x.png"; sourceTree = "<group>"; };
 		8A5087079D83164DF6C438B3C3CB7AB0 /* MBProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.release.xcconfig; sourceTree = "<group>"; };
-		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD8838ED38CFED9DD111CC9E27AAD26 /* MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJRefresh-dummy.m"; sourceTree = "<group>"; };
 		8D80790DC0A0186B808117A51D82A528 /* MKTextFieldCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKTextFieldCell.h; path = MKCustomUIModule/Classes/Cell/NormalCell/MKTextFieldCell/MKTextFieldCell.h; sourceTree = "<group>"; };
 		8F1B060EA480D0B9960FC01775DA1601 /* MKBaseModuleLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MKBaseModuleLibrary.modulemap; sourceTree = "<group>"; };
@@ -622,7 +622,7 @@
 		9C25F5829AB9214FA3AA54B8ACC563F2 /* MJRefreshConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConfig.m; path = MJRefresh/MJRefreshConfig.m; sourceTree = "<group>"; };
 		9C319C4C2D15B1873631A3D2F0C389A8 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		9C7893A5D12BFCC9CDFBE5A3F366C683 /* MKPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKPageControl.m; path = MKCustomUIModule/Classes/View/MKPageControl/MKPageControl.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E43471E1DB25993E3B22DC97609B704 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		9ED871C107ADCD5BBEA1C4557CE6C3A0 /* MKDeviceDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKDeviceDefine.h; path = MKBaseModuleLibrary/Classes/Defines/MKDeviceDefine.h; sourceTree = "<group>"; };
 		9F0F6A400B18BEFB6A60D8A7C860EA56 /* MJRefreshTrailer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshTrailer.h; path = MJRefresh/Base/MJRefreshTrailer.h; sourceTree = "<group>"; };
@@ -658,19 +658,19 @@
 		B5E21B12C1FDDA7ED61B776BD825240A /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WRCustomNavigationBar.m; path = MKBaseModuleLibrary/Classes/Base/View/WRNavigationBar/WRCustomNavigationBar.m; sourceTree = "<group>"; };
 		B5E7975FE68C847AFB3D2ED1A0A86662 /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackGifFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
 		B70F08223422737531FEE8F0B161332C /* MKProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKProgressView.h; path = MKCustomUIModule/Classes/View/MKProgressView/MKProgressView.h; sourceTree = "<group>"; };
-		B82F40879FDB508865D7F93F0B74525E /* Pods_MKCustomUIModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MKCustomUIModule_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82F40879FDB508865D7F93F0B74525E /* Pods_MKCustomUIModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MKCustomUIModule_Example.framework; path = "Pods-MKCustomUIModule_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE2D4D31E268E7E692CA3005099B6AC /* MKHudManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKHudManager.h; path = MKCustomUIModule/Classes/View/MKHudManager/MKHudManager.h; sourceTree = "<group>"; };
 		BF4C1CF82CDA449CC251AF9301A392E5 /* MKLoraDeviceTypeCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKLoraDeviceTypeCell.h; path = MKCustomUIModule/Classes/Cell/LoRaCell/MKLoraDeviceTypeCell/MKLoraDeviceTypeCell.h; sourceTree = "<group>"; };
 		BFEA51DC6F28D0233B458B98870D2638 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		C00B6099F834B78C695849B7F1EF6A4A /* refresh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = refresh.png; path = MKBaseModuleLibrary/Assets/refresh.png; sourceTree = "<group>"; };
 		C0973BE6573705E4E1B20A7B61E7981A /* MKTextFieldCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKTextFieldCell.m; path = MKCustomUIModule/Classes/Cell/NormalCell/MKTextFieldCell/MKTextFieldCell.m; sourceTree = "<group>"; };
 		C1015C4E7B1B8D8999D848F435C55D96 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C270EFE21345305966B661906551901F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C291AC0DBEA2986CD250F2466A26691D /* MLInputDodger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLInputDodger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C270EFE21345305966B661906551901F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C291AC0DBEA2986CD250F2466A26691D /* MLInputDodger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MLInputDodger.framework; path = MLInputDodger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C4B653D4490462391693D8648F7C0B /* MKCustomUIModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKCustomUIModule.debug.xcconfig; sourceTree = "<group>"; };
 		C5972D5EC9C75719976E5B1A9E9B7657 /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MJRefresh.m"; path = "MJRefresh/NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
 		C5F5AF4BDEA3AD440CE3F0DAB96792DE /* UIView+XDRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+XDRefresh.m"; path = "MKBaseModuleLibrary/Classes/Category/UIView+XDRefresh.m"; sourceTree = "<group>"; };
-		C63A9200591292D4AD08B8604A8EF7B6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C63A9200591292D4AD08B8604A8EF7B6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		C71602B2FA3D87A9AF8FB681061D3613 /* Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.debug.xcconfig; sourceTree = "<group>"; };
 		C72E62FB54CB5131EC52B16CCB714BE5 /* MJRefreshNormalTrailer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshNormalTrailer.h; path = MJRefresh/Custom/Trailer/MJRefreshNormalTrailer.h; sourceTree = "<group>"; };
 		C7DA5E35B11B130C5AB10BAE906B9A91 /* CircleProgressBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CircleProgressBar.modulemap; sourceTree = "<group>"; };
@@ -695,7 +695,7 @@
 		CFE6AF234985BC325BC08205F349A154 /* MKCommonColorsDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKCommonColorsDefine.h; path = MKBaseModuleLibrary/Classes/Defines/MKCommonColorsDefine.h; sourceTree = "<group>"; };
 		D05AC8A45B38CA844F95E0C3AE7B39B3 /* MJRefreshHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshHeader.m; path = MJRefresh/Base/MJRefreshHeader.m; sourceTree = "<group>"; };
 		D270732ACE8FBB3DF01641DCCF326CF6 /* MKBaseModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKBaseModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D299E571E016B9E6B94A53EE5C782D2B /* MKCustomUIModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKCustomUIModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D299E571E016B9E6B94A53EE5C782D2B /* MKCustomUIModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MKCustomUIModule.bundle; path = "MKCustomUIModule-MKCustomUIModule.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D34C121DDEBC7390BAEB7472F640F693 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
 		D454368574029A4B6BF4752483421EBD /* MKCustomUIModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKCustomUIModule-prefix.pch"; sourceTree = "<group>"; };
 		D53F5978351FC474DDA18315C79DE801 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
@@ -721,7 +721,7 @@
 		E2BD305C7645B986055A97879A99DE8F /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WRCustomNavigationBar.h; path = MKBaseModuleLibrary/Classes/Base/View/WRNavigationBar/WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		E304A0CE7349316CBEE0182892E1805F /* MKClassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKClassInfo.m; path = MKBaseModuleLibrary/Classes/Tools/MKClassInfo/MKClassInfo.m; sourceTree = "<group>"; };
 		E3E6183A6E8902465168EFC764A8FD76 /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MJRefresh.h"; path = "MJRefresh/NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
-		E49D6D248DD1CEE584E6776B9164A1B2 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49D6D248DD1CEE584E6776B9164A1B2 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJRefresh.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CB8FD35B02697D579DE96694819781 /* MJRefreshComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshComponent.m; path = MJRefresh/Base/MJRefreshComponent.m; sourceTree = "<group>"; };
 		E5DB6466C6AEDE69A95A6E6745D7EA6A /* navigation_back_button_white@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "navigation_back_button_white@3x.png"; path = "MKBaseModuleLibrary/Assets/navigation_back_button_white@3x.png"; sourceTree = "<group>"; };
 		E6F5FD97CBA739B57D2FFAA1C9F33BB3 /* MKBaseCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKBaseCell.m; path = MKBaseModuleLibrary/Classes/Base/Cell/MKBaseCell/MKBaseCell.m; sourceTree = "<group>"; };
@@ -986,6 +986,7 @@
 				EB37547FF9A3BD261B689038502554BD /* CircleProgressBar.m */,
 				77AE71EA6B2DFA9FCFF5BB6940D5052F /* Support Files */,
 			);
+			name = CircleProgressBar;
 			path = CircleProgressBar;
 			sourceTree = "<group>";
 		};
@@ -1037,6 +1038,7 @@
 				CE091454238AA604621CB0FBE988C782 /* ViewController+MASAdditions.m */,
 				B473EAB2D604E509F1944AE3FBC8B150 /* Support Files */,
 			);
+			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -1114,6 +1116,7 @@
 				ED5143563A35C6FC67FD4D9D9854EE0C /* UIView+Toast.m */,
 				314C0042D0DC92E9CB8154ADA7EEAF0A /* Support Files */,
 			);
+			name = Toast;
 			path = Toast;
 			sourceTree = "<group>";
 		};
@@ -1340,6 +1343,7 @@
 				6AC466C91AD00057AF6373DBDC7800EA /* Resources */,
 				005059C7569DD76289996D326B8EC975 /* Support Files */,
 			);
+			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -1478,6 +1482,7 @@
 				4FDDAA87BCF9D1DBA08AC7CD939E9A03 /* MBProgressHUD.m */,
 				839C22CEBC594F6B849EB63901ADBB20 /* Support Files */,
 			);
+			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1538,6 +1543,7 @@
 				62085A279A5452A331E506EAC4BF2FAF /* Resources */,
 				7C5A1C647E59197810F1560C9E4EF95D /* Support Files */,
 			);
+			name = MLInputDodger;
 			path = MLInputDodger;
 			sourceTree = "<group>";
 		};
@@ -1685,6 +1691,7 @@
 				FC2270B39D1C5B299007F362AE6F1503 /* Support Files */,
 				E9C6988F0331909B55F55C9AC2DB3F43 /* Tools */,
 			);
+			name = MKBaseModuleLibrary;
 			path = MKBaseModuleLibrary;
 			sourceTree = "<group>";
 		};
@@ -2223,7 +2230,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2691,7 +2698,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2719,7 +2725,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -2729,6 +2736,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD797EEE6A668CFF149938AF03CC69E5 /* MLInputDodger.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2741,7 +2749,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MLInputDodger/MLInputDodger-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MLInputDodger/MLInputDodger-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MLInputDodger/MLInputDodger.modulemap";
 				PRODUCT_MODULE_NAME = MLInputDodger;
@@ -2761,6 +2769,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81106F3DD199885530839283FB8DFE52 /* Toast.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2773,7 +2782,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Toast/Toast-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Toast/Toast-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Toast/Toast.modulemap";
 				PRODUCT_MODULE_NAME = Toast;
@@ -2793,6 +2802,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C71602B2FA3D87A9AF8FB681061D3613 /* Masonry.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2805,7 +2815,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
 				PRODUCT_MODULE_NAME = Masonry;
@@ -2824,6 +2834,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A5087079D83164DF6C438B3C3CB7AB0 /* MBProgressHUD.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2836,7 +2847,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
 				PRODUCT_MODULE_NAME = MBProgressHUD;
@@ -2873,6 +2884,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DEE9562C7C69C7089F659CEF03F509B /* Toast.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2885,7 +2897,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Toast/Toast-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Toast/Toast-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Toast/Toast.modulemap";
 				PRODUCT_MODULE_NAME = Toast;
@@ -2904,6 +2916,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7BBA11EB5F8B5DF8AF155B2D57275006 /* MJRefresh.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2916,7 +2929,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MJRefresh/MJRefresh-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MJRefresh/MJRefresh-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MJRefresh/MJRefresh.modulemap";
 				PRODUCT_MODULE_NAME = MJRefresh;
@@ -2939,7 +2952,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MKBaseModuleLibrary";
 				IBSC_MODULE = MKBaseModuleLibrary;
 				INFOPLIST_FILE = "Target Support Files/MKBaseModuleLibrary/ResourceBundle-MKBaseModuleLibrary-MKBaseModuleLibrary-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = MKBaseModuleLibrary;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2952,6 +2965,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 18F78942752AA47292486CC11BABE81E /* MKBaseModuleLibrary.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2965,7 +2979,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MKBaseModuleLibrary/MKBaseModuleLibrary-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MKBaseModuleLibrary/MKBaseModuleLibrary-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MKBaseModuleLibrary/MKBaseModuleLibrary.modulemap";
 				PRODUCT_MODULE_NAME = MKBaseModuleLibrary;
@@ -2984,6 +2998,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2263D88033F4E085F2E23676284B2740 /* MJRefresh.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2996,7 +3011,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MJRefresh/MJRefresh-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MJRefresh/MJRefresh-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MJRefresh/MJRefresh.modulemap";
 				PRODUCT_MODULE_NAME = MJRefresh;
@@ -3017,6 +3032,7 @@
 			baseConfigurationReference = 2E2663990A9E4D9E1F9C351774E76E05 /* Pods-MKCustomUIModule_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3050,6 +3066,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 523E404C2B370E873F566B4A56F26F3E /* MBProgressHUD.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3062,7 +3079,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
 				PRODUCT_MODULE_NAME = MBProgressHUD;
@@ -3098,6 +3115,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4CFB7F0AA9C1B590DFE15EA53E92E37A /* MKCustomUIModule.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3131,6 +3149,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EFB7DC4DD45DA221EF5EFF15719FF014 /* CircleProgressBar.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3143,7 +3162,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CircleProgressBar/CircleProgressBar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CircleProgressBar/CircleProgressBar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CircleProgressBar/CircleProgressBar.modulemap";
 				PRODUCT_MODULE_NAME = CircleProgressBar;
@@ -3167,7 +3186,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MKBaseModuleLibrary";
 				IBSC_MODULE = MKBaseModuleLibrary;
 				INFOPLIST_FILE = "Target Support Files/MKBaseModuleLibrary/ResourceBundle-MKBaseModuleLibrary-MKBaseModuleLibrary-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = MKBaseModuleLibrary;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -3180,6 +3199,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4C4B653D4490462391693D8648F7C0B /* MKCustomUIModule.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3212,6 +3232,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 58D1779E2B803AB72FAE00455468655F /* CircleProgressBar.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3224,7 +3245,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CircleProgressBar/CircleProgressBar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CircleProgressBar/CircleProgressBar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CircleProgressBar/CircleProgressBar.modulemap";
 				PRODUCT_MODULE_NAME = CircleProgressBar;
@@ -3243,6 +3264,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 46089A028233F023172ECF5280C82138 /* MKBaseModuleLibrary.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3256,7 +3278,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MKBaseModuleLibrary/MKBaseModuleLibrary-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MKBaseModuleLibrary/MKBaseModuleLibrary-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MKBaseModuleLibrary/MKBaseModuleLibrary.modulemap";
 				PRODUCT_MODULE_NAME = MKBaseModuleLibrary;
@@ -3277,6 +3299,7 @@
 			baseConfigurationReference = 966488824F0BCD751B8B9102D8ADDF14 /* Pods-MKCustomUIModule_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3311,6 +3334,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B8DF64A0CDFF549169AF96F81B03A23 /* Masonry.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3323,7 +3347,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
 				PRODUCT_MODULE_NAME = Masonry;
@@ -3366,7 +3390,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -3409,6 +3432,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 085500FB448AB156D1AE4F5CFAF09F7D /* MLInputDodger.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3421,7 +3445,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MLInputDodger/MLInputDodger-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MLInputDodger/MLInputDodger-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MLInputDodger/MLInputDodger.modulemap";
 				PRODUCT_MODULE_NAME = MLInputDodger;

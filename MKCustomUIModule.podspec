@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '1.0.19'
+  s.version          = '1.0.20'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -118,14 +118,12 @@ TODO: Add long description of the pod here.
     end
     ss.subspec 'MKPickerView' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/View/MKPickerView/**'
-      sss.dependency 'MKCustomUIModule/UIAdopter'
     end
     ss.subspec 'MKSlider' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/View/MKSlider/**'
     end
     ss.subspec 'MKSearchConditionsView' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/View/MKSearchConditionsView/**'
-      sss.dependency 'MKCustomUIModule/UIAdopter'
       sss.dependency 'MKCustomUIModule/View/MKSlider'
     end
     ss.subspec 'MKSearchButton' do |sss|
@@ -151,6 +149,7 @@ TODO: Add long description of the pod here.
   
   s.subspec 'UIAdopter' do |ss|
     ss.source_files = 'MKCustomUIModule/Classes/UIAdopter/**'
+    ss.dependency 'MKCustomUIModule/View'
   end
   
   s.dependency 'MJRefresh'

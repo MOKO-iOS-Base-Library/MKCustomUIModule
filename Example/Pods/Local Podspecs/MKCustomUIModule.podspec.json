@@ -1,6 +1,6 @@
 {
   "name": "MKCustomUIModule",
-  "version": "1.0.18",
+  "version": "1.0.20",
   "summary": "通用UI组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule.git",
-    "tag": "1.0.18"
+    "tag": "1.0.20"
   },
   "platforms": {
     "ios": "12.0"
@@ -174,12 +174,7 @@
         },
         {
           "name": "MKPickerView",
-          "source_files": "MKCustomUIModule/Classes/View/MKPickerView/**",
-          "dependencies": {
-            "MKCustomUIModule/UIAdopter": [
-
-            ]
-          }
+          "source_files": "MKCustomUIModule/Classes/View/MKPickerView/**"
         },
         {
           "name": "MKSlider",
@@ -189,9 +184,6 @@
           "name": "MKSearchConditionsView",
           "source_files": "MKCustomUIModule/Classes/View/MKSearchConditionsView/**",
           "dependencies": {
-            "MKCustomUIModule/UIAdopter": [
-
-            ],
             "MKCustomUIModule/View/MKSlider": [
 
             ]
@@ -232,7 +224,12 @@
     },
     {
       "name": "UIAdopter",
-      "source_files": "MKCustomUIModule/Classes/UIAdopter/**"
+      "source_files": "MKCustomUIModule/Classes/UIAdopter/**",
+      "dependencies": {
+        "MKCustomUIModule/View": [
+
+        ]
+      }
     }
   ]
 }

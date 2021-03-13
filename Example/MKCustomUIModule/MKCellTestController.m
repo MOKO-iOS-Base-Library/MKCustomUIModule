@@ -202,6 +202,11 @@ MKFilterRawAdvDataCellDelegate>
 /// +号按钮点击事件
 - (void)mk_rawAdvDataOperation_addMethod {
     MKFilterRawAdvDataCellModel *cellModel = [[MKFilterRawAdvDataCellModel alloc] init];
+    cellModel.rawDataMaxBytes = 2;
+    cellModel.dataTypePlaceHolder = @"00-FF";
+    cellModel.minTextFieldPlaceHolder = @"00-BB";
+    cellModel.maxTextFieldPlaceHolder = @"00-AA";
+    cellModel.rawTextFieldPlaceHolder = @"11-FF";
     cellModel.index = self.section5List.count;
     [self.section5List addObject:cellModel];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:5] withRowAnimation:UITableViewRowAnimationNone];
