@@ -397,7 +397,7 @@ MKFilterDataCellDelegate>
     cellModel1.index = 0;
     cellModel1.dataListIndex = 1;
     cellModel1.buttonBackColor = COLOR_WHITE_MACROS;
-    cellModel1.buttonTitleColor = UIColorFromRGB(0x2F84D0);
+    cellModel1.buttonTitleColor = NAVBAR_COLOR_MACROS;
     cellModel1.noteMsg = @"过来我看一下你到底想显示啥玩意儿啊，不要这么玩行不行啊，和谐和气一点点哦，大家新年过得好吗？开心吗";
     [self.section1List addObject:cellModel1];
     
@@ -409,7 +409,7 @@ MKFilterDataCellDelegate>
     cellModel2.index = 0;
     cellModel2.dataListIndex = 1;
     cellModel2.buttonBackColor = COLOR_WHITE_MACROS;
-    cellModel2.buttonTitleColor = UIColorFromRGB(0x2F84D0);
+    cellModel2.buttonTitleColor = NAVBAR_COLOR_MACROS;
     cellModel2.buttonLabelFont = MKFont(13.f);
     [self.section1List addObject:cellModel2];
 }
