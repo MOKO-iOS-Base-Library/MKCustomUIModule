@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -131,6 +131,9 @@ TODO: Add long description of the pod here.
     end
     ss.subspec 'MKTextField' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/View/MKTextField/**'
+    end
+    ss.subspec 'MKTableSectionHeader' do |sss|
+      sss.source_files = 'MKCustomUIModule/Classes/View/MKTableSectionHeader/**'
     end
   end
   

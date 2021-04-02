@@ -23,6 +23,8 @@
 #import "MKRawAdvDataOperationCell.h"
 #import "MKFilterRawAdvDataCell.h"
 
+#import "MKTableSectionLineHeader.h"
+
 @interface MKCellTestController ()<UITableViewDelegate,
 UITableViewDataSource,
 MKNormalSliderCellDelegate,
@@ -102,11 +104,19 @@ MKFilterRawAdvDataCellDelegate>
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 3) {
+        return 160.f;
+    }
+    if (section == 5) {
+        return 20.f;
+    }
     return 70.f;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return self.sectionHeaderList[section];
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    MKTableSectionLineHeader *headerView = [MKTableSectionLineHeader initHeaderViewWithTableView:tableView];
+    headerView.headerModel = self.sectionHeaderList[section];
+    return headerView;
 }
 
 #pragma mark - UITableViewDataSource
@@ -252,6 +262,8 @@ MKFilterRawAdvDataCellDelegate>
     [self loadSection3Datas];
     [self loadSection4Datas];
     
+    [self loadSectionHeaders];
+    
     [self.tableView reloadData];
 }
 
@@ -378,6 +390,39 @@ MKFilterRawAdvDataCellDelegate>
     [self.section4List addObject:cellModel];
 }
 
+- (void)loadSectionHeaders {
+    MKTableSectionLineHeaderModel *dataModel1 = [[MKTableSectionLineHeaderModel alloc] init];
+    dataModel1.text = @"MKNormalSliderCell";
+    dataModel1.msgTextColor = [UIColor redColor];
+    dataModel1.msgTextFont = MKFont(18.f);
+    dataModel1.contentColor = COLOR_WHITE_MACROS;
+    [self.sectionHeaderList addObject:dataModel1];
+    
+    MKTableSectionLineHeaderModel *dataModel2 = [[MKTableSectionLineHeaderModel alloc] init];
+    dataModel2.text = @"MKLoRaAdvancedSettingCell";
+    [self.sectionHeaderList addObject:dataModel2];
+    
+    MKTableSectionLineHeaderModel *dataModel3 = [[MKTableSectionLineHeaderModel alloc] init];
+    dataModel3.text = @"MKLoRaSettingCHCell";
+    dataModel3.contentColor = [UIColor redColor];
+    [self.sectionHeaderList addObject:dataModel3];
+    
+    MKTableSectionLineHeaderModel *dataModel4 = [[MKTableSectionLineHeaderModel alloc] init];
+    dataModel4.text = @"MKMixedChoiceCell + MKRawAdvDataOperationCell + MKRawAdvDataOperationCell + MKRawAdvDataOperationCell + MKRawAdvDataOperationCell + MKRawAdvDataOperationCell";
+    dataModel4.msgTextColor = COLOR_WHITE_MACROS;
+    dataModel4.msgTextFont = MKFont(20.f);
+    dataModel4.contentColor = NAVBAR_COLOR_MACROS;
+    [self.sectionHeaderList addObject:dataModel4];
+    
+    MKTableSectionLineHeaderModel *dataModel5 = [[MKTableSectionLineHeaderModel alloc] init];
+    dataModel5.text = @"MKFilterRawAdvDataCell";
+    [self.sectionHeaderList addObject:dataModel5];
+    
+    MKTableSectionLineHeaderModel *dataModel6 = [[MKTableSectionLineHeaderModel alloc] init];
+    dataModel6.contentColor = NAVBAR_COLOR_MACROS;
+    [self.sectionHeaderList addObject:dataModel6];
+}
+
 #pragma mark - UI
 - (void)loadSubViews {
     self.defaultTitle = @"测试";
@@ -403,8 +448,6 @@ MKFilterRawAdvDataCellDelegate>
 - (NSMutableArray *)sectionHeaderList {
     if (!_sectionHeaderList) {
         _sectionHeaderList = [NSMutableArray array];
-        
-        [_sectionHeaderList addObjectsFromArray:@[@"MKNormalSliderCell",@"MKLoRaAdvancedSettingCell",@"MKLoRaSettingCHCell",@"MKMixedChoiceCell",@"MKRawAdvDataOperationCell",@"MKFilterRawAdvDataCell"]];
     }
     return _sectionHeaderList;
 }
