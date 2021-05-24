@@ -139,9 +139,10 @@ static CGFloat const selectButtonHeight = 30.f;
 - (void)setDataModel:(MKTextButtonCellModel *)dataModel {
     _dataModel = nil;
     _dataModel = dataModel;
-    if (!_dataModel || _dataModel.dataListIndex >= _dataModel.dataList.count) {
+    if (!_dataModel || ![_dataModel isKindOfClass:MKTextButtonCellModel.class] || _dataModel.dataListIndex >= _dataModel.dataList.count) {
         return;
     }
+    self.contentView.backgroundColor = (_dataModel.contentColor ? _dataModel.contentColor : COLOR_WHITE_MACROS);
     self.msgLabel.text = SafeStr(_dataModel.msg);
     self.msgLabel.font = (_dataModel.msgFont ? _dataModel.msgFont : MKFont(15.f));
     self.msgLabel.textColor = (_dataModel.msgColor ? _dataModel.msgColor : DEFAULT_TEXT_COLOR);

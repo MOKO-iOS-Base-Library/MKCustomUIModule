@@ -166,11 +166,12 @@ static CGFloat const msgLabelWidth = 100.f;
 - (void)setDataModel:(MKLoRaSettingCHCellModel *)dataModel {
     _dataModel = nil;
     _dataModel = dataModel;
-    self.chLowButton.enabled = _dataModel.chLowButtonEnable;
-    self.chHighButton.enabled = _dataModel.chHighButtonEnable;
-    if (!_dataModel || !ValidArray(_dataModel.chHighValueList) || !ValidArray(_dataModel.chLowValueList) || _dataModel.chHighIndex >= _dataModel.chHighValueList.count || _dataModel.chLowIndex >= _dataModel.chLowValueList.count) {
+    if (!_dataModel || ![_dataModel isKindOfClass:MKLoRaSettingCHCellModel.class] || !ValidArray(_dataModel.chHighValueList) || !ValidArray(_dataModel.chLowValueList) || _dataModel.chHighIndex >= _dataModel.chHighValueList.count || _dataModel.chLowIndex >= _dataModel.chLowValueList.count) {
         return;
     }
+    self.chLowButton.enabled = _dataModel.chLowButtonEnable;
+    self.chHighButton.enabled = _dataModel.chHighButtonEnable;
+    self.contentView.backgroundColor = (_dataModel.contentColor ? _dataModel.contentColor : COLOR_WHITE_MACROS);
     self.msgLabel.text = SafeStr(_dataModel.msg);
     self.msgLabel.font = (_dataModel.msgFont ? _dataModel.msgFont : MKFont(15.f));
     self.msgLabel.textColor = (_dataModel.msgColor ? _dataModel.msgColor : DEFAULT_TEXT_COLOR);

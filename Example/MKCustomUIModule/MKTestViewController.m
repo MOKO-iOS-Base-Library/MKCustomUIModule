@@ -416,12 +416,14 @@ MKFilterDataCellDelegate>
 
 - (void)loadSection2Datas {
     MKNormalTextCellModel *cellModel1 = [[MKNormalTextCellModel alloc] init];
+    cellModel1.contentColor = RGBCOLOR(242, 242, 242);
     cellModel1.leftMsg = @"新的一种cell";
     cellModel1.rightMsg = @"当前值";
     cellModel1.showRightIcon = YES;
     [self.section2List addObject:cellModel1];
     
     MKNormalTextCellModel *cellModel2 = [[MKNormalTextCellModel alloc] init];
+    cellModel2.contentColor = [UIColor greenColor];
     cellModel2.leftMsg = @"新的一种cell1";
     cellModel2.rightMsg = @"当前值";
     cellModel2.showRightIcon = NO;
@@ -434,6 +436,7 @@ MKFilterDataCellDelegate>
     [self.section2List addObject:cellModel2];
     
     MKNormalTextCellModel *cellModel3 = [[MKNormalTextCellModel alloc] init];
+    cellModel3.contentColor = [UIColor yellowColor];
     cellModel3.leftMsg = @"过来我看一下你到底想显示啥玩意儿啊，不要这么玩行不行啊，和谐和气一点点哦，大家新年过得好吗？开心吗新的一种cell2";
     cellModel3.rightMsg = @"当前值";
     cellModel3.showRightIcon = YES;
