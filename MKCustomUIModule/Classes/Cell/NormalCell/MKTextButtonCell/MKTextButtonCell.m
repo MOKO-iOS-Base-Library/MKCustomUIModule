@@ -126,8 +126,7 @@ static CGFloat const selectButtonHeight = 30.f;
         }
     }
     MKPickerView *pickView = [[MKPickerView alloc] init];
-    pickView.dataList = self.dataModel.dataList;
-    [pickView showPickViewWithIndex:row block:^(NSInteger currentRow) {
+    [pickView showPickViewWithDataList:self.dataModel.dataList selectedRow:row block:^(NSInteger currentRow) {
         [self.selectedButton setTitle:self.dataModel.dataList[currentRow] forState:UIControlStateNormal];
         if ([self.delegate respondsToSelector:@selector(mk_loraTextButtonCellSelected:dataListIndex:value:)]) {
             [self.delegate mk_loraTextButtonCellSelected:self.dataModel.index dataListIndex:currentRow value:self.dataModel.dataList[currentRow]];
