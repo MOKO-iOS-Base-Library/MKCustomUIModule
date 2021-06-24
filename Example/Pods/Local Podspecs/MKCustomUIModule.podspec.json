@@ -1,6 +1,6 @@
 {
   "name": "MKCustomUIModule",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "summary": "通用UI组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule.git",
-    "tag": "1.1.4"
+    "tag": "1.1.5"
   },
   "platforms": {
     "ios": "12.0"
@@ -221,6 +221,29 @@
             {
               "name": "Controller",
               "source_files": "MKCustomUIModule/Classes/Controller/MKTrackerLogPage/Controller/**"
+            }
+          ]
+        },
+        {
+          "name": "MKUpdatePage",
+          "dependencies": {
+            "iOSDFULibrary": [
+
+            ]
+          },
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MKCustomUIModule/Classes/Controller/MKUpdatePage/Controller/**",
+              "dependencies": {
+                "MKCustomUIModule/Controller/MKUpdatePage/Model": [
+
+                ]
+              }
+            },
+            {
+              "name": "Model",
+              "source_files": "MKCustomUIModule/Classes/Controller/MKUpdatePage/Model/**"
             }
           ]
         }
