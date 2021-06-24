@@ -151,7 +151,11 @@ TODO: Add long description of the pod here.
     ss.subspec 'MKUpdatePage' do |sss|
       sss.subspec 'Controller' do |ssss|
         ssss.source_files = 'MKCustomUIModule/Classes/Controller/MKUpdatePage/Controller/**'
+        
         ssss.dependency 'MKCustomUIModule/Controller/MKUpdatePage/Model'
+        
+        ssss.dependency 'MKCustomUIModule/Cell/NormalCell/MKNormalTextCell'
+        ssss.dependency 'MKCustomUIModule/View/MKHudManager'
       end
       sss.subspec 'Model' do |ssss|
         ssss.source_files = 'MKCustomUIModule/Classes/Controller/MKUpdatePage/Model/**'
