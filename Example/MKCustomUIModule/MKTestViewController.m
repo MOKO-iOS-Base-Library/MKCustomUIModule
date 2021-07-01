@@ -30,6 +30,7 @@
 
 #import <MKCustomUIModule/MKSearchButton.h>
 #import <MKCustomUIModule/MKSearchConditionsView.h>
+#import <MKCustomUIModule/MKAlertController.h>
 
 #import "MKCellTestController.h"
 #import "MKViewCurveController.h"
@@ -142,8 +143,17 @@ MKFilterDataCellDelegate>
 #pragma mark - super method
 
 - (void)rightButtonMethod {
-    MKViewCurveController *vc = [[MKViewCurveController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    MKAlertController *alertView = [MKAlertController alertControllerWithTitle:@"Dismiss" message:@"测试一下通知弹窗" preferredStyle:UIAlertControllerStyleAlert];
+    alertView.notificationName = @"dismissCurrentAlert";
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alertView addAction:cancelAction];
+    [self presentViewController:alertView animated:YES completion:nil];
+    
+    [self performSelector:@selector(dismissAlert) withObject:nil afterDelay:5.f];
+//    MKViewCurveController *vc = [[MKViewCurveController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)leftButtonMethod {
@@ -153,6 +163,10 @@ MKFilterDataCellDelegate>
 //    [self.navigationController pushViewController:vc animated:YES];
     MKCellTestController *vc = [[MKCellTestController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)dismissAlert {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissCurrentAlert" object:nil userInfo:nil];
 }
 
 #pragma mark - UITableViewDelegate

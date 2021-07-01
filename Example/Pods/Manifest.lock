@@ -1,7 +1,5 @@
 PODS:
   - CircleProgressBar (0.32)
-  - iOSDFULibrary (4.10.3):
-    - ZIPFoundation (= 0.9.11)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
@@ -181,9 +179,15 @@ PODS:
     - MBProgressHUD
     - MJRefresh
     - MKBaseModuleLibrary
+    - MKCustomUIModule/Controller/MKAlertController (= 1.1.5)
     - MKCustomUIModule/Controller/MKTrackerAboutPage (= 1.1.5)
     - MKCustomUIModule/Controller/MKTrackerLogPage (= 1.1.5)
-    - MKCustomUIModule/Controller/MKUpdatePage (= 1.1.5)
+  - MKCustomUIModule/Controller/MKAlertController (1.1.5):
+    - CircleProgressBar
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModuleLibrary
   - MKCustomUIModule/Controller/MKTrackerAboutPage (1.1.5):
     - CircleProgressBar
     - Masonry
@@ -206,30 +210,6 @@ PODS:
     - MKCustomUIModule/Controller/MKTrackerLogPage/Controller (= 1.1.5)
   - MKCustomUIModule/Controller/MKTrackerLogPage/Controller (1.1.5):
     - CircleProgressBar
-    - Masonry
-    - MBProgressHUD
-    - MJRefresh
-    - MKBaseModuleLibrary
-  - MKCustomUIModule/Controller/MKUpdatePage (1.1.5):
-    - CircleProgressBar
-    - iOSDFULibrary
-    - Masonry
-    - MBProgressHUD
-    - MJRefresh
-    - MKBaseModuleLibrary
-    - MKCustomUIModule/Controller/MKUpdatePage/Controller (= 1.1.5)
-    - MKCustomUIModule/Controller/MKUpdatePage/Model (= 1.1.5)
-  - MKCustomUIModule/Controller/MKUpdatePage/Controller (1.1.5):
-    - CircleProgressBar
-    - iOSDFULibrary
-    - Masonry
-    - MBProgressHUD
-    - MJRefresh
-    - MKBaseModuleLibrary
-    - MKCustomUIModule/Controller/MKUpdatePage/Model
-  - MKCustomUIModule/Controller/MKUpdatePage/Model (1.1.5):
-    - CircleProgressBar
-    - iOSDFULibrary
     - Masonry
     - MBProgressHUD
     - MJRefresh
@@ -327,7 +307,6 @@ PODS:
     - MKBaseModuleLibrary
   - MLInputDodger (1.5.2)
   - Toast (4.0.0)
-  - ZIPFoundation (0.9.11)
 
 DEPENDENCIES:
   - MKCustomUIModule (from `../`)
@@ -336,14 +315,12 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - CircleProgressBar
-    - iOSDFULibrary
     - Masonry
     - MBProgressHUD
     - MJRefresh
     - MKBaseModuleLibrary
     - MLInputDodger
     - Toast
-    - ZIPFoundation
 
 EXTERNAL SOURCES:
   MKCustomUIModule:
@@ -351,15 +328,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CircleProgressBar: 3920079be5224b62b3d9ed6eeb23ac01c835b681
-  iOSDFULibrary: 7aade51a907d01ca9a87055003cd232b09efd78f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   MKBaseModuleLibrary: 3f6402005cd7aafb0a1564261b3ba798bd6b8ba9
-  MKCustomUIModule: d492cbd2c964e9e3b25bd509425de82e15657f05
+  MKCustomUIModule: 66e5188f4f890cad492283793945b0a3e75758cc
   MLInputDodger: 79a0e420a80d0d3bba122bf2639603cc76609ba8
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
 PODFILE CHECKSUM: 8bbfbc9afaf4215fb32cb37b82051d45fd4c222d
 

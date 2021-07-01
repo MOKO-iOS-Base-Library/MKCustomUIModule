@@ -225,27 +225,8 @@
           ]
         },
         {
-          "name": "MKUpdatePage",
-          "dependencies": {
-            "iOSDFULibrary": [
-
-            ]
-          },
-          "subspecs": [
-            {
-              "name": "Controller",
-              "source_files": "MKCustomUIModule/Classes/Controller/MKUpdatePage/Controller/**",
-              "dependencies": {
-                "MKCustomUIModule/Controller/MKUpdatePage/Model": [
-
-                ]
-              }
-            },
-            {
-              "name": "Model",
-              "source_files": "MKCustomUIModule/Classes/Controller/MKUpdatePage/Model/**"
-            }
-          ]
+          "name": "MKAlertController",
+          "source_files": "MKCustomUIModule/Classes/Controller/MKAlertController/**"
         }
       ]
     },
