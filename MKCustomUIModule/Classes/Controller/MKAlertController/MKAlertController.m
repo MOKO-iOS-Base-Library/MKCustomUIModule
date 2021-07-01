@@ -18,6 +18,11 @@
 
 - (void)dealloc {
     NSLog(@"MKAlertController销毁");
+    if (ValidStr(self.notificationName)) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:self.notificationName
+                                                      object:nil];
+    }
 }
 
 - (void)viewDidLoad {
