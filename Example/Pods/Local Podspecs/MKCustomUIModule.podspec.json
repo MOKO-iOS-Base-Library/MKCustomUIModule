@@ -1,6 +1,6 @@
 {
   "name": "MKCustomUIModule",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "summary": "通用UI组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule.git",
-    "tag": "1.2.0"
+    "tag": "1.2.2"
   },
   "platforms": {
     "ios": "12.0"
@@ -155,6 +155,9 @@
               "dependencies": {
                 "MKCustomUIModule/View/MKPickerView": [
 
+                ],
+                "MKCustomUIModule/UIAdopter": [
+
                 ]
               }
             }
@@ -213,6 +216,19 @@
         {
           "name": "MKTableSectionHeader",
           "source_files": "MKCustomUIModule/Classes/View/MKTableSectionHeader/**"
+        },
+        {
+          "name": "WifiAlertView",
+          "source_files": "MKCustomUIModule/Classes/View/WifiAlertView/**",
+          "dependencies": {
+            "MKCustomUIModule/View/MKTextField": [
+
+            ]
+          }
+        },
+        {
+          "name": "NirKxMenu",
+          "source_files": "MKCustomUIModule/Classes/View/NirKxMenu/**"
         }
       ]
     },
@@ -240,6 +256,90 @@
         {
           "name": "MKAlertController",
           "source_files": "MKCustomUIModule/Classes/Controller/MKAlertController/**"
+        },
+        {
+          "name": "DFUPage",
+          "dependencies": {
+            "iOSDFULibrary": [
+
+            ]
+          },
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MKCustomUIModule/Classes/Controller/DFUPage/Controller/**",
+              "dependencies": {
+                "MKCustomUIModule/Controller/DFUPage/Model": [
+
+                ],
+                "MKCustomUIModule/Controller/DFUPage/Protocol": [
+
+                ]
+              }
+            },
+            {
+              "name": "Model",
+              "source_files": "MKCustomUIModule/Classes/Controller/DFUPage/Model/**",
+              "dependencies": {
+                "MKCustomUIModule/Controller/DFUPage/Protocol": [
+
+                ]
+              }
+            },
+            {
+              "name": "Protocol",
+              "source_files": "MKCustomUIModule/Classes/Controller/DFUPage/Protocol/**"
+            }
+          ]
+        },
+        {
+          "name": "CASelectPage",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MKCustomUIModule/Classes/Controller/CASelectPage/Controller/**",
+              "dependencies": {
+                "MKCustomUIModule/Cell/NormalCell/MKNormalTextCell": [
+
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "MKAboutPage",
+          "dependencies": {
+            "iOSDFULibrary": [
+
+            ]
+          },
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MKCustomUIModule/Classes/Controller/MKAboutPage/Controller/**",
+              "dependencies": {
+                "MKCustomUIModule/Controller/MKAboutPage/Model": [
+
+                ],
+                "MKCustomUIModule/Controller/MKAboutPage/View": [
+
+                ]
+              }
+            },
+            {
+              "name": "Model",
+              "source_files": "MKCustomUIModule/Classes/Controller/MKAboutPage/Model/**"
+            },
+            {
+              "name": "View",
+              "source_files": "MKCustomUIModule/Classes/Controller/MKAboutPage/View/**",
+              "dependencies": {
+                "MKCustomUIModule/Controller/MKAboutPage/Model": [
+
+                ]
+              }
+            }
+          ]
         }
       ]
     },
@@ -251,6 +351,33 @@
 
         ]
       }
+    },
+    {
+      "name": "MQTTServerView",
+      "subspecs": [
+        {
+          "name": "GeneralParams",
+          "source_files": "MKCustomUIModule/Classes/MQTTServerView/GeneralParams/**",
+          "dependencies": {
+            "MKCustomUIModule/View/MKTextField": [
+
+            ]
+          }
+        },
+        {
+          "name": "SSL",
+          "source_files": "MKCustomUIModule/Classes/MQTTServerView/SSL/**"
+        },
+        {
+          "name": "UserCredentials",
+          "source_files": "MKCustomUIModule/Classes/MQTTServerView/UserCredentials/**",
+          "dependencies": {
+            "MKCustomUIModule/View/MKTextField": [
+
+            ]
+          }
+        }
+      ]
     }
   ]
 }

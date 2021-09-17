@@ -34,6 +34,7 @@
 
 #import "MKCellTestController.h"
 #import "MKViewCurveController.h"
+#import "MKAboutController.h"
 
 @interface MKTrackerAboutModel : NSObject<MKTrackerAboutParamsProtocol>
 
@@ -143,15 +144,19 @@ MKFilterDataCellDelegate>
 #pragma mark - super method
 
 - (void)rightButtonMethod {
-    MKAlertController *alertView = [MKAlertController alertControllerWithTitle:@"Dismiss" message:@"测试一下通知弹窗" preferredStyle:UIAlertControllerStyleAlert];
-    alertView.notificationName = @"dismissCurrentAlert";
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        
-    }];
-    [alertView addAction:cancelAction];
-    [self presentViewController:alertView animated:YES completion:nil];
+    MKAboutController *vc = [[MKAboutController alloc] init];
+    vc.appVersion = @"5.1.3";
+    [self.navigationController pushViewController:vc animated:YES];
     
-    [self performSelector:@selector(dismissAlert) withObject:nil afterDelay:5.f];
+//    MKAlertController *alertView = [MKAlertController alertControllerWithTitle:@"Dismiss" message:@"测试一下通知弹窗" preferredStyle:UIAlertControllerStyleAlert];
+//    alertView.notificationName = @"dismissCurrentAlert";
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//
+//    }];
+//    [alertView addAction:cancelAction];
+//    [self presentViewController:alertView animated:YES completion:nil];
+//
+//    [self performSelector:@selector(dismissAlert) withObject:nil afterDelay:5.f];
 //    MKViewCurveController *vc = [[MKViewCurveController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
 }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '1.2.1'
+  s.version          = '1.2.2'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -144,6 +144,13 @@ TODO: Add long description of the pod here.
     ss.subspec 'MKTableSectionHeader' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/View/MKTableSectionHeader/**'
     end
+    ss.subspec 'WifiAlertView' do |sss|
+      sss.source_files = 'MKCustomUIModule/Classes/View/WifiAlertView/**'
+      sss.dependency 'MKCustomUIModule/View/MKTextField'
+    end
+    ss.subspec 'NirKxMenu' do |sss|
+      sss.source_files = 'MKCustomUIModule/Classes/View/NirKxMenu/**'
+    end
   end
   
   s.subspec 'Controller' do |ss|
@@ -161,11 +168,75 @@ TODO: Add long description of the pod here.
       sss.source_files = 'MKCustomUIModule/Classes/Controller/MKAlertController/**'
     end
     
+    ss.subspec 'DFUPage' do |sss|
+          sss.subspec 'Controller' do |ssss|
+            ssss.source_files = 'MKCustomUIModule/Classes/Controller/DFUPage/Controller/**'
+            
+            ssss.dependency 'MKCustomUIModule/Controller/DFUPage/Model'
+            ssss.dependency 'MKCustomUIModule/Controller/DFUPage/Protocol'
+          end
+          sss.subspec 'Model' do |ssss|
+            ssss.source_files = 'MKCustomUIModule/Classes/Controller/DFUPage/Model/**'
+            
+            ssss.dependency 'MKCustomUIModule/Controller/DFUPage/Protocol'
+          end
+          sss.subspec 'Protocol' do |ssss|
+            ssss.source_files = 'MKCustomUIModule/Classes/Controller/DFUPage/Protocol/**'
+          end
+          
+          sss.dependency 'iOSDFULibrary'
+      end
+    
+    ss.subspec 'CASelectPage' do |sss|
+      sss.subspec 'Controller' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Controller/CASelectPage/Controller/**'
+        
+        ssss.dependency 'MKCustomUIModule/Cell/NormalCell/MKNormalTextCell'
+      end
+    end
+    
+    ss.subspec 'MKAboutPage' do |sss|
+          sss.subspec 'Controller' do |ssss|
+            ssss.source_files = 'MKCustomUIModule/Classes/Controller/MKAboutPage/Controller/**'
+            
+            ssss.dependency 'MKCustomUIModule/Controller/MKAboutPage/Model'
+            ssss.dependency 'MKCustomUIModule/Controller/MKAboutPage/View'
+          end
+          sss.subspec 'Model' do |ssss|
+            ssss.source_files = 'MKCustomUIModule/Classes/Controller/MKAboutPage/Model/**'
+          end
+          sss.subspec 'View' do |ssss|
+            ssss.source_files = 'MKCustomUIModule/Classes/Controller/MKAboutPage/View/**'
+            
+            ssss.dependency 'MKCustomUIModule/Controller/MKAboutPage/Model'
+          end
+          
+          sss.dependency 'iOSDFULibrary'
+      end
+    
   end
   
   s.subspec 'UIAdopter' do |ss|
     ss.source_files = 'MKCustomUIModule/Classes/UIAdopter/**'
     ss.dependency 'MKCustomUIModule/View'
+  end
+  
+  s.subspec 'MQTTServerView' do |ss|
+  
+    ss.subspec 'GeneralParams' do |sss|
+      sss.source_files = 'MKCustomUIModule/Classes/MQTTServerView/GeneralParams/**'
+      
+      sss.dependency 'MKCustomUIModule/View/MKTextField'
+    end
+    ss.subspec 'SSL' do |sss|
+      sss.source_files = 'MKCustomUIModule/Classes/MQTTServerView/SSL/**'
+    end
+    ss.subspec 'UserCredentials' do |sss|
+      sss.source_files = 'MKCustomUIModule/Classes/MQTTServerView/UserCredentials/**'
+      
+      sss.dependency 'MKCustomUIModule/View/MKTextField'
+    end
+  
   end
   
   s.dependency 'MJRefresh'
