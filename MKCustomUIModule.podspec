@@ -174,6 +174,9 @@ TODO: Add long description of the pod here.
             
             ssss.dependency 'MKCustomUIModule/Controller/DFUPage/Model'
             ssss.dependency 'MKCustomUIModule/Controller/DFUPage/Protocol'
+            
+            ssss.dependency 'MKCustomUIModule/Cell/NormalCell/MKNormalTextCell'
+            ssss.dependency 'MKCustomUIModule/View/MKHudManager'
           end
           sss.subspec 'Model' do |ssss|
             ssss.source_files = 'MKCustomUIModule/Classes/Controller/DFUPage/Model/**'
