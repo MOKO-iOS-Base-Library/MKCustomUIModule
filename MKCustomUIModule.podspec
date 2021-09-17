@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '1.2.2'
+  s.version          = '1.3.0'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
