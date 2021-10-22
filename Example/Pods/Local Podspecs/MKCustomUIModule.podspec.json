@@ -1,6 +1,6 @@
 {
   "name": "MKCustomUIModule",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "summary": "通用UI组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule.git",
-    "tag": "1.3.1"
+    "tag": "1.3.2"
   },
   "platforms": {
     "ios": "12.0"
@@ -273,11 +273,6 @@
         },
         {
           "name": "MKAboutPage",
-          "dependencies": {
-            "iOSDFULibrary": [
-
-            ]
-          },
           "subspecs": [
             {
               "name": "Controller",
