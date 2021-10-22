@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -167,28 +167,6 @@ TODO: Add long description of the pod here.
     ss.subspec 'MKAlertController' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/Controller/MKAlertController/**'
     end
-    
-    ss.subspec 'DFUPage' do |sss|
-          sss.subspec 'Controller' do |ssss|
-            ssss.source_files = 'MKCustomUIModule/Classes/Controller/DFUPage/Controller/**'
-            
-            ssss.dependency 'MKCustomUIModule/Controller/DFUPage/Model'
-            ssss.dependency 'MKCustomUIModule/Controller/DFUPage/Protocol'
-            
-            ssss.dependency 'MKCustomUIModule/Cell/NormalCell/MKNormalTextCell'
-            ssss.dependency 'MKCustomUIModule/View/MKHudManager'
-          end
-          sss.subspec 'Model' do |ssss|
-            ssss.source_files = 'MKCustomUIModule/Classes/Controller/DFUPage/Model/**'
-            
-            ssss.dependency 'MKCustomUIModule/Controller/DFUPage/Protocol'
-          end
-          sss.subspec 'Protocol' do |ssss|
-            ssss.source_files = 'MKCustomUIModule/Classes/Controller/DFUPage/Protocol/**'
-          end
-          
-          sss.dependency 'iOSDFULibrary'
-      end
     
     ss.subspec 'CASelectPage' do |sss|
       sss.subspec 'Controller' do |ssss|
