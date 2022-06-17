@@ -115,6 +115,8 @@ TODO: Add long description of the pod here.
     end
     ss.subspec 'MKAlertView' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/View/MKAlertView/**'
+      sss.dependency 'MKCustomUIModule/View/MKTextField'
+      sss.dependency 'MKCustomUIModule/UIAdopter'
     end
     ss.subspec 'MKHexKeyBoard' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/View/MKHexKeyBoard/**'
