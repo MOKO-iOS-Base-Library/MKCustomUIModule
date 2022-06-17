@@ -3,43 +3,43 @@ PODS:
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
-  - MKBaseModuleLibrary (1.1.3):
-    - MKBaseModuleLibrary/Base (= 1.1.3)
-    - MKBaseModuleLibrary/Category (= 1.1.3)
-    - MKBaseModuleLibrary/Defines (= 1.1.3)
-    - MKBaseModuleLibrary/Tools (= 1.1.3)
-  - MKBaseModuleLibrary/Base (1.1.3):
-    - MKBaseModuleLibrary/Base/Cell (= 1.1.3)
-    - MKBaseModuleLibrary/Base/Controller (= 1.1.3)
-    - MKBaseModuleLibrary/Base/NavigationController (= 1.1.3)
-    - MKBaseModuleLibrary/Base/View (= 1.1.3)
-  - MKBaseModuleLibrary/Base/Cell (1.1.3):
-    - MKBaseModuleLibrary/Base/Cell/MKBaseCell (= 1.1.3)
-  - MKBaseModuleLibrary/Base/Cell/MKBaseCell (1.1.3):
+  - MKBaseModuleLibrary (1.1.5):
+    - MKBaseModuleLibrary/Base (= 1.1.5)
+    - MKBaseModuleLibrary/Category (= 1.1.5)
+    - MKBaseModuleLibrary/Defines (= 1.1.5)
+    - MKBaseModuleLibrary/Tools (= 1.1.5)
+  - MKBaseModuleLibrary/Base (1.1.5):
+    - MKBaseModuleLibrary/Base/Cell (= 1.1.5)
+    - MKBaseModuleLibrary/Base/Controller (= 1.1.5)
+    - MKBaseModuleLibrary/Base/NavigationController (= 1.1.5)
+    - MKBaseModuleLibrary/Base/View (= 1.1.5)
+  - MKBaseModuleLibrary/Base/Cell (1.1.5):
+    - MKBaseModuleLibrary/Base/Cell/MKBaseCell (= 1.1.5)
+  - MKBaseModuleLibrary/Base/Cell/MKBaseCell (1.1.5):
     - Masonry
     - MKBaseModuleLibrary/Defines
-  - MKBaseModuleLibrary/Base/Controller (1.1.3):
+  - MKBaseModuleLibrary/Base/Controller (1.1.5):
     - MKBaseModuleLibrary/Category
     - MKBaseModuleLibrary/Defines
     - WRNavigationBar
-  - MKBaseModuleLibrary/Base/NavigationController (1.1.3)
-  - MKBaseModuleLibrary/Base/View (1.1.3):
-    - MKBaseModuleLibrary/Base/View/CollectionView (= 1.1.3)
-    - MKBaseModuleLibrary/Base/View/TableView (= 1.1.3)
-  - MKBaseModuleLibrary/Base/View/CollectionView (1.1.3)
-  - MKBaseModuleLibrary/Base/View/TableView (1.1.3)
-  - MKBaseModuleLibrary/Category (1.1.3):
+  - MKBaseModuleLibrary/Base/NavigationController (1.1.5)
+  - MKBaseModuleLibrary/Base/View (1.1.5):
+    - MKBaseModuleLibrary/Base/View/CollectionView (= 1.1.5)
+    - MKBaseModuleLibrary/Base/View/TableView (= 1.1.5)
+  - MKBaseModuleLibrary/Base/View/CollectionView (1.1.5)
+  - MKBaseModuleLibrary/Base/View/TableView (1.1.5)
+  - MKBaseModuleLibrary/Category (1.1.5):
     - MKBaseModuleLibrary/Defines
     - MKBaseModuleLibrary/Tools/MKClassInfo
     - Toast
-  - MKBaseModuleLibrary/Defines (1.1.3)
-  - MKBaseModuleLibrary/Tools (1.1.3):
-    - MKBaseModuleLibrary/Tools/MKClassInfo (= 1.1.3)
-    - MKBaseModuleLibrary/Tools/MKDateFormatter (= 1.1.3)
-    - MKBaseModuleLibrary/Tools/MKModuleManager (= 1.1.3)
-  - MKBaseModuleLibrary/Tools/MKClassInfo (1.1.3)
-  - MKBaseModuleLibrary/Tools/MKDateFormatter (1.1.3)
-  - MKBaseModuleLibrary/Tools/MKModuleManager (1.1.3)
+  - MKBaseModuleLibrary/Defines (1.1.5)
+  - MKBaseModuleLibrary/Tools (1.1.5):
+    - MKBaseModuleLibrary/Tools/MKClassInfo (= 1.1.5)
+    - MKBaseModuleLibrary/Tools/MKDateFormatter (= 1.1.5)
+    - MKBaseModuleLibrary/Tools/MKModuleManager (= 1.1.5)
+  - MKBaseModuleLibrary/Tools/MKClassInfo (1.1.5)
+  - MKBaseModuleLibrary/Tools/MKDateFormatter (1.1.5)
+  - MKBaseModuleLibrary/Tools/MKModuleManager (1.1.5)
   - MKCustomUIModule (1.4.1):
     - CircleProgressBar
     - Masonry
@@ -444,7 +444,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
-  MKBaseModuleLibrary: a563c3af4c51cf0a22b42871f39fb72b9be0b043
+  MKBaseModuleLibrary: bfe8141f0ec3f60a9d3d71fb3ea82eac1bcf74fb
   MKCustomUIModule: b84046fe20677c95061ea1fbc271eb957b93b1c9
   MLInputDodger: 79a0e420a80d0d3bba122bf2639603cc76609ba8
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
