@@ -14,8 +14,6 @@
 #import "UIView+MKAdd.h"
 #import "UITextField+MKAdd.h"
 
-#import "MKCustomUIAdopter.h"
-
 static CGFloat const centerViewOffsetX = 50.f;
 static CGFloat const msgLabelOffsetX = 10.f;
 static CGFloat const titleLabelOffsetY = 25.f;

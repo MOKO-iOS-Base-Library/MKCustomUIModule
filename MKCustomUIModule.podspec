@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '1.4.3'
+  s.version          = '1.4.2'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -116,7 +116,6 @@ TODO: Add long description of the pod here.
     ss.subspec 'MKAlertView' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/View/MKAlertView/**'
       sss.dependency 'MKCustomUIModule/View/MKTextField'
-      sss.dependency 'MKCustomUIModule/UIAdopter'
     end
     ss.subspec 'MKHexKeyBoard' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/View/MKHexKeyBoard/**'
