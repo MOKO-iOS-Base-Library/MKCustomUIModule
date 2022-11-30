@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '1.4.3'
+  s.version          = '1.4.4'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -58,6 +58,9 @@ TODO: Add long description of the pod here.
       end
       sss.subspec 'MKSettingTextCell' do |ssss|
         ssss.source_files = 'MKCustomUIModule/Classes/Cell/NormalCell/MKSettingTextCell/**'
+      end
+      sss.subspec 'MKButtonMsgCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/NormalCell/MKButtonMsgCell/**'
       end
     end
     
