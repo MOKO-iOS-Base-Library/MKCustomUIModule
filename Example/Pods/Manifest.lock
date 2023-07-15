@@ -1,45 +1,51 @@
 PODS:
   - CircleProgressBar (0.32)
+  - libxlsxwriter (1.1.5)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
-  - MKBaseModuleLibrary (1.1.6):
-    - MKBaseModuleLibrary/Base (= 1.1.6)
-    - MKBaseModuleLibrary/Category (= 1.1.6)
-    - MKBaseModuleLibrary/Defines (= 1.1.6)
-    - MKBaseModuleLibrary/Tools (= 1.1.6)
-  - MKBaseModuleLibrary/Base (1.1.6):
-    - MKBaseModuleLibrary/Base/Cell (= 1.1.6)
-    - MKBaseModuleLibrary/Base/Controller (= 1.1.6)
-    - MKBaseModuleLibrary/Base/NavigationController (= 1.1.6)
-    - MKBaseModuleLibrary/Base/View (= 1.1.6)
-  - MKBaseModuleLibrary/Base/Cell (1.1.6):
-    - MKBaseModuleLibrary/Base/Cell/MKBaseCell (= 1.1.6)
-  - MKBaseModuleLibrary/Base/Cell/MKBaseCell (1.1.6):
+  - MKBaseModuleLibrary (1.1.7):
+    - MKBaseModuleLibrary/Base (= 1.1.7)
+    - MKBaseModuleLibrary/Category (= 1.1.7)
+    - MKBaseModuleLibrary/Defines (= 1.1.7)
+    - MKBaseModuleLibrary/Tools (= 1.1.7)
+  - MKBaseModuleLibrary/Base (1.1.7):
+    - MKBaseModuleLibrary/Base/Cell (= 1.1.7)
+    - MKBaseModuleLibrary/Base/Controller (= 1.1.7)
+    - MKBaseModuleLibrary/Base/NavigationController (= 1.1.7)
+    - MKBaseModuleLibrary/Base/View (= 1.1.7)
+  - MKBaseModuleLibrary/Base/Cell (1.1.7):
+    - MKBaseModuleLibrary/Base/Cell/MKBaseCell (= 1.1.7)
+  - MKBaseModuleLibrary/Base/Cell/MKBaseCell (1.1.7):
     - Masonry
     - MKBaseModuleLibrary/Defines
-  - MKBaseModuleLibrary/Base/Controller (1.1.6):
+  - MKBaseModuleLibrary/Base/Controller (1.1.7):
     - MKBaseModuleLibrary/Category
     - MKBaseModuleLibrary/Defines
     - WRNavigationBar
-  - MKBaseModuleLibrary/Base/NavigationController (1.1.6)
-  - MKBaseModuleLibrary/Base/View (1.1.6):
-    - MKBaseModuleLibrary/Base/View/CollectionView (= 1.1.6)
-    - MKBaseModuleLibrary/Base/View/TableView (= 1.1.6)
-  - MKBaseModuleLibrary/Base/View/CollectionView (1.1.6)
-  - MKBaseModuleLibrary/Base/View/TableView (1.1.6)
-  - MKBaseModuleLibrary/Category (1.1.6):
+  - MKBaseModuleLibrary/Base/NavigationController (1.1.7)
+  - MKBaseModuleLibrary/Base/View (1.1.7):
+    - MKBaseModuleLibrary/Base/View/CollectionView (= 1.1.7)
+    - MKBaseModuleLibrary/Base/View/TableView (= 1.1.7)
+  - MKBaseModuleLibrary/Base/View/CollectionView (1.1.7)
+  - MKBaseModuleLibrary/Base/View/TableView (1.1.7)
+  - MKBaseModuleLibrary/Category (1.1.7):
     - MKBaseModuleLibrary/Defines
     - MKBaseModuleLibrary/Tools/MKClassInfo
     - Toast
-  - MKBaseModuleLibrary/Defines (1.1.6)
-  - MKBaseModuleLibrary/Tools (1.1.6):
-    - MKBaseModuleLibrary/Tools/MKClassInfo (= 1.1.6)
-    - MKBaseModuleLibrary/Tools/MKDateFormatter (= 1.1.6)
-    - MKBaseModuleLibrary/Tools/MKModuleManager (= 1.1.6)
-  - MKBaseModuleLibrary/Tools/MKClassInfo (1.1.6)
-  - MKBaseModuleLibrary/Tools/MKDateFormatter (1.1.6)
-  - MKBaseModuleLibrary/Tools/MKModuleManager (1.1.6)
+  - MKBaseModuleLibrary/Defines (1.1.7)
+  - MKBaseModuleLibrary/Tools (1.1.7):
+    - MKBaseModuleLibrary/Tools/MKClassInfo (= 1.1.7)
+    - MKBaseModuleLibrary/Tools/MKDateFormatter (= 1.1.7)
+    - MKBaseModuleLibrary/Tools/MKExcelManager (= 1.1.7)
+    - MKBaseModuleLibrary/Tools/MKModuleManager (= 1.1.7)
+  - MKBaseModuleLibrary/Tools/MKClassInfo (1.1.7)
+  - MKBaseModuleLibrary/Tools/MKDateFormatter (1.1.7)
+  - MKBaseModuleLibrary/Tools/MKExcelManager (1.1.7):
+    - libxlsxwriter
+    - MKBaseModuleLibrary/Defines
+    - SSZipArchive
+  - MKBaseModuleLibrary/Tools/MKModuleManager (1.1.7)
   - MKCustomUIModule (1.4.4):
     - CircleProgressBar
     - Masonry
@@ -425,6 +431,7 @@ PODS:
     - MKBaseModuleLibrary
     - MKCustomUIModule/View/MKTextField
   - MLInputDodger (1.5.2)
+  - SSZipArchive (2.4.3)
   - Toast (4.0.0)
   - WRNavigationBar (1.4.0)
 
@@ -435,11 +442,13 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - CircleProgressBar
+    - libxlsxwriter
     - Masonry
     - MBProgressHUD
     - MJRefresh
     - MKBaseModuleLibrary
     - MLInputDodger
+    - SSZipArchive
     - Toast
     - WRNavigationBar
 
@@ -449,15 +458,17 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CircleProgressBar: 3920079be5224b62b3d9ed6eeb23ac01c835b681
+  libxlsxwriter: 07cdc00cf0edb30ce9773efbbb49a03459a6e0f0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
-  MKBaseModuleLibrary: 6de43aeeb519d1c5f3aa94ebaffe8b3a57351312
+  MKBaseModuleLibrary: 9ab75dfc3c79d88aa3ad13068cc5d47cba77bdd2
   MKCustomUIModule: 83b76a0ccd1ac855157091b389154bd6a309c414
   MLInputDodger: 79a0e420a80d0d3bba122bf2639603cc76609ba8
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   WRNavigationBar: 10bfdf96addf14d640d07c2ef08a029c18d8af10
 
 PODFILE CHECKSUM: 8bbfbc9afaf4215fb32cb37b82051d45fd4c222d
 
-COCOAPODS: 1.10.0.rc.1
+COCOAPODS: 1.12.0
