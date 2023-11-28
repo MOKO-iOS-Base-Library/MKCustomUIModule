@@ -24,7 +24,6 @@
 #import <MKCustomUIModule/MKSlider.h>
 
 #import <MKCustomUIModule/MKTrackerAboutController.h>
-#import <MKCustomUIModule/MKTrackerLogController.h>
 
 #import <MKCustomUIModule/MKCustomUIAdopter.h>
 
@@ -60,46 +59,6 @@
 @end
 
 @implementation MKTrackerAboutModel
-@end
-
-@interface MKTrackerLogModel : NSObject<MKTrackerLogPageProtocol>
-
-/// 导航栏标题，默认@"Log"
-@property (nonatomic, copy)NSString *title;
-
-/// 导航栏title颜色,默认白色
-@property (nonatomic, strong)UIColor *titleColor;
-
-/// 顶部导航栏背景颜色，默认蓝色
-@property (nonatomic, strong)UIColor *titleBarColor;
-
-/// 最上面那个icon
-@property (nonatomic, strong)UIImage *emailIcon;
-
-/// icon和button中间那个label的msg
-@property (nonatomic, copy)NSString *msg;
-
-/// icon和button中间那个label字体颜色,默认#353535
-@property (nonatomic, strong)UIColor *msgColor;
-
-/// icon和button中间那个label字体大小，默认15
-@property (nonatomic, strong)UIFont *msgFont;
-
-/// 发送按钮的背景颜色
-@property (nonatomic, strong)UIColor *buttonBackColor;
-
-/// 发送按钮的title颜色，默认#2F84D0
-@property (nonatomic, strong)UIColor *buttonTitleColor;
-
-/// 发送按钮的title字体大小，默认15
-@property (nonatomic, strong)UIFont *buttonLabelFont;
-
-/// 按钮标题，默认Email
-@property (nonatomic, copy)NSString *buttonTitle;
-
-@end
-
-@implementation MKTrackerLogModel
 @end
 
 @interface MKTestViewController ()<UITableViewDelegate,
@@ -534,8 +493,8 @@ MKFilterDataCellDelegate>
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(0);
         make.right.mas_equalTo(0);
-        make.top.mas_equalTo(defaultTopInset);
-        make.bottom.mas_equalTo(-VirtualHomeHeight);
+        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
     }];
 }
 

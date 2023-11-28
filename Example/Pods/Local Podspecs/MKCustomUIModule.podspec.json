@@ -1,6 +1,6 @@
 {
   "name": "MKCustomUIModule",
-  "version": "1.4.4",
+  "version": "2.0.0",
   "summary": "通用UI组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule.git",
-    "tag": "1.4.4"
+    "tag": "2.0.0"
   },
   "platforms": {
     "ios": "12.0"
@@ -98,10 +98,6 @@
         {
           "name": "LoRaCell",
           "subspecs": [
-            {
-              "name": "MKLoraDeviceTypeCell",
-              "source_files": "MKCustomUIModule/Classes/Cell/LoRaCell/MKLoraDeviceTypeCell/**"
-            },
             {
               "name": "MKMeasureTxPowerCell",
               "source_files": "MKCustomUIModule/Classes/Cell/LoRaCell/MKMeasureTxPowerCell/**",
@@ -254,15 +250,6 @@
             {
               "name": "Controller",
               "source_files": "MKCustomUIModule/Classes/Controller/MKTrackerAboutPage/Controller/**"
-            }
-          ]
-        },
-        {
-          "name": "MKTrackerLogPage",
-          "subspecs": [
-            {
-              "name": "Controller",
-              "source_files": "MKCustomUIModule/Classes/Controller/MKTrackerLogPage/Controller/**"
             }
           ]
         },

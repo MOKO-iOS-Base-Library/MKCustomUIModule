@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '1.4.4'
+  s.version          = '2.0.0'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -65,10 +65,6 @@ TODO: Add long description of the pod here.
     end
     
     ss.subspec 'LoRaCell' do |sss|
-      sss.subspec 'MKLoraDeviceTypeCell' do |ssss|
-        ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKLoraDeviceTypeCell/**'
-      end
-      
       sss.subspec 'MKMeasureTxPowerCell' do |ssss|
         ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKMeasureTxPowerCell/**'
         ssss.dependency 'MKCustomUIModule/View/MKSlider'
@@ -165,11 +161,6 @@ TODO: Add long description of the pod here.
         sss.subspec 'Controller' do |ssss|
           ssss.source_files = 'MKCustomUIModule/Classes/Controller/MKTrackerAboutPage/Controller/**'
         end
-    end
-    ss.subspec 'MKTrackerLogPage' do |sss|
-      sss.subspec 'Controller' do |ssss|
-        ssss.source_files = 'MKCustomUIModule/Classes/Controller/MKTrackerLogPage/Controller/**'
-      end
     end
     ss.subspec 'MKAlertController' do |sss|
       sss.source_files = 'MKCustomUIModule/Classes/Controller/MKAlertController/**'
