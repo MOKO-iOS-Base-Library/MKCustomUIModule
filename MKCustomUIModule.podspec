@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '2.0.0'
+  s.version          = '2.1.0'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '14.0'
   
   s.resource_bundles = {
     'MKCustomUIModule' => ['MKCustomUIModule/Assets/*.png']
