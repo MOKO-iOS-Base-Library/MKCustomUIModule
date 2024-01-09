@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '2.1.1'
+  s.version          = '2.1.2'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -62,6 +62,13 @@ TODO: Add long description of the pod here.
       sss.subspec 'MKButtonMsgCell' do |ssss|
         ssss.source_files = 'MKCustomUIModule/Classes/Cell/NormalCell/MKButtonMsgCell/**'
       end
+      sss.subspec 'MKDeviceInfoCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/NormalCell/MKDeviceInfoCell/**'
+      end
+      sss.subspec 'MKDeviceInfoDfuCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/NormalCell/MKDeviceInfoDfuCell/**'
+        ssss.dependency 'MKCustomUIModule/UIAdopter'
+      end
     end
     
     ss.subspec 'LoRaCell' do |sss|
@@ -101,6 +108,30 @@ TODO: Add long description of the pod here.
       sss.subspec 'MKFilterConditionCell' do |ssss|
         ssss.source_files = 'MKCustomUIModule/Classes/Cell/LoRaCell/MKFilterConditionCell/**'
         ssss.dependency 'MKCustomUIModule/View/MKPickerView'
+        ssss.dependency 'MKCustomUIModule/UIAdopter'
+      end
+      
+    end
+    
+    ss.subspec 'FilterCell' do |sss|
+      sss.subspec 'FilterBeaconCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/FilterCell/FilterBeaconCell/**'
+        ssss.dependency 'MKCustomUIModule/View/MKTextField'
+        ssss.dependency 'MKCustomUIModule/UIAdopter'
+      end
+      
+      sss.subspec 'FilterByRawDataCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/FilterCell/FilterByRawDataCell/**'
+        ssss.dependency 'MKCustomUIModule/View/MKTextField'
+      end
+      
+      sss.subspec 'FilterEditSectionHeaderView' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/FilterCell/FilterEditSectionHeaderView/**'
+      end
+      
+      sss.subspec 'FilterNormalTextFieldCell' do |ssss|
+        ssss.source_files = 'MKCustomUIModule/Classes/Cell/FilterCell/FilterNormalTextFieldCell/**'
+        ssss.dependency 'MKCustomUIModule/View/MKTextField'
         ssss.dependency 'MKCustomUIModule/UIAdopter'
       end
       
