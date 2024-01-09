@@ -170,7 +170,7 @@
 }
 
 #pragma mark - event method
-- (void)textFieldValueChanged:(NSString *)text textType:(mk_filterRawAdvDataTextType)type {
+- (void)textFieldValueChanged:(NSString *)text textType:(mk_filterByRawDataTextType)type {
     if ([self.delegate respondsToSelector:@selector(mk_rawFilterDataChanged:index:textValue:)]) {
         [self.delegate mk_rawFilterDataChanged:type index:self.dataModel.index textValue:text];
     }
@@ -214,7 +214,7 @@
         WS(weakSelf);
         _typeTextField.textChangedBlock = ^(NSString * _Nonnull text) {
             __strong typeof(self) sself = weakSelf;
-            [sself textFieldValueChanged:text textType:mk_filterRawAdvDataTextTypeDataType];
+            [sself textFieldValueChanged:text textType:mk_filterByRawDataTextTypeDataType];
         };
     }
     return _typeTextField;
@@ -228,7 +228,7 @@
         WS(weakSelf);
         _minTextField.textChangedBlock = ^(NSString * _Nonnull text) {
             __strong typeof(self) sself = weakSelf;
-            [sself textFieldValueChanged:text textType:mk_filterRawAdvDataTextTypeMinIndex];
+            [sself textFieldValueChanged:text textType:mk_filterByRawDataTextTypeMinIndex];
         };
     }
     return _minTextField;
@@ -242,7 +242,7 @@
         WS(weakSelf);
         _maxTextField.textChangedBlock = ^(NSString * _Nonnull text) {
             __strong typeof(self) sself = weakSelf;
-            [sself textFieldValueChanged:text textType:mk_filterRawAdvDataTextTypeMaxIndex];
+            [sself textFieldValueChanged:text textType:mk_filterByRawDataTextTypeMaxIndex];
         };
     }
     return _maxTextField;
@@ -277,7 +277,7 @@
         WS(weakSelf);
         _rawDataField.textChangedBlock = ^(NSString * _Nonnull text) {
             __strong typeof(self) sself = weakSelf;
-            [sself textFieldValueChanged:text textType:mk_filterRawAdvDataTextTypeRawDataType];
+            [sself textFieldValueChanged:text textType:mk_filterByRawDataTextTypeRawDataType];
         };
     }
     return _rawDataField;
