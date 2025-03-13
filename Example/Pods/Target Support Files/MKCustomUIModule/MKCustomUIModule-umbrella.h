@@ -24,6 +24,7 @@
 #import "MKRawAdvDataOperationCell.h"
 #import "MKButtonMsgCell.h"
 #import "MKDeviceInfoCell.h"
+#import "MKDeviceInfoDfuCell.h"
 #import "MKNormalSliderCell.h"
 #import "MKNormalTextCell.h"
 #import "MKSettingTextCell.h"

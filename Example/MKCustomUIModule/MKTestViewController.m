@@ -31,6 +31,8 @@
 #import <MKCustomUIModule/MKSearchConditionsView.h>
 #import <MKCustomUIModule/MKAlertController.h>
 
+#import "MKHudManager.h"
+
 #import "MKCellTestController.h"
 #import "MKViewCurveController.h"
 #import "MKAboutController.h"
@@ -103,9 +105,8 @@ MKFilterDataCellDelegate>
 #pragma mark - super method
 
 - (void)rightButtonMethod {
-    MKAboutController *vc = [[MKAboutController alloc] init];
-    vc.appVersion = @"5.1.3";
-    [self.navigationController pushViewController:vc animated:YES];
+    [[MKHudManager share] showHUDWithTitle:@"Loading..." inView:self.view isPenetration:NO];
+    [self performSelector:@selector(hiddenHudManager) withObject:nil afterDelay:5.f];
     
 //    MKAlertController *alertView = [MKAlertController alertControllerWithTitle:@"Dismiss" message:@"测试一下通知弹窗" preferredStyle:UIAlertControllerStyleAlert];
 //    alertView.notificationName = @"dismissCurrentAlert";
@@ -293,6 +294,10 @@ MKFilterDataCellDelegate>
     model.aboutIcon = LOADIMAGE(@"slot_frameType", @"png");
     MKTrackerAboutController *vc = [[MKTrackerAboutController alloc] initWithProtocol:model];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)hiddenHudManager {
+    [[MKHudManager share] hide];
 }
 
 #pragma mark - Private method
