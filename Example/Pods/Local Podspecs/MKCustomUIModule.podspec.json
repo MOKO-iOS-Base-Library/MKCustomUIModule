@@ -1,6 +1,6 @@
 {
   "name": "MKCustomUIModule",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "summary": "通用UI组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule.git",
-    "tag": "2.1.4"
+    "tag": "2.1.5"
   },
   "platforms": {
     "ios": "14.0"
@@ -27,7 +27,7 @@
     "MJRefresh": [
 
     ],
-    "SVProgressHUD": [
+    "JGProgressHUD": [
 
     ],
     "CircleProgressBar": [

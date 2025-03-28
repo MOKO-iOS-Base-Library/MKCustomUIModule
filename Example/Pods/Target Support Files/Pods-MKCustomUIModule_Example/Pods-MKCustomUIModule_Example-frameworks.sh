@@ -177,26 +177,26 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CircleProgressBar/CircleProgressBar.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MKBaseModuleLibrary/MKBaseModuleLibrary.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MKCustomUIModule/MKCustomUIModule.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MLInputDodger/MLInputDodger.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toast/Toast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WRNavigationBar/WRNavigationBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/libxlsxwriter/xlsxwriter.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CircleProgressBar/CircleProgressBar.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MKBaseModuleLibrary/MKBaseModuleLibrary.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MKCustomUIModule/MKCustomUIModule.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MLInputDodger/MLInputDodger.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toast/Toast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WRNavigationBar/WRNavigationBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/libxlsxwriter/xlsxwriter.framework"
