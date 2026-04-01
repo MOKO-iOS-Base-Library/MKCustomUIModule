@@ -60,7 +60,7 @@
         return;
     }
     if (self.protocol.titleBarColor) {
-        self.custom_naviBarColor = self.protocol.titleBarColor;
+        self.navBarBackgroundColor = self.protocol.titleBarColor;
     }
     if (self.protocol.titleColor) {
         self.titleLabel.textColor = self.protocol.titleColor;

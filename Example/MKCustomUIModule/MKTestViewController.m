@@ -29,7 +29,6 @@
 
 #import <MKCustomUIModule/MKSearchButton.h>
 #import <MKCustomUIModule/MKSearchConditionsView.h>
-#import <MKCustomUIModule/MKAlertController.h>
 
 #import "MKHudManager.h"
 
@@ -107,18 +106,6 @@ MKFilterDataCellDelegate>
 - (void)rightButtonMethod {
     [[MKHudManager share] showHUDWithTitle:@"Loading..." inView:self.view isPenetration:NO];
     [self performSelector:@selector(hiddenHudManager) withObject:nil afterDelay:5.f];
-    
-//    MKAlertController *alertView = [MKAlertController alertControllerWithTitle:@"Dismiss" message:@"测试一下通知弹窗" preferredStyle:UIAlertControllerStyleAlert];
-//    alertView.notificationName = @"dismissCurrentAlert";
-//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-//
-//    }];
-//    [alertView addAction:cancelAction];
-//    [self presentViewController:alertView animated:YES completion:nil];
-//
-//    [self performSelector:@selector(dismissAlert) withObject:nil afterDelay:5.f];
-//    MKViewCurveController *vc = [[MKViewCurveController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)leftButtonMethod {

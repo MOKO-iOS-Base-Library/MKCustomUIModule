@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKCustomUIModule'
-  s.version          = '2.1.7'
+  s.version          = '2.1.8'
   s.summary          = '通用UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -193,9 +193,6 @@ TODO: Add long description of the pod here.
           ssss.source_files = 'MKCustomUIModule/Classes/Controller/MKTrackerAboutPage/Controller/**'
         end
     end
-    ss.subspec 'MKAlertController' do |sss|
-      sss.source_files = 'MKCustomUIModule/Classes/Controller/MKAlertController/**'
-    end
     
     ss.subspec 'CASelectPage' do |sss|
       sss.subspec 'Controller' do |ssss|
@@ -247,9 +244,9 @@ TODO: Add long description of the pod here.
   
   end
   
-  s.dependency 'MJRefresh'
-  s.dependency 'CircleProgressBar'
-  s.dependency 'Masonry'
+  s.dependency 'MJRefresh', '~> 3.7.5'
+  s.dependency 'CircleProgressBar', '~> 0.2'
+  s.dependency 'Masonry', '~> 1.1.0'
   
   s.dependency 'MKBaseModuleLibrary'
   

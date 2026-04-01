@@ -1,6 +1,7 @@
 Toast for iOS
 =============
 
+[![Build Status](https://travis-ci.org/scalessec/Toast.svg?branch=3.0)](https://travis-ci.org/scalessec/Toast)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/Toast.svg)](http://cocoadocs.org/docsets/Toast)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
@@ -86,7 +87,7 @@ Setup Instructions
 
 Install with CocoaPods by adding the following to your `Podfile`:
 ```ruby
-pod 'Toast', '~> 4.1.1'
+pod 'Toast', '~> 4.0.0'
 ```
 
 [Carthage](https://github.com/Carthage/Carthage)
@@ -94,9 +95,9 @@ pod 'Toast', '~> 4.1.1'
 
 Install with Carthage by adding the following to your `Cartfile`:
 ```ogdl
-github "scalessec/Toast" ~> 4.1.1
+github "scalessec/Toast" ~> 4.0.0
 ```
-Run `carthage update --use-xcframeworks` to build the framework and link against `Toast.xcframework`. Then, `#import <Toast/Toast.h>`.
+Run `carthage update` to build the framework and link against `Toast.framework`. Then, `#import <Toast/Toast.h>`.
 
 Manually
 --------
@@ -105,13 +106,9 @@ Manually
 2. `#import "UIView+Toast.h"`
 3. Grab yourself a cold 🍺.
 
-Privacy
------------
-Toast does not collect any data. A [privacy manifest](Toast/Resources/PrivacyInfo.xcprivacy) is provided with the library. See [Apple's documentation](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files) for related details.
- 
 MIT License
 -----------
-    Copyright (c) 2011-2024 Charles Scalesse.
+    Copyright (c) 2011-2017 Charles Scalesse.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the

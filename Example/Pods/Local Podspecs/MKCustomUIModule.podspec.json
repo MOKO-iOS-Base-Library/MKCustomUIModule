@@ -1,6 +1,6 @@
 {
   "name": "MKCustomUIModule",
-  "version": "2.1.6",
+  "version": "2.1.8",
   "summary": "通用UI组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MOKO-iOS-Base-Library/MKCustomUIModule.git",
-    "tag": "2.1.6"
+    "tag": "2.1.8"
   },
   "platforms": {
     "ios": "14.0"
@@ -25,13 +25,13 @@
   },
   "dependencies": {
     "MJRefresh": [
-
+      "~> 3.7.5"
     ],
     "CircleProgressBar": [
-
+      "~> 0.2"
     ],
     "Masonry": [
-
+      "~> 1.1.0"
     ],
     "MKBaseModuleLibrary": [
 
@@ -304,10 +304,6 @@
               "source_files": "MKCustomUIModule/Classes/Controller/MKTrackerAboutPage/Controller/**"
             }
           ]
-        },
-        {
-          "name": "MKAlertController",
-          "source_files": "MKCustomUIModule/Classes/Controller/MKAlertController/**"
         },
         {
           "name": "CASelectPage",
