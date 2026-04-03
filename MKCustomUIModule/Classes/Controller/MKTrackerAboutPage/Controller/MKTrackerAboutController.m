@@ -63,7 +63,7 @@
         self.navBarBackgroundColor = self.protocol.titleBarColor;
     }
     if (self.protocol.titleColor) {
-        self.titleLabel.textColor = self.protocol.titleColor;
+        [self setNavTitleColor:self.protocol.titleColor];
     }
     self.defaultTitle = (ValidStr(self.protocol.title) ? self.protocol.title : @"ABOUT");
     [self.rightButton setHidden:YES];

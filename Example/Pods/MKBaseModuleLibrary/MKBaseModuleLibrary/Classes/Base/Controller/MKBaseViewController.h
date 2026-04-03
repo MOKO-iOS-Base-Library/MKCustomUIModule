@@ -13,10 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MKBaseViewController : UIViewController
 
 /**
- *  标题label
- */
-@property (nonatomic, strong, readonly) UILabel *titleLabel;
-/**
  *  左按钮
  */
 @property (nonatomic, strong, readonly) UIButton *leftButton;
@@ -37,6 +33,16 @@ NS_ASSUME_NONNULL_BEGIN
  自定义导航栏颜色
  */
 @property (nonatomic, strong, nullable) UIColor *navBarBackgroundColor;
+
+/**
+ *  设置导航栏标题字体
+ */
+- (void)setNavTitleFont:(UIFont *)font;
+
+/**
+ *  设置导航栏标题颜色
+ */
+- (void)setNavTitleColor:(UIColor *)color;
 
 /**
  *  设置导航栏背景颜色

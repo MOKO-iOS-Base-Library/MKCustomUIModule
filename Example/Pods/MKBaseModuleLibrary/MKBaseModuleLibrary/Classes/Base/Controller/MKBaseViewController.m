@@ -13,7 +13,6 @@
 
 @interface MKBaseViewController ()<UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIButton *leftButton;
 @property (nonatomic, strong) UIButton *rightButton;
 @property (nonatomic, strong) WRCustomNavigationBar *customNavBar;
@@ -82,6 +81,15 @@
 
 - (void)rightButtonMethod {
     // 子类重写
+}
+
+#pragma mark - Public Method
+- (void)setNavTitleFont:(UIFont *)font {
+    self.customNavBar.titleLabelFont = font;
+}
+
+- (void)setNavTitleColor:(UIColor *)color {
+    self.customNavBar.titleLabelColor = color;
 }
 
 #pragma mark - Custom Method
@@ -216,17 +224,6 @@
         _rightButton.backgroundColor = [UIColor clearColor];
     }
     return _rightButton;
-}
-
-- (UILabel *)titleLabel {
-    if (!_titleLabel) {
-        _titleLabel = [[UILabel alloc] init];
-        _titleLabel.font = MKFont(20);
-        _titleLabel.textColor = COLOR_WHITE_MACROS;
-        _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.backgroundColor = [UIColor clearColor];
-    }
-    return _titleLabel;
 }
 
 @end
