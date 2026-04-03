@@ -31,7 +31,7 @@
     [self.curveView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(5.f);
         make.right.mas_equalTo(-5.f);
-        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).mas_offset(100.f);
+        make.top.equalTo(self.view).offset(kTopBarHeight + 100);
         make.height.mas_equalTo(200.f);
     }];
     [self.rightButton setTitle:@"Draw" forState:UIControlStateNormal];

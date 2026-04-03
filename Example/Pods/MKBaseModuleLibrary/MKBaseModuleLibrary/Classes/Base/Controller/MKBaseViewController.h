@@ -34,9 +34,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *defaultTitle;
 
 /**
- 导航栏背景色（默认使用 NAVBAR_COLOR_MACROS）
+ 自定义导航栏颜色
  */
 @property (nonatomic, strong, nullable) UIColor *navBarBackgroundColor;
+
+/**
+ *  设置导航栏背景颜色
+ *
+ *  @param image 图片
+ */
+- (void)setNavigationBarImage:(UIImage *)image;
 
 /**
  *  左按钮方法
@@ -53,30 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (BOOL)isCurrentViewControllerVisible:(UIViewController *)viewController;
 
-/**
- *  返回到指定类名的控制器
- */
 - (void)popToViewControllerWithClassName:(NSString *)className;
-
-/**
- *  刷新导航栏样式（子类可重写颜色配置方法）
- */
-- (void)updateNavigationBarAppearance;
-
-/**
- *  获取导航栏背景色（子类可重写）
- */
-- (UIColor *)getNavBarBackgroundColor;
-
-/**
- *  获取导航栏标题颜色（子类可重写）
- */
-- (UIColor *)getNavBarTitleColor;
-
-/**
- *  获取导航栏按钮颜色（子类可重写）
- */
-- (UIColor *)getNavBarButtonColor;
 
 @end
 
