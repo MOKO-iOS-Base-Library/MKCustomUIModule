@@ -98,7 +98,7 @@
     self.customNavBar = [WRCustomNavigationBar CustomNavigationBar];
     self.customNavBar.barBackgroundColor = self.navBarBackgroundColor ?: NAVBAR_COLOR_MACROS;
     self.customNavBar.titleLabelColor = COLOR_WHITE_MACROS;
-    self.customNavBar.titleLabelFont = MKFont(20);
+    self.customNavBar.titleLabelFont = MKFont(18.f);
     
     // 设置标题
     [self updateTitle];
