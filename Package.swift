@@ -22,7 +22,7 @@ let package = Package(
             path: "MKCustomUIModule",
             sources: ["Classes"],
             resources: [.process("Assets")],
-            publicHeadersPath: "Classes",
+            publicHeadersPath: "Classes/PublicHeaders",
             cSettings: [
                 .headerSearchPath("Classes"),
                 .headerSearchPath("Classes/Cell"),
