@@ -6,7 +6,7 @@
 //  Copyright © 2020 Chengang. All rights reserved.
 //
 
-#import <MKBaseModuleLibrary/MKBaseCell.h>
+#import "MKBaseCell.h"
 
 /*
     右侧按钮点击事件会抛出MKTextFieldNeedHiddenKeyboard通知

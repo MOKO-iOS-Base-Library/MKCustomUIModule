@@ -6,7 +6,7 @@
 //  Copyright © 2020 Chengang. All rights reserved.
 //
 
-#import <MKBaseModuleLibrary/MKBaseCell.h>
+#import "MKBaseCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

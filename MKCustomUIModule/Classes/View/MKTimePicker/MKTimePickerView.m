@@ -8,7 +8,6 @@
 
 #import "MKTimePickerView.h"
 #import "MKMacroDefines.h"
-#import "MKCategoryModule.h"
 
 static float const animationDuration = .3f;
 static CGFloat const kDatePickerH = 270;

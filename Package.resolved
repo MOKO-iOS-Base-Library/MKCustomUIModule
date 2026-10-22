@@ -1,0 +1,15 @@
+{
+  "originHash" : "f73c106b624012d57a6a3a3a298baa68be5b4e9bd6da4f9d52074aac496efd1a",
+  "pins" : [
+    {
+      "identity" : "mkbasemodulelibrary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MOKO-iOS-Base-Library/MKBaseModuleLibrary.git",
+      "state" : {
+        "revision" : "48bdae2d047c0e4252e41df742ef0706aceaec96",
+        "version" : "2.2.14"
+      }
+    }
+  ],
+  "version" : 3
+}

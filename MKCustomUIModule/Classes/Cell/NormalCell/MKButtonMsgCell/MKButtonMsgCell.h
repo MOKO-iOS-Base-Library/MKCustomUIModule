@@ -5,7 +5,7 @@
 //  Created by aa on 2022/11/30.
 //
 
-#import <MKBaseModuleLibrary/MKBaseCell.h>
+#import "MKBaseCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
