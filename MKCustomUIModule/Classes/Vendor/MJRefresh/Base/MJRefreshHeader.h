@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 小码哥. All rights reserved.
 //  下拉刷新控件:负责监控用户下拉的状态
 
-#if __has_include(<MJRefresh/MJRefreshComponent.h>)
-#import <MJRefresh/MJRefreshComponent.h>
+#if __has_include("MJRefreshComponent.h")
+#import "MJRefreshComponent.h"
 #else
 #import "MJRefreshComponent.h"
 #endif

@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 小码哥. All rights reserved.
 //
 
-#if __has_include(<MJRefresh/MJRefreshStateHeader.h>)
-#import <MJRefresh/MJRefreshStateHeader.h>
+#if __has_include("MJRefreshStateHeader.h")
+#import "MJRefreshStateHeader.h"
 #else
 #import "MJRefreshStateHeader.h"
 #endif

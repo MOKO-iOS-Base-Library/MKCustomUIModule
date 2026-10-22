@@ -7,8 +7,8 @@
 //  刷新控件的基类
 
 #import <UIKit/UIKit.h>
-#if __has_include(<MJRefresh/MJRefreshConst.h>)
-#import <MJRefresh/MJRefreshConst.h>
+#if __has_include("MJRefreshConst.h")
+#import "MJRefreshConst.h"
 #else
 #import "MJRefreshConst.h"
 #endif

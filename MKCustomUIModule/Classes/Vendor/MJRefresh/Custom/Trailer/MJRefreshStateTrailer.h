@@ -6,8 +6,8 @@
 //  Copyright © 2020 小码哥. All rights reserved.
 //
 
-#if __has_include(<MJRefresh/MJRefreshTrailer.h>)
-#import <MJRefresh/MJRefreshTrailer.h>
+#if __has_include("MJRefreshTrailer.h")
+#import "MJRefreshTrailer.h"
 #else
 #import "MJRefreshTrailer.h"
 #endif

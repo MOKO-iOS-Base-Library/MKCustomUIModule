@@ -6,8 +6,8 @@
 //  Copyright © 2020 小码哥. All rights reserved.
 //
 
-#if __has_include(<MJRefresh/MJRefreshComponent.h>)
-#import <MJRefresh/MJRefreshComponent.h>
+#if __has_include("MJRefreshComponent.h")
+#import "MJRefreshComponent.h"
 #else
 #import "MJRefreshComponent.h"
 #endif

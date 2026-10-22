@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 小码哥. All rights reserved.
 //  上拉刷新控件
 
-#if __has_include(<MJRefresh/MJRefreshComponent.h>)
-#import <MJRefresh/MJRefreshComponent.h>
+#if __has_include("MJRefreshComponent.h")
+#import "MJRefreshComponent.h"
 #else
 #import "MJRefreshComponent.h"
 #endif

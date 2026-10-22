@@ -7,8 +7,8 @@
 //  给ScrollView增加下拉刷新、上拉刷新、 左滑刷新的功能
 
 #import <UIKit/UIKit.h>
-#if __has_include(<MJRefresh/MJRefreshConst.h>)
-#import <MJRefresh/MJRefreshConst.h>
+#if __has_include("MJRefreshConst.h")
+#import "MJRefreshConst.h"
 #else
 #import "MJRefreshConst.h"
 #endif

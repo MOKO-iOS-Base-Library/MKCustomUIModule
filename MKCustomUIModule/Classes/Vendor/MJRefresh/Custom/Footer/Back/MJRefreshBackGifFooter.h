@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 小码哥. All rights reserved.
 //
 
-#if __has_include(<MJRefresh/MJRefreshBackStateFooter.h>)
-#import <MJRefresh/MJRefreshBackStateFooter.h>
+#if __has_include("MJRefreshBackStateFooter.h")
+#import "MJRefreshBackStateFooter.h"
 #else
 #import "MJRefreshBackStateFooter.h"
 #endif
