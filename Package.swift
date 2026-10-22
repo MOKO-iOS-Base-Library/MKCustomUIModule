@@ -64,6 +64,7 @@ let package = Package(
                 .headerSearchPath("Classes/MQTTServerView/SSL"),
                 .headerSearchPath("Classes/MQTTServerView/UserCredentials"),
                 .headerSearchPath("Classes/UIAdopter"),
+                .headerSearchPath("Classes/Vendor/MJRefresh/include"),
                 .headerSearchPath("Classes/Vendor/MJRefresh"),
                 .headerSearchPath("Classes/Vendor/MJRefresh/Base"),
                 .headerSearchPath("Classes/Vendor/MJRefresh/Custom"),
