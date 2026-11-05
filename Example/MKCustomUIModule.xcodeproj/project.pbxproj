@@ -486,10 +486,10 @@ echo "SUCCESS" &gt; "${SCRIPT_OUTPUT_FILE_0}"
 				<string>6003F588195388D20070C39A</string>
 				<string>120ACA1DBA475AB9FB3EC1A4</string>
 				<dict>
-					<key>value</key>
-					<string>BDB56347BEDC4C16BCC97576</string>
 					<key>comment</key>
 					<string>Moko deps auto-update</string>
+					<key>value</key>
+					<string>BDB56347BEDC4C16BCC97576</string>
 				</dict>
 			</array>
 			<key>buildRules</key>
@@ -823,10 +823,10 @@ echo "SUCCESS" &gt; "${SCRIPT_OUTPUT_FILE_0}"
 				<string>6003F5AB195388D20070C39A</string>
 				<string>6003F5AC195388D20070C39A</string>
 				<dict>
-					<key>value</key>
-					<string>BDB56347BEDC4C16BCC97576</string>
 					<key>comment</key>
 					<string>Moko deps auto-update</string>
+					<key>value</key>
+					<string>BDB56347BEDC4C16BCC97576</string>
 				</dict>
 			</array>
 			<key>buildRules</key>
@@ -1507,6 +1507,36 @@ echo "SUCCESS" &gt; "${SCRIPT_OUTPUT_FILE_0}"
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>BDB56347BEDC4C16BCC97576</key>
+		<dict>
+			<key>buildActionMask</key>
+			<integer>2147483647</integer>
+			<key>files</key>
+			<array/>
+			<key>inputFileListPaths</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Moko deps auto-update</string>
+			<key>outputFileListPaths</key>
+			<array/>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<false/>
+			<key>shellPath</key>
+			<string>/bin/zsh</string>
+			<key>shellScript</key>
+			<string>#!/bin/zsh
+REPO_ROOT="$(cd "$(dirname "$PROJECT_FILE_PATH")/.." &amp;&amp; pwd)"
+if [ -f "$REPO_ROOT/.moko_deps.sh" ]; then
+    "$REPO_ROOT/.moko_deps.sh"
+fi
+exit 0</string>
+		</dict>
 		<key>D56DACA19DEA47C9A4F81AAD</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1534,31 +1564,6 @@ echo "SUCCESS" &gt; "${SCRIPT_OUTPUT_FILE_0}"
 			<string>Pods_MKCustomUIModule_Example.framework</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>BDB56347BEDC4C16BCC97576</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>buildActionMask</key>
-			<integer>2147483647</integer>
-			<key>files</key>
-			<array/>
-			<key>inputFileListPaths</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>name</key>
-			<string>Moko deps auto-update</string>
-			<key>outputFileListPaths</key>
-			<array/>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<false/>
-			<key>shellPath</key>
-			<string>/bin/zsh</string>
-			<key>shellScript</key>
-			<string>#!/bin/zsh\nREPO_ROOT="$(cd "$(dirname "$PROJECT_FILE_PATH")/.." &amp;&amp; pwd)"\nif [ -f "$REPO_ROOT/.moko_deps.sh" ]; then\n    "$REPO_ROOT/.moko_deps.sh"\nfi\nexit 0</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
