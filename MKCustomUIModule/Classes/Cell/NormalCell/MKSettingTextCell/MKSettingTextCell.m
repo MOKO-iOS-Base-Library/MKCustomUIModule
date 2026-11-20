@@ -118,7 +118,7 @@ static CGFloat const offset_X = 15.f;
 - (UIImageView *)rightIcon {
     if (!_rightIcon) {
         _rightIcon = [[UIImageView alloc] init];
-        _rightIcon.image = LOADICON(@"MKCustomUIModule", @"MKSettingTextCell", @"mk_customUI_goNextButton.png");
+        _rightIcon.image = LOADICON(@"MKCustomUIModule", @"MKSettingTextCell", @"mk_customUI_goNextButton@2x.png");
     }
     return _rightIcon;
 }
