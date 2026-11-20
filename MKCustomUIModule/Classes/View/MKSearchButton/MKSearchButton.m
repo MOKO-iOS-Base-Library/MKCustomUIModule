@@ -142,7 +142,7 @@
 - (UIImageView *)searchIcon{
     if (!_searchIcon) {
         _searchIcon = [[UIImageView alloc] init];
-        _searchIcon.image = LOADICON(@"MKCustomUIModule", @"MKSearchButton", @"mk_customUI_searchGrayIcon@2x.png");
+        _searchIcon.image = LOADICON(@"MKCustomUIModule", @"MKSearchButton", @"mk_customUI_searchGrayIcon.png");
     }
     return _searchIcon;
 }
@@ -171,7 +171,7 @@
 - (UIButton *)clearButton{
     if (!_clearButton) {
         _clearButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_clearButton setImage:LOADICON(@"MKCustomUIModule", @"MKSearchButton", @"mk_customUI_clearButtonIcon@2x.png") forState:UIControlStateNormal];
+        [_clearButton setImage:LOADICON(@"MKCustomUIModule", @"MKSearchButton", @"mk_customUI_clearButtonIcon.png") forState:UIControlStateNormal];
         [_clearButton addTarget:self
                          action:@selector(clearButtonPressed)
                forControlEvents:UIControlEventTouchUpInside];

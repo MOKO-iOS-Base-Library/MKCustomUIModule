@@ -116,7 +116,7 @@ static CGFloat const switchButtonHeight = 30.f;
 #pragma mark - event method
 - (void)switchButtonPressed {
     self.switchButton.selected = !self.switchButton.selected;
-    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_switchSelectedIcon@2x.png") : LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_switchUnselectedIcon@2x.png"));
+    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_switchUnselectedIcon.png"));
     [self.switchButton setImage:buttonImage forState:UIControlStateNormal];
     [self updateSubViews];
     if ([self.delegate respondsToSelector:@selector(mk_rawAdvDataOperation_switchStatusChanged:)]) {
@@ -138,9 +138,9 @@ static CGFloat const switchButtonHeight = 30.f;
 
 - (void)listButtonMethod {
     self.listButton.selected = !self.listButton.selected;
-    UIImage *image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_listButtonUnselectedIcon@2x.png");
+    UIImage *image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_listButtonUnselectedIcon.png");
     if (self.listButton.isSelected) {
-        image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_listButtonSelectedIcon@2x.png");
+        image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_listButtonSelectedIcon.png");
     }
     self.selectedIcon.image = image;
     if ([self.delegate respondsToSelector:@selector(mk_rawAdvDataOperation_whiteListButtonSelected:)]) {
@@ -158,13 +158,13 @@ static CGFloat const switchButtonHeight = 30.f;
     self.msgLabel.text = SafeStr(_dataModel.msg);
     self.switchButton.enabled = _dataModel.switchEnable;
     self.switchButton.selected = _dataModel.isOn;
-    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_switchSelectedIcon@2x.png") : LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_switchUnselectedIcon@2x.png"));
+    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_switchUnselectedIcon.png"));
     [self.switchButton setImage:buttonImage forState:UIControlStateNormal];
     self.listButton.selected = _dataModel.selected;
     self.listButton.enabled = _dataModel.enabled;
-    UIImage *image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_listButtonUnselectedIcon@2x.png");
+    UIImage *image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_listButtonUnselectedIcon.png");
     if (self.listButton.isSelected) {
-        image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_listButtonSelectedIcon@2x.png");
+        image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_listButtonSelectedIcon.png");
     }
     self.selectedIcon.image = image;
     [self updateSubViews];
@@ -193,7 +193,7 @@ static CGFloat const switchButtonHeight = 30.f;
 - (UIButton *)switchButton {
     if (!_switchButton) {
         _switchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_switchButton setImage:LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_switchUnselectedIcon@2x.png") forState:UIControlStateNormal];
+        [_switchButton setImage:LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_switchUnselectedIcon.png") forState:UIControlStateNormal];
         [_switchButton addTarget:self
                           action:@selector(switchButtonPressed)
                 forControlEvents:UIControlEventTouchUpInside];
@@ -204,7 +204,7 @@ static CGFloat const switchButtonHeight = 30.f;
 - (UIButton *)addButton {
     if (!_addButton) {
         _addButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_addButton setImage:LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_addIcon@2x.png") forState:UIControlStateNormal];
+        [_addButton setImage:LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_addIcon.png") forState:UIControlStateNormal];
         [_addButton addTarget:self
                        action:@selector(addButtonPressed)
              forControlEvents:UIControlEventTouchUpInside];
@@ -215,7 +215,7 @@ static CGFloat const switchButtonHeight = 30.f;
 - (UIButton *)subButton {
     if (!_subButton) {
         _subButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_subButton setImage:LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_subIcon@2x.png") forState:UIControlStateNormal];
+        [_subButton setImage:LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_subIcon.png") forState:UIControlStateNormal];
         [_subButton addTarget:self
                        action:@selector(subButtonPressed)
              forControlEvents:UIControlEventTouchUpInside];
@@ -226,7 +226,7 @@ static CGFloat const switchButtonHeight = 30.f;
 - (UIImageView *)selectedIcon {
     if (!_selectedIcon) {
         _selectedIcon = [[UIImageView alloc] init];
-        _selectedIcon.image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_listButtonUnselectedIcon@2x.png");
+        _selectedIcon.image = LOADICON(@"MKCustomUIModule", @"MKRawAdvDataOperationCell", @"mk_customUI_listButtonUnselectedIcon.png");
     }
     return _selectedIcon;
 }

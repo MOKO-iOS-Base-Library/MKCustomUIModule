@@ -128,7 +128,7 @@
 
 #pragma mark - private method
 - (void)updateCleanButtonIcon {
-    UIImage *image = (self.cleanButton.selected ? LOADICON(@"MKCustomUIModule", @"MKMQTTGeneralParamsView", @"mk_customUI_switchSelectedIcon@2x.png") : LOADICON(@"MKCustomUIModule", @"MKMQTTGeneralParamsView", @"mk_customUI_switchUnselectedIcon@2x.png"));
+    UIImage *image = (self.cleanButton.selected ? LOADICON(@"MKCustomUIModule", @"MKMQTTGeneralParamsView", @"mk_customUI_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKMQTTGeneralParamsView", @"mk_customUI_switchUnselectedIcon.png"));
     [self.cleanButton setImage:image forState:UIControlStateNormal];
 }
 
@@ -147,7 +147,7 @@
 - (UIButton *)cleanButton {
     if (!_cleanButton) {
         _cleanButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_cleanButton setImage:LOADICON(@"MKCustomUIModule", @"MKMQTTGeneralParamsView", @"mk_customUI_switchUnselectedIcon@2x.png") forState:UIControlStateNormal];
+        [_cleanButton setImage:LOADICON(@"MKCustomUIModule", @"MKMQTTGeneralParamsView", @"mk_customUI_switchUnselectedIcon.png") forState:UIControlStateNormal];
         [_cleanButton addTarget:self
                          action:@selector(cleanButtonPressed)
                forControlEvents:UIControlEventTouchUpInside];

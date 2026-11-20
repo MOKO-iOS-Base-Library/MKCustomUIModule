@@ -14,13 +14,13 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self setThumbImage:[LOADICON(@"MKCustomUIModule", @"MKSlider", @"mk_customUI_sliderThumbIcon@2x.png") resizableImageWithCapInsets:UIEdgeInsetsZero]
+        [self setThumbImage:[LOADICON(@"MKCustomUIModule", @"MKSlider", @"mk_customUI_sliderThumbIcon.png") resizableImageWithCapInsets:UIEdgeInsetsZero]
                    forState:UIControlStateNormal];
-        [self setThumbImage:[LOADICON(@"MKCustomUIModule", @"MKSlider", @"mk_customUI_sliderThumbIcon@2x.png") resizableImageWithCapInsets:UIEdgeInsetsZero]
+        [self setThumbImage:[LOADICON(@"MKCustomUIModule", @"MKSlider", @"mk_customUI_sliderThumbIcon.png") resizableImageWithCapInsets:UIEdgeInsetsZero]
                    forState:UIControlStateHighlighted];
-        [self setMinimumTrackImage:[LOADICON(@"MKCustomUIModule", @"MKSlider", @"mk_customUI_sliderMinimumTrackIcon@2x.png") resizableImageWithCapInsets:UIEdgeInsetsZero]
+        [self setMinimumTrackImage:[LOADICON(@"MKCustomUIModule", @"MKSlider", @"mk_customUI_sliderMinimumTrackIcon.png") resizableImageWithCapInsets:UIEdgeInsetsZero]
                           forState:UIControlStateNormal];
-        [self setMaximumTrackImage:[ LOADICON(@"MKCustomUIModule", @"MKSlider", @"mk_customUI_sliderMaximumTrackImage@2x.png") resizableImageWithCapInsets:UIEdgeInsetsZero] forState:UIControlStateNormal];
+        [self setMaximumTrackImage:[ LOADICON(@"MKCustomUIModule", @"MKSlider", @"mk_customUI_sliderMaximumTrackImage.png") resizableImageWithCapInsets:UIEdgeInsetsZero] forState:UIControlStateNormal];
     }
     return self;
 }

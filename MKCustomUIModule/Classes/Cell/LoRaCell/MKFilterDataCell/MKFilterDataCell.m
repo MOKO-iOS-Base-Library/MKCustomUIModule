@@ -301,7 +301,7 @@
 #pragma mark - event method
 - (void)switchButtonPressed {
     self.switchButton.selected = !self.switchButton.selected;
-    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_switchSelectedIcon@2x.png") : LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_switchUnselectedIcon@2x.png"));
+    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_switchUnselectedIcon.png"));
     [self.switchButton setImage:buttonImage forState:UIControlStateNormal];
     if (self.normalView) {
         self.normalView.hidden = !self.switchButton.isSelected;
@@ -318,9 +318,9 @@
 
 - (void)listButtonMethod {
     self.listButton.selected = !self.listButton.selected;
-    UIImage *image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_listButtonUnselectedIcon@2x.png");
+    UIImage *image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_listButtonUnselectedIcon.png");
     if (self.listButton.isSelected) {
-        image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_listButtonSelectedIcon@2x.png");
+        image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_listButtonSelectedIcon.png");
     }
     self.selectedIcon.image = image;
     if ([self.delegate respondsToSelector:@selector(mk_listButtonStateChanged:index:)]) {
@@ -366,13 +366,13 @@
     self.msgLabel.text = SafeStr(_dataModel.msg);
     self.switchButton.enabled = _dataModel.switchEnable;
     self.switchButton.selected = _dataModel.isOn;
-    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_switchSelectedIcon@2x.png") : LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_switchUnselectedIcon@2x.png"));
+    UIImage *buttonImage = (self.switchButton.isSelected ? LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_switchSelectedIcon.png") : LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_switchUnselectedIcon.png"));
     [self.switchButton setImage:buttonImage forState:UIControlStateNormal];
     self.listButton.selected = _dataModel.selected;
     self.listButton.enabled = _dataModel.enabled;
-    UIImage *image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_listButtonUnselectedIcon@2x.png");
+    UIImage *image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_listButtonUnselectedIcon.png");
     if (self.listButton.isSelected) {
-        image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_listButtonSelectedIcon@2x.png");
+        image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_listButtonSelectedIcon.png");
     }
     self.selectedIcon.image = image;
     
@@ -446,7 +446,7 @@
 - (UIImageView *)selectedIcon {
     if (!_selectedIcon) {
         _selectedIcon = [[UIImageView alloc] init];
-        _selectedIcon.image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_listButtonUnselectedIcon@2x.png");
+        _selectedIcon.image = LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_listButtonUnselectedIcon.png");
     }
     return _selectedIcon;
 }
@@ -465,7 +465,7 @@
 - (UIButton *)switchButton {
     if (!_switchButton) {
         _switchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_switchButton setImage:LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_switchUnselectedIcon@2x.png") forState:UIControlStateNormal];
+        [_switchButton setImage:LOADICON(@"MKCustomUIModule", @"MKFilterDataCell", @"mk_customUI_switchUnselectedIcon") forState:UIControlStateNormal];
         [_switchButton addTarget:self
                           action:@selector(switchButtonPressed)
                 forControlEvents:UIControlEventTouchUpInside];

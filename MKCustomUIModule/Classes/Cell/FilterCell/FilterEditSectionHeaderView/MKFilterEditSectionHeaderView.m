@@ -105,7 +105,7 @@
 - (UIButton *)addButton {
     if (!_addButton) {
         _addButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_addButton setImage:LOADICON(@"MKCustomUIModule", @"MKFilterEditSectionHeaderView", @"mk_customUI_addIcon@2x.png") forState:UIControlStateNormal];
+        [_addButton setImage:LOADICON(@"MKCustomUIModule", @"MKFilterEditSectionHeaderView", @"mk_customUI_addIcon.png") forState:UIControlStateNormal];
         [_addButton addTarget:self
                        action:@selector(addButtonPressed)
              forControlEvents:UIControlEventTouchUpInside];
@@ -116,7 +116,7 @@
 - (UIButton *)subButton {
     if (!_subButton) {
         _subButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_subButton setImage:LOADICON(@"MKCustomUIModule", @"MKFilterEditSectionHeaderView", @"mk_customUI_subIcon@2x.png") forState:UIControlStateNormal];
+        [_subButton setImage:LOADICON(@"MKCustomUIModule", @"MKFilterEditSectionHeaderView", @"mk_customUI_subIcon.png") forState:UIControlStateNormal];
         [_subButton addTarget:self
                        action:@selector(subButtonPressed)
              forControlEvents:UIControlEventTouchUpInside];

@@ -99,25 +99,25 @@
 
 - (void)loadTableDatas {
     MKAboutCellModel *faxModel = [[MKAboutCellModel alloc] init];
-    faxModel.iconName = @"mk_customUI_faxIcon@2x.png";
+    faxModel.iconName = @"mk_customUI_faxIcon.png";
     faxModel.typeMessage = @"Fax";
     faxModel.value = @"86-75523573370-808";
     [self.dataList addObject:faxModel];
     
     MKAboutCellModel *telModel = [[MKAboutCellModel alloc] init];
-    telModel.iconName = @"mk_customUI_telIcon@2x.png";
+    telModel.iconName = @"mk_customUI_telIcon.png";
     telModel.typeMessage = @"Tel";
     telModel.value = @"86-75523573370";
     [self.dataList addObject:telModel];
     
     MKAboutCellModel *addModel = [[MKAboutCellModel alloc] init];
-    addModel.iconName = @"mk_customUI_addUsIcon@2x.png";
+    addModel.iconName = @"mk_customUI_addUsIcon.png";
     addModel.typeMessage = @"Add";
     addModel.value = @"4F,Building2,Guanghui Technology Park,MinQing Rd,Longhua,Shenzhen,Guangdong,China";
     [self.dataList addObject:addModel];
     
     MKAboutCellModel *linkModel = [[MKAboutCellModel alloc] init];
-    linkModel.iconName = @"mk_customUI_shouceIcon@2x.png";
+    linkModel.iconName = @"mk_customUI_shouceIcon.png";
     linkModel.typeMessage = @"Website";
     linkModel.value = @"www.mokosmart.com";
     linkModel.canAdit = YES;
@@ -151,7 +151,7 @@
 - (UIImageView *)aboutIcon{
     if (!_aboutIcon) {
         _aboutIcon = [[UIImageView alloc] init];
-        _aboutIcon.image = LOADICON(@"MKCustomUIModule", @"MKAboutController", @"mk_customUI_aboutIcon@2x.png");
+        _aboutIcon.image = LOADICON(@"MKCustomUIModule", @"MKAboutController", @"mk_customUI_aboutIcon.png");
     }
     return _aboutIcon;
 }

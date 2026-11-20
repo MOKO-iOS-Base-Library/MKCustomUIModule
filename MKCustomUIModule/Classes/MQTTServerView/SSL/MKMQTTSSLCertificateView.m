@@ -107,7 +107,7 @@
 - (UIButton *)certificateButton {
     if (!_certificateButton) {
         _certificateButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_certificateButton setImage:LOADICON(@"MKCustomUIModule", @"MKMQTTSSLCertificateView", @"mk_customUI_config_certAddIcon@2x.png") forState:UIControlStateNormal];
+        [_certificateButton setImage:LOADICON(@"MKCustomUIModule", @"MKMQTTSSLCertificateView", @"mk_customUI_config_certAddIcon.png") forState:UIControlStateNormal];
         [_certificateButton addTarget:self
                                action:@selector(certificateButtonPressed)
                      forControlEvents:UIControlEventTouchUpInside];
